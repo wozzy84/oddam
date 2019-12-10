@@ -1,0 +1,43 @@
+.HomeHeader {
+    height: 95px;
+    width: 100%;
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+    
+}
+
+.navigation li {
+    display: inline-block;
+    margin: 10px;
+}
+.navigation li:last-child {
+    margin-right: 0px;
+}
+
+.mainUl li{
+font-size: 18px;
+border: 0.75px solid transparent;
+
+justify-content: center;
+padding: 9px 20px;
+
+    &:hover {
+        border: 0.75px solid #3C3C3C;
+    }
+
+}
+
+.loginUl li {
+    font-size: 14px;
+    color: #737373;
+    border: 0.75px solid transparent;
+
+justify-content: center;
+padding: 9px 10px;
+
+    &:hover {
+        border: 0.75px solid #FAD648;
+    }
+
+}

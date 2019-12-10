@@ -10,6 +10,7 @@
 
 # production
 /build
+/zasoby
 
 # misc
 .DS_Store

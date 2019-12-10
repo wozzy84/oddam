@@ -1,6 +1,10 @@
-@import '/home/piotr/oddam/node_modules/reset-css/sass/_reset.scss';
-@import '/home/piotr/oddam/src/scss/settings/_colors.scss';
-@import '/home/piotr/oddam/src/scss/settings/_fonts.scss';
+@import ' ../../../../node_modules/reset-css/sass/reset';
+@import '../../src/scss/settings/colors';
+@import '../../src/scss/settings/fonts';
+@import '../../src/components/HomeContainer/HomeContainer.scss';
+@import '../../src/components/HomeMainPic/HomeMainPic.scss';
+@import '../../src/components/HomeMainSec/HomeMainSec.scss';
+@import '../../src/components/HomeHeader/HomeHeader.scss';
 
 body {
     font-family: $font-base;
@@ -8,5 +12,8 @@ body {
 
 .test {
     
-    color: blue
+    background-color: blue;
+    height: 2000px;
+    widows: 100%;
 };
+

@@ -1,0 +1,45 @@
+.HomeMainSec {
+    height: 831px;
+    width: 100%;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.MainSecContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 350px;;  
+
+}
+
+.decorationElement {
+    height: 33px;
+    width: 253px;
+    background: transparent url('../../assets/images/Decoration.svg') 0% 0% no-repeat padding-box;
+}
+.buttonsContainer {
+    display: flex;
+    button {
+        height: 120px;
+        width: 310px;
+        margin: 20px;
+        background: transparent;
+        border-style: solid;
+        border: 0.75px solid #3C3C3C;
+        box-shadow: none;
+        font-size: 36px;
+        font-family: $font-base-light;
+        
+    }
+}
+
+.callToAction {
+  text-align: center;
+  font-size: 38px;
+  line-height: 55px;
+  letter-spacing: -0.76px;
+}
