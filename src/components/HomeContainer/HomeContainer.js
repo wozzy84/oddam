@@ -4,6 +4,7 @@ import { HomeHeader} from '../HomeHeader/HomeHeader';
 import { HomeMainSec} from '../HomeMainSec/HomeMainSec';
 import { HomeThreeCol} from '../HomeThreeCol/HomeThreeCol';
 import { HomeFourSteps} from '../HomeFourSteps/HomeFourSteps'
+import { HomeAbout } from '../HomeAbout/HomeAbout';
 
 
 const HomeContainer = (props) => {
@@ -20,7 +21,7 @@ const HomeContainer = (props) => {
         </div>
             <HomeThreeCol/>
             <HomeFourSteps/>
-
+            <HomeAbout/>
         </div>
        
     )

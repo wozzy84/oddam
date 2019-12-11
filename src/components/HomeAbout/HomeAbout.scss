@@ -1,0 +1,49 @@
+.HomeAbout_sec {
+    display: flex;
+}
+
+.aboutPicContainer {
+    background-image: url('../../assets/images/People.jpg');
+    height: 935px;
+    width: 50%
+}
+
+.aboutDescriptContainer {
+    width: 50%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+}
+
+.aboutDecoration {
+    margin: 0 auto;
+    height: 33px;
+    width: 253px;
+    background: transparent url('../../assets/images/Decoration.svg') 0% 0% no-repeat padding-box;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.aboutTitle {
+    font-size: 36px;
+    line-height: 1.5;
+}
+
+.aboutDescription {
+    font-size: 30px;
+    letter-spacing: -0.6px;
+    line-height: 1.8;
+    max-width: 657px;
+}
+
+.aboutSignature {
+    height: 148px;
+    width: 100%;
+    margin-top: 20px;
+    background-image: url('../../assets/images/Signature.svg');
+    background-repeat: no-repeat;
+    background-position: right;
+}

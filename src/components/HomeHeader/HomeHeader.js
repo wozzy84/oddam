@@ -19,7 +19,7 @@ const HomeHeader = () => {
                         spy={true}
                         smooth={true}
                         hashSpy={true}
-                        offset={50}
+                        offset={20}
                         duration={500}
                         isDynamic={true}
                      ><li>Start</li></Link>
@@ -28,17 +28,17 @@ const HomeHeader = () => {
                         spy={true}
                         smooth={true}
                         hashSpy={true}
-                        offset={50}
+                        offset={20}
                         duration={500}
                         isDynamic={true}>
                     <li>O co chodzi?</li>   
                         </Link>   
                         <Link activeClass="active"
-                        to="target"
+                        to="HomeAbout_sec"
                         spy={true}
                         smooth={true}
                         hashSpy={true}
-                        offset={50}
+                        offset={20}
                         duration={500}
                         isDynamic={true}>
                     <li>O nas</li>        
@@ -48,7 +48,7 @@ const HomeHeader = () => {
                         spy={true}
                         smooth={true}
                         hashSpy={true}
-                        offset={50}
+                        offset={20}
                         duration={500}
                         isDynamic={true}>
                     

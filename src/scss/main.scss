@@ -8,9 +8,11 @@
 @import '../../src/components/HomeHeader/HomeHeader.scss';
 @import '../../src/components/HomeThreeCol/HomeThreeCol.scss';
 @import '../../src/components/HomeFourSteps/HomeFourSteps.scss';
+@import '../../src/components/HomeAbout/HomeAbout.scss';
 
 body {
     font-family: $font-base;
+    color:  #3C3C3C;
 }
 
 .test {
