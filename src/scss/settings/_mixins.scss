@@ -1,0 +1,11 @@
+@mixin button_mixin {
+        height: 120px;
+        width: 310px;
+        margin: 20px;
+        background: transparent;
+        border-style: solid;
+        border: 0.75px solid #3C3C3C;
+        box-shadow: none;
+        font-size: 36px;
+        font-family: $font-base-light;
+}

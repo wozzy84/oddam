@@ -1,11 +1,13 @@
 @import ' ../../../../node_modules/reset-css/sass/reset';
 @import '../../src/scss/settings/colors';
 @import '../../src/scss/settings/fonts';
+@import '../../src/scss/settings/mixins';
 @import '../../src/components/HomeContainer/HomeContainer.scss';
 @import '../../src/components/HomeMainPic/HomeMainPic.scss';
 @import '../../src/components/HomeMainSec/HomeMainSec.scss';
 @import '../../src/components/HomeHeader/HomeHeader.scss';
 @import '../../src/components/HomeThreeCol/HomeThreeCol.scss';
+@import '../../src/components/HomeFourSteps/HomeFourSteps.scss';
 
 body {
     font-family: $font-base;

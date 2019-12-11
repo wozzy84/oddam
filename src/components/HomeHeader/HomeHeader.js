@@ -24,7 +24,7 @@ const HomeHeader = () => {
                         isDynamic={true}
                      ><li>Start</li></Link>
                       <Link activeClass="active"
-                        to="target"
+                        to="about"
                         spy={true}
                         smooth={true}
                         hashSpy={true}
