@@ -1,0 +1,35 @@
+.postsContainer {
+    max-width: 1344px;
+    margin: 0 auto;
+    padding-top: 50px;
+    font-family: $font-base-light
+}
+
+.postLine {
+    height: 81px;
+    margin-top: 17px;
+    margin-bottom: 17px;
+    width: 100%;
+    border-bottom: 0.75px solid #3C3C3C; 
+    display: flex;
+    justify-content: space-between;
+}
+.postLine:last-child {
+    border-bottom: transparent;
+}
+
+.postTitle {
+    
+    font-size: 26px;
+    line-height: 1.2;
+}
+
+.postBody {
+    font-size: 18px;
+    line-height: 1.22;
+}
+
+.postTags {
+    font-size: 18px;
+
+}

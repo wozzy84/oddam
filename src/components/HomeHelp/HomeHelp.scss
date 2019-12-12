@@ -1,0 +1,65 @@
+.HomeHelpSec {
+    height: 862px;
+}
+
+
+.HomeHelpNavCont {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 50%;
+    width: 100%;
+    padding-top: 60px;
+}
+
+
+.HomeHelpNav {
+    margin-top: 70px;
+    margin-bottom:70px;
+}
+
+
+.HelpNavList {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.HelpNavList li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size:24px;
+    text-align: center;
+    border: 0.75px solid transparent; 
+    width: 208px;
+    height: 79px;
+    margin: 0px 10px;
+    &:hover {
+        border: 0.75px solid #3C3C3C;
+    }
+
+}
+
+.HomeHelpTitle {
+    font-size: 38px;
+    line-height: 1.44;
+}
+
+.HomeDecoration {
+    margin: 0 auto;
+    height: 33px;
+    width: 253px;
+    background: transparent url('../../assets/images/Decoration.svg') 0% 0% no-repeat padding-box;
+    margin-top: 15px;
+
+}
+
+.HomeHelpNavDesc {
+    max-width: 640px;
+    font-size: 22px;
+    line-height: 1.4;
+    text-align: center;
+}
+
