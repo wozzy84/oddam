@@ -44,7 +44,7 @@ const HomeHeader = () => {
                     <li>O nas</li>        
                         </Link>
                         <Link activeClass="active"
-                        to="target"
+                        to="HomeHelpSec"
                         spy={true}
                         smooth={true}
                         hashSpy={true}
