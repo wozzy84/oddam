@@ -22,9 +22,7 @@
 }
 
 .four_steps_decoration {
-    height: 33px;
-    width: 253px;
-    background: transparent url('../../assets/images/Decoration.svg') 0% 0% no-repeat padding-box;
+    @include decoration_mixin
 }
 
 .decoration_bar {

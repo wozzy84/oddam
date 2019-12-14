@@ -1,0 +1,121 @@
+.HomeContactSec {
+    display: flex;
+}
+
+
+.contactDecoration {
+    @include decoration_mixin;
+    margin-bottom: 30px;
+
+}
+
+.ContactPic {
+    width: 60%;
+    height: 950px;
+    background-image: url('../../assets/images/Background-Contact-Form.jpg');
+    opacity: 0.3    ;
+}
+
+.ContactTextContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.contactForm {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    font-family: $font-base-semi
+}
+
+.buttonContainer {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.inputGroup {
+    display: flex;
+    input {
+        width: 256px;
+        height: 25px;
+        border: 0px transparent;
+        border-bottom: 1px solid black;
+        
+    }
+
+    label {
+        margin-bottom: 20px;
+    }
+   
+
+}
+
+.inputSubGroup {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    
+}
+
+.nameInput {
+    margin-right: 20px;
+}
+
+.contactTitle {
+    font-size: 38px;
+    line-height: 1.44;
+    margin-bottom: 20px;
+}
+
+.textAreaLabel {
+    margin-bottom: 20px;
+   
+}
+
+.contactTextArea {
+    width: 100%;
+    border: 0px transparent;
+    border-bottom: 1px solid black;
+    resize: none;
+    height: 97px;
+}
+.textAreaGroup {
+    width: 98%;
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.contactSubmit {
+    height: 50px;
+    width: 150px;
+    margin-top:40px;
+    background: transparent;
+    border-style: solid;
+    border: 0.75px solid #3C3C3C;
+    box-shadow: none;
+    font-size: 18px;
+    font-family: $font-base-light;
+}
+
+.successInfo {
+color:#4F8A10;
+font-family:$font-base-semi;
+line-height: 1.5;
+opacity: 0;
+
+}
+
+.errorMsg {
+    color: #D8000C;
+    font-size:12px;
+    margin-top:3px;
+    opacity: 0;
+}

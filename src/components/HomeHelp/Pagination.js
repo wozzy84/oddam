@@ -27,9 +27,9 @@ const handleClick =(e) => {
       <ul className='pagination'>
         {pageNumbers.map((number, index) => (
           
-          <li key={number} id={index} onClick={handleClick}className='page-item'
+          <li key={number} id={index}  onClick={(e) => paginate(number)} onMouseDown={handleClick}className='page-item'
           style={activeLink==index? style: null}>
-            <a onClick={(e) => paginate(number)}  className='page-link'>
+            <a   className='page-link'>
               {number}
             </a>
           </li>

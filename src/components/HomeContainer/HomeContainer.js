@@ -6,6 +6,7 @@ import { HomeThreeCol} from '../HomeThreeCol/HomeThreeCol';
 import { HomeFourSteps} from '../HomeFourSteps/HomeFourSteps'
 import { HomeAbout } from '../HomeAbout/HomeAbout';
 import { HomeHelp } from '../HomeHelp/HomeHelp';
+import { HomeContact } from '../HomeContact/HomeContact';
 
 
 const HomeContainer = (props) => {
@@ -24,6 +25,7 @@ const HomeContainer = (props) => {
             <HomeFourSteps/>
             <HomeAbout/>
             <HomeHelp/>
+            <HomeContact/> 
         </div>
        
     )

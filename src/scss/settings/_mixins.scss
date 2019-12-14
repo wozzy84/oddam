@@ -8,4 +8,12 @@
         box-shadow: none;
         font-size: 36px;
         font-family: $font-base-light;
+        cursor: pointer;
+}
+
+@mixin decoration_mixin {
+        margin: 0 auto;
+        height: 33px;
+        width: 253px;
+        background: transparent url('../../assets/images/Decoration.svg') 0% 0% no-repeat padding-box;
 }

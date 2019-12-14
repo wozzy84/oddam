@@ -55,7 +55,7 @@ const HomeHeader = () => {
                     <li>Fundacja i oraganizacje</li>
                     </Link>
                     <Link activeClass="active"
-                        to="target"
+                        to="HomeContactSec"
                         spy={true}
                         smooth={true}
                         hashSpy={true}

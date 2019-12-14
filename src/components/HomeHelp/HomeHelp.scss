@@ -1,7 +1,3 @@
-.HomeHelpSec {
-    height: 862px;
-}
-
 
 .HomeHelpNavCont {
     display: flex;
@@ -48,10 +44,7 @@
 }
 
 .HomeDecoration {
-    margin: 0 auto;
-    height: 33px;
-    width: 253px;
-    background: transparent url('../../assets/images/Decoration.svg') 0% 0% no-repeat padding-box;
+    @include decoration_mixin;
     margin-top: 15px;
 
 }
