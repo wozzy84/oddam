@@ -22,8 +22,8 @@
     
    
     background-color: #F0F1F1;
-    margin: 20px;
-    padding-top:40px;
+    margin: 23px;
+    padding-top:23px;
     padding-bottom: 30px;
     display: flex;
     flex-direction: column;
@@ -35,10 +35,13 @@
         width: 250px;
         height: 30px;
         margin-top: 10px;
-        margin-bottom:30px;
+        margin-bottom:5px;
         background-color: #F0F1F1;
         border: none;
         border-bottom: 1px solid #3C3C3C;
+    }
+    label {
+        margin-top: 10px;
     }
     
 }
@@ -73,5 +76,4 @@
             border: 0.75px solid #3C3C3C;
         }
     }
-
 
