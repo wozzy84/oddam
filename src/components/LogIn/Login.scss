@@ -23,7 +23,7 @@
     height: 235px;
     background-color: #F0F1F1;
     margin: 20px;
-    padding-top:20px;
+    padding-top:10px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -34,14 +34,18 @@
         width: 250px;
         height: 30px;
         margin-top: 10px;
-        margin-bottom:30px;
+        margin-bottom:5px;
         background-color: #F0F1F1;
         border: none;
         border-bottom: 1px solid #3C3C3C;
+        
     }
+    label {
+        margin-top: 10px
+    }    
+
     
-    
-    }
+}
     .loginInputContainer {
         display: flex;
         flex-direction: column;

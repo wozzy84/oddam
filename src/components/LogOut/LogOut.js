@@ -6,7 +6,6 @@ const LogOut= () => {
 
     return  (
         <>
-        
         <section className="logOutSection">
             <h1>Wylogowanie nastąpiło <br/> pomyślnie!</h1>
             <div className="logOutDecoration"></div>
