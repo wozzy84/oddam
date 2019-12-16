@@ -1,6 +1,8 @@
 import React from 'react'
 import {Link} from 'react-router-dom'
 import {useState, useEffect} from 'react';
+import {auth} from '../../config'
+import { useHistory } from "react-router-dom";
 
 const Login = () => {
 
@@ -11,6 +13,7 @@ const Login = () => {
     const [email, setEmail] = useState("");
     const [passwd, setPasswd] = useState("");
     const [submitTry, setSubmitTry] = useState(false)
+    const history = useHistory();
 
     const handleChange = (e) => {
         switch (e.currentTarget.id){
@@ -45,7 +48,21 @@ const Login = () => {
         setPasswdError(!passwdValidaion);
         if (submitTry==false) {
             setSubmitTry(true)
+        } 
+        if (emailValidatiton&&passwdValidaion) {
+            auth.signInWithEmailAndPassword(email, passwd)
+            .then(cred=> {
+                console.log(cred.user.email)
+                history.push('/')
+                
+            
+            })
+            .catch(function(error) {
+                console.error(error.code, error.message);
+                
+              });
         }
+
         
     }
 
