@@ -1,17 +1,11 @@
 import React from 'react'
-import {NavLink} from 'react-router-dom'
 import {Link} from 'react-scroll'
-
+import {HomeLoginNav} from '../HomeLoginNav/HomeLoginNav'
 
 const HomeHeader = () => {
     return (
         <div className="HomeHeader">
-            <nav className="loginNav">
-                <ul className="navigation loginUl">
-                    <NavLink to='/logowanie'><li>Zaloguj</li></NavLink>
-                    <NavLink to ='rejestracja'><li>Załóż konto</li></NavLink>
-                </ul>
-            </nav>
+            <HomeLoginNav/>
             <nav className="mainNav">
                 <ul className="navigation mainUl" >
                     <Link activeClass="active"

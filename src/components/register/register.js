@@ -1,6 +1,8 @@
 import React from 'react'
 import {Link} from 'react-router-dom'
 import {useState, useEffect} from 'react';
+import {auth} from '../../config'
+import { useHistory } from "react-router-dom";
 
 const Register = () => {
     const [emailError, setEmailError] = useState(false);
@@ -11,6 +13,8 @@ const Register = () => {
     const [passwd, setPasswd] = useState("");
     const [passwdRepeat, setPasswdRepeat] = useState('')
     const [submitTry, setSubmitTry] = useState(false)
+    const history = useHistory();
+   
 
     const handleChange = (e) => {
         switch (e.currentTarget.id){
@@ -45,6 +49,14 @@ const Register = () => {
         setPasswdError(!passwdValidaion);
         if (submitTry==false) {
             setSubmitTry(true)
+        }
+        if(validateEmail(email)&& validatePasswd) {
+            auth.createUserWithEmailAndPassword(email, passwd)
+            .then(cred => console.log(cred.user.uid));
+            history.push('/')
+
+        } else {
+            console.log("Email bądź hasło jest błędne")
         }
         
     }
