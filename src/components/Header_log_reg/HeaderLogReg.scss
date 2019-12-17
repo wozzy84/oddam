@@ -4,22 +4,20 @@
     
 }
 
-.Header_MainSec_container {
+.LogReg_container {
     margin: 0 auto;
     display: flex;
     width: 100%;
-    height: 963px;
+  
 }
 
 .RightSubContainer {
     padding-top:37px;
     width:100%;
-    padding-right: 142px
+    padding-right: 142px;
 }
 
-.LogReg_container {
-    margin: 0 auto;
-    display: flex;
-    width: 100%;
-
+.mainUl a {
+    text-decoration: none;
+    color: black;
 }

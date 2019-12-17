@@ -3,6 +3,7 @@ import {Link} from 'react-router-dom'
 import {useState, useEffect} from 'react';
 import {auth} from '../../config'
 import { useHistory } from "react-router-dom";
+import { HeaderLogReg } from '../Header_log_reg/HeaderLogReg';
 
 const Login = () => {
 
@@ -37,7 +38,6 @@ const Login = () => {
             return true
         };
     }
-
 
 
     const handleClick = (e) => {
@@ -81,7 +81,7 @@ const Login = () => {
 
     return  (
         <>
-        
+        <HeaderLogReg/>
         <section className="loginSection">
             <h1>Zaloguj się</h1>
             <div className="loginDecoration"></div>

@@ -3,6 +3,7 @@ import {Link} from 'react-router-dom'
 import {useState, useEffect} from 'react';
 import {auth} from '../../config'
 import { useHistory } from "react-router-dom";
+import { HeaderLogReg} from '../../components/Header_log_reg/HeaderLogReg'
 
 const Register = () => {
     const [emailError, setEmailError] = useState(false);
@@ -75,7 +76,7 @@ const Register = () => {
 
     return  (
         <>
-        
+        <HeaderLogReg/>
         <section className="registerSection">
             <h1>Załóż konto</h1>
             <div className="registerDecoration"></div>
