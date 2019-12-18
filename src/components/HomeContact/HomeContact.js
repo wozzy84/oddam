@@ -107,7 +107,7 @@ const HomeContact = ()  => {
  
     
     return (
-           <section className="HomeContactSec">
+           <section className="HomeContactSec" id="Contact">
         <div className="ContactPic"></div>
         <div className="ContactTextContainer">
             <h2 className="contactTitle">Skontaktuj się z nami</h2>

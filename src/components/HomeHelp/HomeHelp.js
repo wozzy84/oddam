@@ -45,7 +45,7 @@ const HomeHelp = (props) => {
         setCurrentPage(1)
     }
     return (
-        <section className="HomeHelpSec">
+        <section className="HomeHelpSec" id="Help">
             <div className="HomeHelpNavCont">
                 <p className="HomeHelpTitle">Komu pomagamy?</p>
                 <div className="HomeDecoration"></div>

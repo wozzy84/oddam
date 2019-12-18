@@ -7,7 +7,7 @@ import { Link} from 'react-router-dom'
 const HomeFourSteps = () => {
     return (
       
-        <section className="HomeFourSteps" id="about">
+        <section className="HomeFourSteps" id="FourSteps">
             <div className="four_steps_call2action">
                 Wystarczą 4 proste kroki
             </div>

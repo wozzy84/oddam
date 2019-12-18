@@ -11,7 +11,7 @@ import { HomeContact } from '../HomeContact/HomeContact';
 
 const HomeContainer = (props) => {
     return (
-        <div className="HomeContainer">
+    <div className="HomeContainer">
              <div className="Header_MainSec_container">
             <HomeMainPic/>
             <div className="RightSubContainer">

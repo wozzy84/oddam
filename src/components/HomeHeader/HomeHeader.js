@@ -18,7 +18,7 @@ const HomeHeader = () => {
                         isDynamic={true}
                      ><li>Start</li></Link>
                       <Link activeClass="active"
-                        to="about"
+                        to="FourSteps"
                         spy={true}
                         smooth={true}
                         hashSpy={true}
@@ -28,7 +28,7 @@ const HomeHeader = () => {
                     <li>O co chodzi?</li>   
                         </Link>   
                         <Link activeClass="active"
-                        to="HomeAbout_sec"
+                        to="about"
                         spy={true}
                         smooth={true}
                         hashSpy={true}
@@ -38,7 +38,7 @@ const HomeHeader = () => {
                     <li>O nas</li>        
                         </Link>
                         <Link activeClass="active"
-                        to="HomeHelpSec"
+                        to="Help"
                         spy={true}
                         smooth={true}
                         hashSpy={true}
@@ -49,7 +49,7 @@ const HomeHeader = () => {
                     <li>Fundacja i oraganizacje</li>
                     </Link>
                     <Link activeClass="active"
-                        to="HomeContactSec"
+                        to="Contact"
                         spy={true}
                         smooth={true}
                         hashSpy={true}

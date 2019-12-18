@@ -2,24 +2,24 @@ import React from 'react'
 import {NavLink} from 'react-router-dom'
 import { useHistory } from "react-router-dom"
 import {auth} from '../../config'
-import {useState} from  'react'
+import { useSelector, useDispatch} from 'react-redux'
 
 
 const HomeLoginNav = () => {
-    const [logged, setLogged]  = useState(null)
+
     const history = useHistory();
-    
-    auth.onAuthStateChanged((e)=> {
-        if(e) {
-            setLogged(e.email)
-            
-        }
-        else setLogged(null)
-    })
+    const dispatch = useDispatch()
+    const logged = useSelector(state => state.loggedUser.email)
 
     const handleClick = () => {
         auth.signOut().then( ()=> {
-            setLogged(null);
+            dispatch({
+                type: "LOGGED_USER",
+                payload: {
+                    email: null,
+                    uid: null
+                }
+            })
             history.push('/wylogowano')
 
         })

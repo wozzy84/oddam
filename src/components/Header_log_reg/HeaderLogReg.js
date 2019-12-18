@@ -1,5 +1,5 @@
 import React from 'react'
-import {Link} from 'react-router-dom'
+import { HashLink as Link } from 'react-router-hash-link';
 import {HomeLoginNav} from '../HomeLoginNav/HomeLoginNav'
 
 const HeaderLogReg = () => {
@@ -11,58 +11,11 @@ const HeaderLogReg = () => {
              <HomeLoginNav/>
             <nav className="mainNav">
                 <ul className="navigation mainUl" >
-                    <Link activeClass="active"
-                        to="/"
-                        spy={true}
-                        smooth={true}
-                        hashSpy={true}
-                        offset={20}
-                        duration={500}
-                        isDynamic={true}
-                     ><li>Start</li></Link>
-                      <Link activeClass="active"
-                        to="/#about"
-                        spy={true}
-                        smooth={true}
-                        hashSpy={true}
-                        offset={20}
-                        duration={500}
-                        isDynamic={true}>
-                    <li>O co chodzi?</li>   
-                        </Link>   
-                        <Link activeClass="active"
-                        to="HomeAbout_sec"
-                        spy={true}
-                        smooth={true}
-                        hashSpy={true}
-                        offset={20}
-                        duration={500}
-                        isDynamic={true}>
-                    <li>O nas</li>        
-                        </Link>
-                        <Link activeClass="active"
-                        to="HomeHelpSec"
-                        spy={true}
-                        smooth={true}
-                        hashSpy={true}
-                        offset={20}
-                        duration={500}
-                        isDynamic={true}>
-                    
-                    <li>Fundacja i oraganizacje</li>
-                    </Link>
-                    <Link activeClass="active"
-                        to="HomeContactSec"
-                        spy={true}
-                        smooth={true}
-                        hashSpy={true}
-                        offset={50}
-                        duration={500}
-                        isDynamic={true}>
-                         <li>Kontakt</li>   
-                        </Link>
-                    
-
+                    <Link activeClass="active" to="/"><li>Start</li></Link>
+                    <Link activeClass="active" to="/#FourSteps"><li>O co chodzi?</li></Link>   
+                    <Link activeClass="active" to="/#about"><li>O nas</li></Link>
+                    <Link activeClass="active" to="/#Help"><li>Fundacja i oraganizacje</li></Link>
+                    <Link activeClass="active" to="/#Contact"><li>Kontakt</li></Link>
                 </ul>
             </nav>
         </div>
