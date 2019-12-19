@@ -1,7 +1,10 @@
 import React from 'react';
 import { Link} from 'react-router-dom'
+import {useSelector}from 'react-redux'
 
 const HomeMainSec = () => {
+    const logged = useSelector(state => state.loggedUser.email)
+
     return (
            
     <div className="HomeMainSec">
@@ -9,8 +12,8 @@ const HomeMainSec = () => {
             <div className="callToAction"><p>Zacznij pomagać!<br/> Oddaj niechciane rzeczy w zaufane ręce</p></div>
             <div className="decorationElement"></div>
             <div className="buttonsContainer">
-               <Link to='logowanie'><button>ODDAJ <br/>RZECZY</button></Link> 
-               <Link to='logowanie'><button id="org">ZORGANIZUJ ZBIÓRKĘ</button> </Link>
+               <button><Link to={logged?'oddaj-rzeczy':'logowanie'}>ODDAJ<br/>RZECZY</Link> </button>
+                <button id="org"><Link to='logowanie'>ZORGANIZUJ ZBIÓRKĘ </Link></button> 
             </div>
         </div>    
     </div>  

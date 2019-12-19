@@ -1,14 +1,23 @@
 
 
-.loginUl_logged li {
+.loginUl_logged li > a {
     font-size: 14px;
     color: #737373;
     border: 0.75px solid transparent;
     justify-content: center;
     padding: 9px 10px;
-
-
- 
+    text-decoration: none;
+}
+.loginUl_logged li {
+    font-size: 14px;
+    color: #737373;
+    border: 0.75px solid transparent;
+    justify-content: center;
+    margin: 9px 10px;
+    text-decoration: none;
+}
+.loginUl_logged li:last-child {
+    margin-right: 0px;
 }
 
 li.HiLogged{
@@ -20,13 +29,13 @@ li.oddaj_link {
     border: 0.75px solid #FAD648;
 }
 
-.loginUl li {
+.loginUl li > a{
     font-size: 14px;
     color: #737373;
     border: 0.75px solid transparent;
-
-justify-content: center;
-padding: 9px 10px;
+    text-decoration: none;
+    justify-content: center;
+    padding: 9px 10px;
 
     &:hover {
         border: 0.75px solid #FAD648;

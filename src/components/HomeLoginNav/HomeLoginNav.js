@@ -31,7 +31,7 @@ const HomeLoginNav = () => {
             <nav className="loginNav">
             <ul className="navigation loginUl_logged">
                 <li className="HiLogged">Cześć {logged}!</li>
-                <NavLink to='/oddaj-rzeczy'><li className="oddaj_link">Oddaj rzeczy</li></NavLink>
+                <li className="oddaj_link"><NavLink to='/oddaj-rzeczy'>Oddaj rzeczy</NavLink></li>
                 <li onClick={handleClick}>Wyloguj</li>
                
             </ul>
@@ -41,8 +41,8 @@ const HomeLoginNav = () => {
         return (    
             <nav className="loginNav">
             <ul className="navigation loginUl">
-                <NavLink to='/logowanie'><li>Zaloguj</li></NavLink>
-                <NavLink to ='rejestracja'><li>Załóż konto</li></NavLink>
+                <li><NavLink to='/logowanie'>Zaloguj</NavLink></li>
+                <li><NavLink to ='rejestracja'>Załóż konto</NavLink></li>
                
             </ul>
         </nav>

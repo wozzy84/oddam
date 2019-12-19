@@ -24,8 +24,24 @@
 .buttonsContainer {
     display: flex;
     button {
-        @include button_mixin;
-        
+            background: transparent;
+            border: none;
+            margin: 20px;
+        a {
+            display: block;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 120px;
+            width: 310px; 
+            text-align: center;
+            font-size: 36px;
+            font-family: $font-base-light;
+            cursor: pointer;
+            color:  #3C3C3C;
+            border: 0.75px solid  #3C3C3C;
+            text-decoration: none;
+        }
     }
 }
 

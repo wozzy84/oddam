@@ -9,19 +9,23 @@
 
 .navigation li {
     display: inline-block;
-    margin: 10px;
+}
+
+.navigation li > a{
+    display: block;
+   
     cursor: pointer;
+    padding: 9px 20px;
 }
-.navigation li:last-child {
-    margin-right: 0px;
-}
+
+
 
 .mainUl li{
 font-size: 18px;
 border: 0.75px solid transparent;
-
 justify-content: center;
-padding: 9px 20px;
+
+
 
     &:hover {
         border: 0.75px solid #3C3C3C;

@@ -3,8 +3,11 @@ import SvgIcon1 from '../../assets/Icons/Icon1'
 import SvgIcon2 from '../../assets/Icons/Icon2'
 import SvgIcon3 from '../../assets/Icons/Icon3'
 import SvgIcon4 from '../../assets/Icons/Icon4'
-import { Link} from 'react-router-dom'
+import {useSelector}from 'react-redux'
+import {Link} from 'react-router-dom'
 const HomeFourSteps = () => {
+    const logged = useSelector(state => state.loggedUser.email)
+
     return (
       
         <section className="HomeFourSteps" id="FourSteps">
@@ -39,7 +42,7 @@ const HomeFourSteps = () => {
                 </div>
                 </div>
             <div>
-                <Link to='logowanie'><button className="four_steps_button">ODDAJ <br/> RZECZY</button></Link>
+                <button className="four_steps_button"><Link to={logged?'oddaj-rzeczy':'logowanie'}>ODDAJ<br/>RZECZY</Link></button>
             </div>
 
 
