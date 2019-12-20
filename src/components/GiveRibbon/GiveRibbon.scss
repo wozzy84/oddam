@@ -1,0 +1,23 @@
+.RibbonContainer {
+   height: 180px;
+   background-color: #FAD648;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   padding: 0 142px;
+
+}
+
+.RibbonTitle {
+    font-family: $font-base-semi;
+    font-size: 36px;
+    line-height: 1.22;
+    margin-bottom: 5px;
+}
+
+.RibbonText {
+    font-size:22px;
+    line-height: 1.22;
+}
+
+

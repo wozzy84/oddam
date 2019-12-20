@@ -1,0 +1,94 @@
+.StepOneSec {
+    height: 883px;
+    background-image: url('../../assets/images/Background-Form.jpg');
+    padding-bottom: 50px;
+    padding-top: 50px
+}
+
+.StepOneForm {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: space-between;
+    // padding-top: 50px;
+    
+    margin-left: 142px;
+}
+
+.radioList {
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    min-width: 575px;
+    min-height: 368px;
+    font-size: 24px;
+    font-family: $font-base-light;
+    label {
+        cursor: pointer;
+    }
+}
+
+.radioElement > label{
+    display: flex;
+    align-items: center;
+    
+}
+
+
+[type=radio] {
+    position: absolute;;
+    left: -9999px;
+}
+
+[type="radio"]:not(:checked) + label:before {
+    content: '';
+    display: inline-block;
+    margin-right: 30px;
+    margin-top: 20px;
+    margin-bottom:20px;
+    position: relative;
+    width: 40px;
+    height: 40px;
+    border: 1px solid #3C3C3C;
+    background: transparent;
+    cursor: pointer;
+
+
+}
+
+
+[type="radio"]:checked + label:before {
+    content: '';
+    display: inline-block;
+    margin-right: 30px;
+    margin-top: 20px;
+    margin-bottom:20px;
+    position: relative;
+    width: 40px;
+    height: 40px;
+    border: 1px solid#3C3C3C;
+    background:#FAD648;
+    cursor: pointer;
+
+}
+
+.StepOneTitle {
+    font-size: 36px;
+    font-family: $font-base-semi;
+    line-height: 1.25;
+}
+
+.StepCounter {
+    font-size: 24px;
+    font-family: $font-base-light;
+}
+
+.fwdButton {
+    width: 180px;
+    height: 79px;
+    border: 1px solid#3C3C3C;
+    background: transparent;
+    font-size: 24px;
+    font-family: $font-base-light
+
+}

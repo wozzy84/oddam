@@ -1,10 +1,12 @@
 import { createStore, combineReducers, applyMiddleware } from "redux"
 import logger from "redux-logger"
 import {loggedUser} from './reducers'
+import {currentStep} from './reducers'
 
 
 const reducers = combineReducers({
-    loggedUser:loggedUser
+    loggedUser:loggedUser,
+    currentStep: currentStep
   })
 
 //store

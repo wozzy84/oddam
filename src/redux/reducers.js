@@ -6,4 +6,13 @@ function loggedUser (state = {}, action) {
     return state
 }
 
-export {loggedUser}
+function currentStep (state = {currentStep:1}, action) {
+    switch (action.type) {
+        case "CURRENT_STEP":
+            return action.payload 
+
+    }
+    return state
+}
+
+export {loggedUser, currentStep}
