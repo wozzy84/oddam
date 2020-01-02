@@ -1,0 +1,111 @@
+.StepTwoSec {
+    height: 883px;
+    background-image: url('../../assets/images/Background-Form.jpg');
+    padding-bottom: 50px;
+    padding-top: 50px
+}
+
+.StepTwoForm {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: space-between;
+    // padding-top: 50px;
+    
+    margin-left: 142px;
+}
+
+.StepTwoTitle {
+    font-size: 36px;
+    font-family: $font-base-semi;
+    line-height: 1.25;
+    position: absolute;
+    padding-top: 200px;
+}
+
+.StepCounter {
+    font-size: 24px;
+    font-family: $font-base-light;
+}
+
+.fwdButton, .revButton {
+   @include buttonsFdwRev
+
+}
+
+
+.revButton {
+    margin-right: 50px;
+}
+
+.GiveSelect {
+    width: 300px;
+    height: 40px;
+}
+.selectGroup {
+    position: absolute;
+    padding-top: 300px;
+    display: flex;
+    width: 800px;
+    
+}
+
+.bagLabel {
+    font-size:33px;
+    font-family: $font-base-light;
+    display: flex;
+    align-items: center;
+    position: absolute;
+
+}
+
+.selectAction {
+    font-size:24px;
+    margin-left: 30px;
+    width: 260px;
+    height: 49px;
+    border: 1px solid#3C3C3C;
+    display: flex;
+    padding-left:40px;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+}
+
+.StepTwoList {
+    
+    width: 50px;
+    font-size: 33px;
+    border: 1px solid #3C3C3C;
+    font-family: $font-base-light;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding:5px;
+    position: relative;
+    left:547px;
+    top:60px;
+
+}
+
+.StepTwoListElement {
+    font-size: 24px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    width: 50px;
+    text-align: center;
+    cursor: pointer;
+    
+
+}
+
+.StepTwoListElement:hover {
+    background-color:#3C3C3C;;
+    color:white;
+    width: 100%;
+    text-align: center;
+}
+.arrowIcon {
+    height: 26px;
+    width: 57px;
+}

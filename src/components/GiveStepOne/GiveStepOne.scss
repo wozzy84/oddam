@@ -84,11 +84,6 @@
 }
 
 .fwdButton {
-    width: 180px;
-    height: 79px;
-    border: 1px solid#3C3C3C;
-    background: transparent;
-    font-size: 24px;
-    font-family: $font-base-light
+    @include buttonsFdwRev
 
 }

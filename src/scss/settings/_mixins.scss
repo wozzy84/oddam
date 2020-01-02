@@ -17,3 +17,13 @@
         width: 253px;
         background: transparent url('../../assets/images/Decoration.svg') 0% 0% no-repeat padding-box;
 }
+
+@mixin buttonsFdwRev {
+        width: 180px;
+        height: 79px;
+        border: 1px solid#3C3C3C;
+        background: transparent;
+        font-size: 24px;
+        font-family: $font-base-light;
+        cursor: pointer;
+}

@@ -1,12 +1,20 @@
-import { createStore, combineReducers, applyMiddleware } from "redux"
+import { createStore, combineReducers, applyMiddleware} from "redux"
 import logger from "redux-logger"
-import {loggedUser} from './reducers'
+import {loggedUser, selectedOption, bags, Localization, reciever, organizationName} from './reducers'
 import {currentStep} from './reducers'
+
+
 
 
 const reducers = combineReducers({
     loggedUser:loggedUser,
-    currentStep: currentStep
+    currentStep: currentStep,
+    selectedOption: selectedOption,
+    bags: bags,
+    Localization:Localization,
+    reciever: reciever,
+    organizationName: organizationName
+ 
   })
 
 //store

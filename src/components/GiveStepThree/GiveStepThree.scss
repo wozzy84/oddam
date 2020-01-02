@@ -1,0 +1,121 @@
+.StepThreeSec {
+    height: 883px;
+    background-image: url('../../assets/images/Background-Form.jpg');
+    padding-bottom: 50px;
+    padding-top: 50px
+}
+
+.StepThreeForm {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: space-between;
+    margin-left: 142px;
+}
+
+
+.StepThreeTitle {
+    font-size: 36px;
+    font-family: $font-base-semi;
+    line-height: 1.25;
+
+}
+
+.StepCounter {
+    font-size: 24px;
+    font-family: $font-base-light;
+}
+
+.fwdButton, .revButton {
+   @include buttonsFdwRev
+
+}
+
+.revButton {
+    margin-right: 50px;
+}
+
+
+
+.selectThreeAction {
+    font-size:24px;
+    width: 260px;
+    height: 49px;
+    border: 1px solid#3C3C3C;
+    display: flex;
+    padding-left:40px;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    position: relative;
+    margin-top: -80px;
+    
+}
+
+.StepThreeList {
+    width: 290px;
+    font-size: 33px;
+    border: 1px solid #3C3C3C;
+    font-family: $font-base-light;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding:5px;
+    position: absolute;
+    top:1320px;
+    background-color:#E8E9E4
+
+}
+
+.StepThreeListElement {
+    font-size: 24px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    width: 260px;
+    text-align: left;
+    padding-left: 10px;
+    cursor: pointer;
+    
+
+}
+
+.StepThreeListElement:hover {
+    background-color:#3C3C3C;;
+    color:white;
+
+}
+.arrowIcon {
+    height: 26px;
+    width: 57px;
+}
+
+.StepThreeSubTitle {
+    font-family: $font-base-semi;
+    font-size: 24px;
+}
+
+.ChooseRecieverList {
+    display: flex;
+    flex-wrap: wrap;
+    width: 600px;
+}
+
+.ChooseRecieverElement{
+    border:1px solid #3C3C3C;
+    font-family: $font-base-light;
+    font-size: 24px;
+    padding:15px;
+    margin: 10px 20px 10px 0px;
+    cursor: pointer;
+}
+
+.TextInputStepThree {
+    margin-top: 20px;
+    height: 40px;
+    width: 570px;
+    border:1px solid #3C3C3C;
+    background-color: transparent;
+    font-size: 24px;
+    font-family: $font-base-light;
+    padding-left: 10px;
+}
