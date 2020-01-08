@@ -1,3 +1,8 @@
+const initial = {
+    city: "",
+    street:"" 
+}
+
 function loggedUser (state = {}, action) {
     switch (action.type) {
         case "LOGGED_USER":
@@ -56,5 +61,49 @@ function organizationName (state = "", action) {
 }
 
 
+function controledForm (state={},action) {
+    switch (action.type) {
+        case "STREET":   
+            return    {
+                ...state,
+                street: action.street
+            }
+        case "CITY":
+            return    {
+                ...state,
+                city: action.city
+            }
+        case "ZIP_CODE":
+            return    {
+                ...state,
+                zipCode: action.zipCode
+            }
+        case "PHONE":
+            return {
+                ...state,
+                phone: action.phone
+            } 
+       
+        case "RECIEVE_DATA":
+            return {
+                ...state,
+                recieveData: action.recieveData
+            }          
+        case "RECIEVE_HOUR":
+            return {
+                ...state,
+                recieveHour: action.recieveHour
+            }
+        case "REMARKS":
+            return {
+                ...state,
+                remarks: action.remarks
+            }
+        
+    }
+    return state
+} 
 
-export {loggedUser, currentStep, selectedOption, bags, Localization, reciever, organizationName}
+
+
+export {loggedUser, currentStep, selectedOption, bags, Localization, reciever, organizationName ,controledForm}

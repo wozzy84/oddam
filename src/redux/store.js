@@ -1,7 +1,8 @@
 import { createStore, combineReducers, applyMiddleware} from "redux"
 import logger from "redux-logger"
-import {loggedUser, selectedOption, bags, Localization, reciever, organizationName} from './reducers'
+import {loggedUser, selectedOption, bags, Localization, reciever, organizationName, controledForm} from './reducers'
 import {currentStep} from './reducers'
+import * as updateActions from '../components/GiveStepFour/updateAction'
 
 
 
@@ -13,7 +14,9 @@ const reducers = combineReducers({
     bags: bags,
     Localization:Localization,
     reciever: reciever,
-    organizationName: organizationName
+    organizationName: organizationName,
+    controledForm: controledForm
+  
  
   })
 
