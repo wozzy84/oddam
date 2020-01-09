@@ -2,7 +2,7 @@ import { createStore, combineReducers, applyMiddleware} from "redux"
 import logger from "redux-logger"
 import {loggedUser, selectedOption, bags, Localization, reciever, organizationName, controledForm} from './reducers'
 import {currentStep} from './reducers'
-import * as updateActions from '../components/GiveStepFour/updateAction'
+
 
 
 

@@ -2,7 +2,7 @@ import React from 'react';
 import { useSelector, useDispatch} from 'react-redux'
 import { useForm } from 'react-hook-form'
 import { connect } from 'react-redux';
-import * as updateAction from './updateAction'
+
 
 
 
@@ -11,9 +11,19 @@ const  GiveStepFour = (props) => {
     const step = useSelector(state => state.currentStep)
     const controledForm = useSelector(state=>state.controledForm)
     const { register, handleSubmit, watch, errors, control } = useForm()
-    const onSubmit = data => { console.log("hello", data) }
+   
     const errorBorder = {border: "1px solid  #D8000C", outline: "none"}
     const errorMsg = {color: "#D8000C", fontSize: "20px"}
+    
+     const onSubmit = (data) => { console.log("hello", data)
+            dispatch({
+                
+            type: "CURRENT_STEP",
+            payload  : {
+                currentStep: +step.currentStep+1
+            }          
+})    }
+    
     const handleChange = (e) => {
         switch (e.currentTarget.name){
             case "street":
@@ -117,7 +127,7 @@ const  GiveStepFour = (props) => {
                 </div>    
                 <div>
                     <button  className="revButton" type="button" value={-1} onClick={handleClick}>Wstecz</button>
-                    <button  className="fwdButton" type="submit" value={1} onClick={handleClick} >Dalej</button>
+                    <button  className="fwdButton" type="submit" value={0} data-val={1} onClick={handleClick} >Dalej</button>
                 </div>
                 {errors.street && <p style={errorMsg}>Podaj adres odbioru!</p>}
                 {errors.city &&  <p style={errorMsg}>Podaj miasto!</p>}

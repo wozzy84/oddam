@@ -1,0 +1,94 @@
+.StepFiveSec {
+    height: 883px;
+    background-image: url('../../assets/images/Background-Form.jpg');
+    padding-bottom: 50px;
+    padding-top: 50px
+}
+.StepFiveForm {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: space-between;
+    margin-left: 142px;
+    font-size: 24px;
+    font-family: $font-base-light;
+    line-height: 1.33;
+   
+    h3 {
+        font-family: $font-base-semi;
+        margin-bottom: 20px;
+        font-size: 34px
+    }
+    h4 {
+        font-family: $font-base-semi;
+        margin-bottom: 20px;
+   
+    }
+    
+}
+
+.StepFiveFormColumn {
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+    width: 392px; 
+ 
+
+}
+
+.StepFiveFormWrapper {
+    display: flex;
+    width: 900px;
+    justify-content: space-between;
+}
+
+.StepFiveInputGroup {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+
+
+
+}
+
+.SummaryLabel {
+   
+    max-width: 150px;   
+    margin-bottom: 25px
+
+}
+
+.SummaryDescription{
+    margin-bottom: 25px;
+    max-width: 250px;
+}
+
+.SummaryBriefTitle {
+    font-size: 24px;
+    font-family: $font-base-semi;
+}
+
+.ShirtIcon {
+    background-image: url('../../assets/Icons/IconShirt.png');
+    width: 45px;
+    height: 45px;
+    display: inline-block;
+    background-position: center;
+    margin: 10px;
+}
+
+.CircleIcon {
+    background-image: url('../../assets/Icons/IconCircle.png');
+    width: 45px;
+    height: 45px;
+    display: inline-block;
+    background-position: center;
+    margin: 10px;
+}
+.SummaryBriefDetails {
+ display: flex;
+   
+ align-items: center;
+
+}

@@ -19,10 +19,14 @@ function currentStep (state = {currentStep:1}, action) {
     }
     return state
 }
-function selectedOption (state = "", action) {
+function selectedOption (state = [], action) {
     switch (action.type) {
         case "SELECTED_OPTION":
-            return action.payload 
+            const clearedData = state.filter(data=>data.selectedOption!=action.payload.selectedOption)
+            const dataSource = [...clearedData , action.payload].filter(data=>data.checked)
+            return dataSource
+            
+         
 
     }
     return state
