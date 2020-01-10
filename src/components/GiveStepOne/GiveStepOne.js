@@ -1,17 +1,17 @@
 import React from 'react';
 import { useSelector, useDispatch} from 'react-redux'
-import { checkServerIdentity } from 'tls';
+import {useState} from 'react'
+
 
 
 const  GiveStepOne = () => {
-
+    const [error, setError] = useState(false)
   
     const dispatch = useDispatch()
     const step = useSelector(state => state.currentStep)
-    
     const option = useSelector(state => state.selectedOption)
-
     const handleOptionChange = (e) =>{
+    
         dispatch({
             type:"SELECTED_OPTION",
             payload :{
@@ -21,23 +21,28 @@ const  GiveStepOne = () => {
             }
             
         })
+     
+        setError(false)
+    
     }
     
-
+   
 
     const handleClick = () => {
-        dispatch({
-           
-                type: "CURRENT_STEP",
-                payload  : {
-                 currentStep: step.currentStep+1
+        if(option.length){
+            dispatch({
+            type: "CURRENT_STEP",
+            payload  : {
+                currentStep: step.currentStep+1
                 }
-
-                
-        })
-
+            }) 
+       
               
+        }    else {
+            setError(true)
+        }
     }
+
 
     return (
         <>
@@ -47,7 +52,7 @@ const  GiveStepOne = () => {
                 <h3 className="StepOneTitle">Zaznacz co chcesz oddać:</h3>
                 <ul className="radioList">  
                     <li className="radioElement">
-                        <input name="StepOneRadio1" data-description="ubranina, które nadają się do ponownego użycia" checked = {option.some(e => e.selectedOption === 'option1')} className="StepOneRadio" type="checkbox" id="SteoOneRadio1"  value="option1"  onChange={handleOptionChange}>
+                        <input name="StepOneRadio1" data-description="ubrania, które nadają się do ponownego użycia" checked = {option.some(e => e.selectedOption === 'option1')} className="StepOneRadio" type="checkbox" id="SteoOneRadio1"  value="option1"  onChange={handleOptionChange}>
                         </input>
                         <label htmlFor="SteoOneRadio1">ubranina, które nadają się do ponownego użycia</label>
                     </li>
@@ -68,21 +73,18 @@ const  GiveStepOne = () => {
                         <label htmlFor="SteoOneRadio5">inne</label>
                     </li>                  
                 </ul>
+                {error && <p style={{color:"red"}}>Wybierz przynajmniej jedną opcję</p>}
                 <button  className="fwdButton" type="button" onClick={handleClick}>Dalej</button>
-                
-            </form>
-
-            
-            
-
+               
+            </form>     
+                   
+ 
         </section>
 
-        
-
+         
         </>
     )
 }
 
 export {GiveStepOne}
 
-// checked={option.selectedOption==="option1"}

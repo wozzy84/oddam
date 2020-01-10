@@ -5,7 +5,7 @@ import {SvgIconArrowUp} from '../../../assets/Icons/IconArrowUp'
 import {SvgIconArrowDown} from '../../../assets/Icons/IconArrowDown'
 import OutsideClickHandler from 'react-outside-click-handler';
 
-const  GiveStepThreeList = () => {
+const  GiveStepThreeList = (props) => {
 
     const dispatch = useDispatch()
     const Localization = useSelector(state => state.Localization)
@@ -22,6 +22,7 @@ const  GiveStepThreeList = () => {
             }
         })
         setActiveList(false)
+        props.pass(false)
 
     }
 

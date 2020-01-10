@@ -10,9 +10,10 @@ const  GiveSummary = () => {
     const bags = useSelector(state => state.bags.bags)
     const controledForm = useSelector(state=>state.controledForm)
     const option = useSelector(state => state.selectedOption)
-    const { register, handleSubmit, watch, errors, control } = useForm()
+    const recievers = useSelector(state=>state.reciever)
+    const { handleSubmit} = useForm()
     
-    const onSubmit = (data) => { console.log("hello", data)
+    const onSubmit = () => { 
         dispatch({   
             type: "CURRENT_STEP",
             payload  : {
@@ -38,7 +39,7 @@ const  GiveSummary = () => {
                 <h3 className="StepFiveTitle">Podsumowanie Twojej darowizny</h3>        
                 <div className="SummaryBriefContainer">
                     <h5 className="SummaryBriefTitle">Oddajesz:</h5>
-                    <p className="SummaryBriefDetails"><span className="ShirtIcon"></span>{bags} {option.map(e=> e.optionDescription +', ')}, dzieciom</p>
+                    <p className="SummaryBriefDetails"><span className="ShirtIcon"></span>{bags} {option.map(e=> e.optionDescription +', ')} {recievers.map(e=> e+", ")} </p>
                     <p className="SummaryBriefDetails"><span className="CircleIcon"> </span>dla lokalizacji: {localization}</p>
                 </div>
                 

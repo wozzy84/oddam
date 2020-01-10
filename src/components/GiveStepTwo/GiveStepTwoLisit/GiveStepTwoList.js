@@ -4,8 +4,9 @@ import { useSelector, useDispatch} from 'react-redux'
 import {SvgIconArrowUp} from '../../../assets/Icons/IconArrowUp'
 import {SvgIconArrowDown} from '../../../assets/Icons/IconArrowDown'
 import OutsideClickHandler from 'react-outside-click-handler';
+import { tsPropertySignature } from '@babel/types';
 
-const  GiveStepTwoList = () => {
+const  GiveStepTwoList = (props) => {
 
     const dispatch = useDispatch()
     const bags = useSelector(state => state.bags)
@@ -21,9 +22,10 @@ const  GiveStepTwoList = () => {
             }
         })
         setActiveList(false)
-
+        if(typeof e.currentTarget.value =="number") {
+            props.pass(false)
+        }
     }
-
 
     return(
         <>

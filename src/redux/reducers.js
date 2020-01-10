@@ -24,9 +24,7 @@ function selectedOption (state = [], action) {
         case "SELECTED_OPTION":
             const clearedData = state.filter(data=>data.selectedOption!=action.payload.selectedOption)
             const dataSource = [...clearedData , action.payload].filter(data=>data.checked)
-            return dataSource
-            
-         
+            return dataSource    
 
     }
     return state
@@ -48,12 +46,17 @@ function Localization (state = {Localization:"wybierz"}, action) {
     return state
 }
 
-function reciever (state = '', action) {
+function reciever (state = [], action) {
     switch (action.type) {
         case "SELECT_RECIEVER":
-            return action.payload
+           if(state.includes(action.payload.currentReciever)){
+                const filteredRevievers =  state.filter(data=>data!=action.payload.currentReciever)
+            return filteredRevievers
+           } 
+           return [...state, action.payload.currentReciever]
+        
     }
-    return state
+    return  state
 }
 
 function organizationName (state = "", action) {
