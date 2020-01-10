@@ -1,6 +1,6 @@
 import { createStore, combineReducers, applyMiddleware} from "redux"
 import logger from "redux-logger"
-import {loggedUser, selectedOption, bags, Localization, reciever, organizationName, controledForm} from './reducers'
+import {loggedUser, selectedOption, bags, Localization, reciever, organizationName, controledForm, DataPicker} from './reducers'
 import {currentStep} from './reducers'
 
 
@@ -15,7 +15,8 @@ const reducers = combineReducers({
     Localization:Localization,
     reciever: reciever,
     organizationName: organizationName,
-    controledForm: controledForm
+    controledForm: controledForm,
+    data: DataPicker
   
  
   })

@@ -3,6 +3,7 @@ import { useSelector, useDispatch} from 'react-redux'
 import { useForm } from 'react-hook-form'
 
 
+
 const  GiveSummary = () => {
     const dispatch = useDispatch()   
     const step = useSelector(state => state.currentStep)
@@ -11,12 +12,15 @@ const  GiveSummary = () => {
     const controledForm = useSelector(state=>state.controledForm)
     const option = useSelector(state => state.selectedOption)
     const recievers = useSelector(state=>state.reciever)
+    const data = useSelector(state=>state.data)
     const { handleSubmit} = useForm()
+
+    console.log(data)
     
     const onSubmit = () => { 
         dispatch({   
             type: "CURRENT_STEP",
-            payload  : {
+            payload: {
                 currentStep: step.currentStep+1
             }          
         })
@@ -68,7 +72,7 @@ const  GiveSummary = () => {
                         <h4>Termin odbioru:</h4>
                         <div className="StepFouruInputGroup">
                             <p className="SummaryLabel">Data</p>
-                            <p className="SummaryDescription">{controledForm.recieveData}</p>
+                            <p className="SummaryDescription">{data.toLocaleDateString()}</p>
                         </div>
                         <div className="StepFouruInputGroup">
                             <p className="SummaryLabel">Godzina</p>

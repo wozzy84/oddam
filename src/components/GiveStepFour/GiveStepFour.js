@@ -1,9 +1,13 @@
 import React from 'react';
 import { useSelector, useDispatch} from 'react-redux'
 import { useForm } from 'react-hook-form'
-import { connect } from 'react-redux';
+import DatePicker from "react-datepicker";
+import {useState} from "react"
+import { registerLocale } from  "react-datepicker";
+import pl from 'date-fns/locale/pl';
+import "react-datepicker/dist/react-datepicker.css";
 
-
+registerLocale('pl', pl)
 
 
 const  GiveStepFour = (props) => {
@@ -14,6 +18,18 @@ const  GiveStepFour = (props) => {
    
     const errorBorder = {border: "1px solid  #D8000C", outline: "none"}
     const errorMsg = {color: "#D8000C", fontSize: "20px"}
+    const data = useSelector(state=>state.data)
+    
+
+
+    const handleChangeDate = (e) => {
+       console.log(e) 
+         dispatch ({
+             type: 'DATE_PICKER',
+             date: e
+        })
+  
+}
     
      const onSubmit = (data) => { console.log("hello", data)
             dispatch({
@@ -51,13 +67,8 @@ const  GiveStepFour = (props) => {
                 phone:  e.currentTarget.value
             })
             break
-            case "recieveData":
-            dispatch({
-                type: 'RECIEVE_DATA',
-                recieveData:  e.currentTarget.value
-            })
-            break
             case "recieveHour":
+              
             dispatch({
                 type: 'RECIEVE_HOUR',
                 recieveHour:  e.currentTarget.value
@@ -113,8 +124,8 @@ const  GiveStepFour = (props) => {
                         <h4>Termin odbioru:</h4>
                         <div className="StepFouruInputGroup">
                             <label>Data</label>
-                            <input name="recieveData" type="text" defaultValue={controledForm.recieveData} onChange={handleChange}  placeholder={"DD/MM/YYYY"}ref={register ({ required:true, minLength: {value: 4}, pattern: /^([0-2][0-9]|(3)[0-1])(\/)(((0)[0-9])|((1)[0-2]))(\/)\d{4}$/})} style={errors.recieveData? errorBorder: null}></input>
-                        </div>
+                            <DatePicker selected={data} minDate={new Date} locale="pl"dateFormat="dd/MM/yyyy" onChange={handleChangeDate}/>
+                            </div>
                         <div className="StepFouruInputGroup">
                             <label>Godzina</label>
                             <input name="recieveHour" type="text" defaultValue={controledForm.recieveHour} onChange={handleChange} placeholder={"HH:MM"}  ref={register ({ required:true, minLength: {value: 5}, pattern: /^(0[0-9]|1[0-9]|2[0-3]|[0-9]):[0-5][0-9]$/ })} style={errors.recieveHour? errorBorder: null}></input>    
@@ -138,6 +149,7 @@ const  GiveStepFour = (props) => {
                 {errors.remarks && <p style ={errorMsg}>Wiadomość może mieć maksymalnie 120 znaków</p>}
 
             </form>
+          
         </section>
         </>
     )   

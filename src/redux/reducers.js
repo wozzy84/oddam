@@ -89,13 +89,7 @@ function controledForm (state={},action) {
             return {
                 ...state,
                 phone: action.phone
-            } 
-       
-        case "RECIEVE_DATA":
-            return {
-                ...state,
-                recieveData: action.recieveData
-            }          
+            }        
         case "RECIEVE_HOUR":
             return {
                 ...state,
@@ -111,6 +105,14 @@ function controledForm (state={},action) {
     return state
 } 
 
+function DataPicker (state=new Date(), action) {
+    switch(action.type) {
+       case "DATE_PICKER":
+        return action.date  
+    } 
+    return state
+}
 
 
-export {loggedUser, currentStep, selectedOption, bags, Localization, reciever, organizationName ,controledForm}
+
+export {loggedUser, currentStep, selectedOption, bags, Localization, reciever, organizationName ,controledForm, DataPicker}
