@@ -15,7 +15,7 @@ const  GiveSummary = () => {
     const data = useSelector(state=>state.data)
     const { handleSubmit} = useForm()
 
-    console.log(data)
+ 
     
     const onSubmit = () => { 
         dispatch({   
@@ -35,6 +35,19 @@ const  GiveSummary = () => {
                 }          
         })    
     }
+    const handleBags = (e) => {
+        switch(e) {
+            case 1:
+            return "worek, "
+            case 2: 
+            case 3:
+            case 4:
+            return "worki, "
+            case 5:
+            return "worków, "
+            
+        }
+    } 
 
     return (
         <>
@@ -43,7 +56,7 @@ const  GiveSummary = () => {
                 <h3 className="StepFiveTitle">Podsumowanie Twojej darowizny</h3>        
                 <div className="SummaryBriefContainer">
                     <h5 className="SummaryBriefTitle">Oddajesz:</h5>
-                    <p className="SummaryBriefDetails"><span className="ShirtIcon"></span>{bags} {option.map(e=> e.optionDescription +', ')} {recievers.map(e=> e+", ")} </p>
+                    <p className="SummaryBriefDetails"><span className="ShirtIcon"></span>{bags} {handleBags(bags)}{option.map(e=> e.optionDescription +', ')} {recievers.map(e=> e+", ")} </p>
                     <p className="SummaryBriefDetails"><span className="CircleIcon"> </span>dla lokalizacji: {localization}</p>
                 </div>
                 

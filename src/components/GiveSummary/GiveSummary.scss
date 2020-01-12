@@ -71,8 +71,8 @@
 
 .ShirtIcon {
     background-image: url('../../assets/Icons/IconShirt.png');
-    width: 45px;
-    height: 45px;
+    min-width: 45px;
+    min-height: 45px;
     display: inline-block;
     background-position: center;
     margin: 10px;
@@ -87,8 +87,8 @@
     margin: 10px;
 }
 .SummaryBriefDetails {
- display: flex;
-   
- align-items: center;
+    display: flex;  
+    align-items: center;
+    max-width: 1000px
 
 }
