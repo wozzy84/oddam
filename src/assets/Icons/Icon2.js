@@ -31,4 +31,4 @@ const SvgIcon2 = props => (
   </svg>
 );
 
-export default SvgIcon2;
+export  {SvgIcon2};

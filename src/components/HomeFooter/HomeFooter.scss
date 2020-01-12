@@ -1,0 +1,23 @@
+.FooterSec {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    padding-bottom: 20px;
+    flex-direction: column;
+    max-width: 1410px;
+    margin: 0 auto;
+    div {
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+        margin-top: -22px;
+        span {
+            margin-left: 10px;
+            margin-right: 5px;
+            cursor: pointer;
+        }
+     
+    }
+
+}

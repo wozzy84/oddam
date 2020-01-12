@@ -1,8 +1,8 @@
 import React from 'react'
-import SvgIcon1 from '../../assets/Icons/Icon1'
-import SvgIcon2 from '../../assets/Icons/Icon2'
-import SvgIcon3 from '../../assets/Icons/Icon3'
-import SvgIcon4 from '../../assets/Icons/Icon4'
+import {SvgIcon1} from '../../assets/Icons/Icon1'
+import {SvgIcon2} from '../../assets/Icons/Icon2'
+import {SvgIcon3} from '../../assets/Icons/Icon3'
+import {SvgIcon4} from '../../assets/Icons/Icon4'
 import {useSelector}from 'react-redux'
 import {Link} from 'react-router-dom'
 const HomeFourSteps = () => {

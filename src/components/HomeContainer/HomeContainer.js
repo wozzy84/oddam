@@ -7,6 +7,7 @@ import { HomeFourSteps} from '../HomeFourSteps/HomeFourSteps'
 import { HomeAbout } from '../HomeAbout/HomeAbout';
 import { HomeHelp } from '../HomeHelp/HomeHelp';
 import { HomeContact } from '../HomeContact/HomeContact';
+import { HomeFooter} from '../HomeFooter/HomeFooter'
 
 
 const HomeContainer = (props) => {
@@ -26,6 +27,7 @@ const HomeContainer = (props) => {
             <HomeAbout/>
             <HomeHelp/>
             <HomeContact/> 
+            <HomeFooter/>
         </div>
        
     )

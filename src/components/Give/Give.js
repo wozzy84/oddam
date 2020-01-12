@@ -4,6 +4,7 @@ import {GiveHeader} from '../GiveHeader/GiveHeader'
 import {useSelector}from 'react-redux'
 import { HomeContact } from '../HomeContact/HomeContact';
 import { GiveSteps } from '../GiveSteps/GiveSteps';
+import {HomeFooter} from '../HomeFooter/HomeFooter';
 
 
 
@@ -19,12 +20,11 @@ const Give = () => {
                         <div className="GiveRightSubContainer">
                             <GiveHeader/>
                             <GiveMainSec/>
-                        </div>
-                            
-
+                        </div>        
                      </div>
                     <GiveSteps/>
                     <HomeContact/>
+                    <HomeFooter/>
                 </div>
 
             </>
