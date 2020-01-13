@@ -1,5 +1,8 @@
-
-
+.loginNav {
+    @media(max-width: 1024px) {
+        display: none;
+    }
+}
 .loginUl_logged li > a {
     font-size: 14px;
     color: #737373;
@@ -10,7 +13,7 @@
 }
 .loginUl_logged li {
     font-size: 14px;
-    color: #737373;
+    color: #737373; 
     border: 0.75px solid transparent;
     justify-content: center;
     margin: 9px 10px;

@@ -9,27 +9,64 @@
 
 .navigation li {
     display: inline-block;
+  
 }
 
-.navigation li > a{
-    display: block;
-   
+.navigation li > a{ 
+    display: block; 
     cursor: pointer;
     padding: 9px 20px;
+    @media (max-width: 1240px) {
+        padding: 9px 10px
+    }
 }
 
-
-
 .mainUl li{
-font-size: 18px;
-border: 0.75px solid transparent;
-justify-content: center;
-
+    font-size: 18px;
+    border: 0.75px solid transparent;
+    justify-content: center;
+    cursor: pointer;
+        @media (max-width: 1024px) {
+            display: flex; 
+            
+           
+        }
+ 
 
 
     &:hover {
         border: 0.75px solid #3C3C3C;
     }
-
 }
+
+.mainUl {
+    @media (max-width: 1024px) {
+        position: relative;
+     
+        border: 0.75px solid #3C3C3C;
+        &:hover {
+            border: 0.75px solid #3C3C3C;
+        }
+    }
+}
+
+.hamburger { 
+   display: flex;
+   flex-direction: column;
+   align-items: flex-end;
+}
+
+.hamburger__span {
+    @media (max-width: 1024px) {
+        display:block;
+              justify-content: center;
+        width: 60px;
+        height: 8px;
+        border-radius: 5px;
+        background-color: black;
+        margin: 5px;
+    }
+}
+
+
 

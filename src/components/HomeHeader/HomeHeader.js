@@ -5,11 +5,13 @@ import {HomeLoginNav} from '../HomeLoginNav/HomeLoginNav'
 const HomeHeader = () => {
     return (
         <div className="HomeHeader">
+           
             <HomeLoginNav/>
             <nav className="mainNav">
+            <div className="hamburger"><span className="hamburger__span"></span><span className="hamburger__span"></span><span className="hamburger__span"></span></div>
                 <ul className="navigation mainUl" >
                     <li>
-                        <Link activeClass="active"
+                        <Link className="active"
                            to="target"
                            spy={true}
                            smooth={true}
@@ -21,7 +23,7 @@ const HomeHeader = () => {
                         </Link>
                      </li>
                     <li>
-                        <Link activeClass="active"
+                        <Link className="active"
                             to="FourSteps"
                             spy={true}
                             smooth={true}
@@ -33,7 +35,7 @@ const HomeHeader = () => {
                         </Link>
                     </li>                   
                     <li>
-                        <Link activeClass="active"
+                        <Link className="active"
                             to="about"
                             spy={true}
                             smooth={true}
@@ -45,7 +47,7 @@ const HomeHeader = () => {
                         </Link>
                     </li>
                     <li>
-                        <Link activeClass="active"
+                        <Link className="active"
                             to="Help"
                             spy={true}
                             smooth={true}
@@ -57,7 +59,7 @@ const HomeHeader = () => {
                         </Link>
                     </li>
                     <li>
-                        <Link activeClass="active"
+                        <Link className="active"
                             to="Contact"
                             spy={true}
                             smooth={true}

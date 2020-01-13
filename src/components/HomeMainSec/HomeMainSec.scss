@@ -1,6 +1,5 @@
 .HomeMainSec {
     height: 831px;
-    width: 100%;
     background-position: center;
     display: flex;
     justify-content: center;
@@ -23,12 +22,14 @@
 }
 .buttonsContainer {
     display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     button {
+
             background: transparent;
             border: none;
             margin: 20px;
         a {
-            display: block;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -46,6 +47,7 @@
 }
 
 .callToAction {
+display: flex;
   text-align: center;
   font-size: 38px;
   line-height: 55px;
