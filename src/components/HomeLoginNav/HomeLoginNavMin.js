@@ -5,7 +5,7 @@ import {auth} from '../../config'
 import { useSelector, useDispatch} from 'react-redux'
 
 
-const HomeLoginNav = () => {
+const HomeLoginNavMin = () => {
 
     const history = useHistory();
     const dispatch = useDispatch()
@@ -28,28 +28,22 @@ const HomeLoginNav = () => {
 
     if (logged){
         return (    
-            <nav className="loginNav">
-            <ul className="main-nav__list loginUl_logged">
-                <li className="HiLogged">Cześć {logged}!</li>
-                <li className="oddaj_link"><NavLink to='/oddaj-rzeczy'>Oddaj rzeczy</NavLink></li>
-                <li onClick={handleClick}>Wyloguj</li>
-               
-            </ul>
-        </nav>
-        )
+                <>
+                <li className= "main-nav__list-element ">Cześć {logged}!</li>
+                <li className="main-nav__list-element"><NavLink to='/oddaj-rzeczy' className="main-nav__link">Oddaj rzeczy</NavLink></li>
+                <li onClick={handleClick} className="main-nav__list-element">Wyloguj</li>
+                </>
+            )
     } else {
         return (    
-            <nav className="loginNav">
-            <ul className="navigation loginUl">
-                <li><NavLink to='/logowanie'>Zaloguj</NavLink></li>
-                <li><NavLink to ='rejestracja'>Załóż konto</NavLink></li>
-               
-            </ul>
-        </nav>
+            <>
+                <li className="main-nav__list-element" ><NavLink to='/logowanie' className="main-nav__link">Zaloguj</NavLink></li>
+                <li className="main-nav__list-element" ><NavLink to ='rejestracja' className="main-nav__link">Załóż konto</NavLink></li> 
+            </>
         )
     }
 
 } 
 
 
-export {HomeLoginNav}
+export {HomeLoginNavMin}
