@@ -113,6 +113,14 @@ function DataPicker (state=new Date(), action) {
     return state
 }
 
+function SideMenu (state=false, action) {
+    switch(action.type) {
+        case "SIDE_MENU":
+        return action.active
+    }
+    return state
+}
 
 
-export {loggedUser, currentStep, selectedOption, bags, Localization, reciever, organizationName ,controledForm, DataPicker}
+
+export {loggedUser, currentStep, selectedOption, bags, Localization, reciever, organizationName ,controledForm, DataPicker, SideMenu}

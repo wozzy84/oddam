@@ -77,36 +77,54 @@ const Register = ({match}) => {
 
     return  (
         <>
-        <HomeHeader currentLocation={match.url}/>
-        <section className="registerSection">
-            <h1>Załóż konto</h1>
-            <div className="registerDecoration"></div>
-            <form className="registerForm">
-                <div className="registerInputGroup">
-                    <div className="registerInputContainer">
-                        <label htmlFor="registerEmail">Email</label>
-                        <input type="email" id="registerEmail" style={emailError? redBar: blackBar} value={email} onChange={handleChange}></input>
+        <div className="register-container">
+            <div className="register-header-container"> 
+                 <HomeHeader currentLocation={match.url}/>
+            </div>
+
+
+        </div>
+        
+        <section className="register-section">
+            <div className="register-form-container">
+
+           
+            <h1 className="register-form-container__title">Załóż konto</h1>
+            <div className="register-form-container__decoration"></div>
+            <form className="register-form">
+                <div className="register-form__input-group">
+                    <div className="register-form__input-container">
+                        <label className="register-form__label" htmlFor="registerEmail">Email</label>
+                        <input className="register-form__input" type="email" id="registerEmail" style={emailError? redBar: blackBar} value={email} onChange={handleChange}></input>
                         <p className="errorMsg" style={emailError? {opacity: "1"}: {opacity: 0}}>Niepoprawny email!</p>
                     </div>
-                    <div className="registerInputContainer">
-                        <label htmlFor="registerPasswd">Hasło</label>
-                        <input type="password" id="registerPasswd" style={passwdError? redBar: blackBar} value={passwd} onChange={handleChange}></input>
-                        <p className="errorMsg" style={passwdError? {opacity: "1"}: {opacity: 0}} >Podane hasła są różne</p>
+                    <div className="register-form__input-group">
+                        <div className="register-form__input-container">
+                        <label className="register-form__label" htmlFor="registerPasswd">Hasło</label>
+                        <input className="register-form__input" type="password" id="registerPasswd" style={passwdError? redBar: blackBar} value={passwd} onChange={handleChange}></input>
+                        <p className="register-form__error" style={passwdError? {opacity: "1"}: {opacity: 0}} >Podane hasła są różne</p>
+                        </div>
                     </div>
-                    <div className="registerInputContainer">
-                        <label htmlFor="registerPasswd">Powtórz hasło</label>
-                        <input type="password" id="registerPasswdrepeat" style={passwdError? redBar: blackBar} value={passwdRepeat} onChange={handleChange}></input>
-                        <p className="errorMsg" style={passwdError? {opacity: "1"}: {opacity: 0}} >Podane hasła są różne</p>
+                    <div className="register-form__input-group">
+                        <div className="register-form__input-container">
+                        <label className="register-form__label" htmlFor="registerPasswd">Powtórz hasło</label>
+                        <input className="register-form__input" type="password" id="registerPasswdrepeat" style={passwdError? redBar: blackBar} value={passwdRepeat} onChange={handleChange}></input>
+                        <p className="register-form__error" style={passwdError? {opacity: "1"}: {opacity: 0}} >Podane hasła są różne</p>
+                        </div>
                     </div>
                     
                 </div>
-                <div className="registerButtonGroup">
-                    <Link to ='/logowanie'><button className="RegLogInBtn" type="button">Zaloguj się</button></Link>
-                    <button className="RegSignInBtn" type="submit" onClick={handleClick}>Załóż konto</button>
+                <div className="register-form__button-group">
+                    <button className="register-form__button register-form__button--log-in" type="button">
+                        <Link to ='/logowanie' className="register-form__link">Zaloguj się</Link>
+                    </button>
+                    <button className="register-form__button register-form__button--sign-in" type="submit" onClick={handleClick}>
+                        Załóż konto
+                    </button>
                 </div>
 
             </form>
-
+            </div>
         </section>
 
         </>

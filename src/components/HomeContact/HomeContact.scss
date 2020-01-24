@@ -2,7 +2,6 @@
     display: flex;
 }
 
-
 .contactDecoration {
     @include decoration_mixin;
     margin-bottom: 30px;
@@ -41,6 +40,7 @@
 
 .inputGroup {
     display: flex;
+    
     input {
         width: 256px;
         height: 25px;

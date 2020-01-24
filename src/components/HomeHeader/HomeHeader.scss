@@ -4,9 +4,10 @@
     display: flex;
     align-items: flex-end;
     flex-direction: column;
+    z-index: 9999;
     @media(max-width: 1024px) {
         width: 100%;
-        background-color: rgba(250, 207, 30, 1);
+        background-color: #facf1e;
         align-items: center;
         position: fixed;     
     }

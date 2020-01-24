@@ -6,27 +6,40 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import  {faTimesCircle}  from '@fortawesome/free-solid-svg-icons'
 import { HomeLoginNavMin } from '../HomeLoginNav/HomeLoginNavMin'
 import {useState} from "react"
+import { useSelector, useDispatch} from 'react-redux'
 import { disableBodyScroll, clearAllBodyScrollLocks } from 'body-scroll-lock';
 
 
 const HomeHeader = (props) => {
     const [activeMenu, setActiveMenu] = useState(false)
     const targetElement = document.querySelector('.home-container');
+    const sideMenu = useSelector(state=>state.SideMenu)
+    const dispatch = useDispatch()  
     const options = {
         reserveScrollBarGap: true
     }
 
+    console.log(sideMenu)
+
     const handleClick = () => {
         setActiveMenu(true)
         document.body.style.backgroundColor = "grey";
-        document.body.style.transition = "background-color 1s";
+        document.body.style.transition = "background-color 1s ";
+        dispatch({
+            type: "SIDE_MENU",
+            active: true
+        })
         disableBodyScroll(targetElement, options)
         
     }
 
     const handleCloseMenu = () => {
         setActiveMenu(false)
-        document.body.style.backgroundColor = "white"
+        document.body.style.backgroundColor = "transparent"
+        dispatch({
+            type: "SIDE_MENU",
+            active: false
+        })
         clearAllBodyScrollLocks()
     }
     
