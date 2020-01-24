@@ -1,12 +1,14 @@
     import React from 'react'
-    import {Home} from './components/Home/Home'
+    import Home from './components/Home/Home'
     import {HashRouter,Route} from 'react-router-dom';
-    import { Login } from './components/LogIn/Login';
-    import { Register } from './components/register/register';
-    import {LogOut} from './components/LogOut/LogOut'
-    import {Give} from './components/Give/Give'
+    import Login  from './components/LogIn/Login';
+    import Register from './components/register/register';
+    import LogOut from './components/LogOut/LogOut'
+    import Give from './components/Give/Give'
     import { useDispatch } from 'react-redux';
     import {auth} from './config'
+    
+    
 
     const App = (props) => {
 
@@ -48,4 +50,4 @@
     )
     }
 
-    export  {App}
+    export default App

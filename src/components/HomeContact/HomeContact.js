@@ -25,6 +25,7 @@ const HomeContact = ()  => {
             case "textarea":
             setMessage(e.currentTarget.value)
             return
+        
         }
     }
     const validateEmail = (e) =>{
@@ -54,7 +55,7 @@ const HomeContact = ()  => {
         setEmailError(!emailValidatiton);
         setNameError(!nameValidation);
         setMessageError(!messageValidaion);
-        if (submitTry==false) {
+        if (submitTry===false) {
             setSubmitTry(true)
         }
         if(emailValidatiton&&nameValidation&&messageValidaion) {{
@@ -96,7 +97,7 @@ const HomeContact = ()  => {
         const emailValidatiton = validateEmail(email);
         const nameValidation = validateName(name.trim());
         const messageValidaion = validateMessage(message);
-        if (submitTry==true) {
+        if (submitTry===true) {
              setEmailError(!emailValidatiton);
              setNameError(!nameValidation);
              setMessageError(!messageValidaion);

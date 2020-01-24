@@ -16,6 +16,8 @@ const GiveRibbon = () => {
                 return "Jeśli wiesz komu chcesz pomóc, możesz wpisać nazwę tej organizacji w wyszukiwarce. Możesz też filtrować organizacje po ich lokalizacji bądź celu ich pomocy."
             case 4: 
                 return "Podaj adres oraz termin odbioru rzeczy."
+            default: 
+                return ""
         }
    } 
    

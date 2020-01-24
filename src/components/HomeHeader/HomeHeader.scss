@@ -14,7 +14,8 @@
 
 .hamburger-menu {
     display: flex;
-    width: 100%;height: 100%;
+    width: 100%;
+    height: 100%;
     align-items: center;
     justify-content: space-between;
 }
@@ -55,6 +56,20 @@
     }
 }
 
+.main-nav {
+    width: 100%;
+    @media(min-width: 1024px) {
+        display: flex;
+        justify-content: flex-end;
+    }
+}
+.main-nav__list-element {
+    @media(min-width: 1024px) {
+        display: inline-block;
+    
+    } 
+}
+
 .main-nav__list {
     @media (max-width: 1024px) {
         position: absolute;
@@ -69,22 +84,30 @@
     }
 }
 
-.main-nav__list-element {
-    display: inline-block; 
+.main-nav__link{
+    text-decoration: none; 
     font-size: 18px;
     justify-content: center;
+    color: $color-dark-gray;
     padding: 9px 20px;
     cursor: pointer;
-        @media (max-width: 1024px) {
-            border: 4px solid transparent;
-            border-right: 0px;
-            display: flex; 
-            justify-content: flex-start;
-            padding-left: 30px;
-            color: $color-dark-gray;
-            }
+    @media (min-width: 1024px) {
+        border: 1px solid transparent;
+    }
+    @media (max-width: 1024px) {
+        border: 4px solid transparent;
+        border-right: 0px;
+        display: flex; 
+        justify-content: flex-start;
+        padding-left: 30px;
+        color: $color-dark-gray;
+    }
     &:hover {
+        @media (min-width: 1024px){
+            border: 1px solid $color-dark-gray;
+        }
         @media (max-width: 1024px) {
+            color: lighten($color-dark-gray, 20%);
             border-left: 4px solid rgba(250, 207, 3, 1);
             border-right: 0px; 
             background: rgb(255,255,255);
@@ -93,18 +116,7 @@
     } 
 }
 
-.main-nav__link { 
-    text-decoration: none;
-    color: $color-dark-gray;
-    cursor: pointer;
-    @media (max-width: 1240px) {
-        &:hover {
-            color: lighten($color-dark-gray, 20%)
-        }
-    }
-}
-
-.timesCircle {
+.times-circle {
     font-size:30px;
     position: absolute;
     top: 10px;

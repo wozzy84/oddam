@@ -3,9 +3,9 @@ import {Link} from 'react-router-dom'
 import {useState, useEffect} from 'react';
 import {auth} from '../../config'
 import { useHistory } from "react-router-dom";
-import { HeaderLogReg } from '../Header_log_reg/HeaderLogReg';
+import {HomeHeader} from '../HomeHeader/HomeHeader'
 
-const Login = () => {
+const Login = ({match}) => {
 
     const [emailError, setEmailError] = useState(false);
     const [passwdError, setPasswdError] = useState(false); 
@@ -18,10 +18,10 @@ const Login = () => {
 
     const handleChange = (e) => {
         switch (e.currentTarget.id){
-            case "loginEmail":
+            case "login-email":
             setEmail(e.currentTarget.value)
             return
-            case "loginPasswd":
+            case "login-passwd":
             setPasswd(e.currentTarget.value)
             return
         }
@@ -39,7 +39,6 @@ const Login = () => {
         };
     }
 
-
     const handleClick = (e) => {
         e.preventDefault();
         const emailValidatiton = validateEmail(email);
@@ -54,16 +53,11 @@ const Login = () => {
             .then(cred=> {
                 console.log(cred.user.email)
                 history.push('/')
-                
-            
             })
             .catch(function(error) {
                 console.error(error.code, error.message);
-                
               });
-        }
-
-        
+        }  
     }
 
     useEffect(()=> {
@@ -78,41 +72,48 @@ const Login = () => {
     },[email, passwd ])
 
 
-
     return  (
-        <>
-        <HeaderLogReg/>
-        <section className="loginSection">
-            <h1>Zaloguj się</h1>
-            <div className="loginDecoration"></div>
-            <form className="loginForm">
-                <div className="loginInputGroup">
-                    <div className="loginInputContainer">
-                        <label htmlFor="loginEmail">Email</label>
-                        <input type="email" id="loginEmail" style={emailError? redBar: blackBar} value={email} onChange={handleChange}></input>
-                        <p className="errorMsg" style={emailError? {opacity: "1"}: {opacity: 0}}  >Podany email jest nieprawidłowy!</p>
+    <>
+     <div className="login-container">
+      <div className="login-header-container">
+               <HomeHeader currentLocation={match.url}/>
+     </div>
+           
+     <section className="login-section">
+            <div className="login-form-container">
+            <h1 className="login-form-container__title">Zaloguj się</h1>
+            <div className="login-form-container__decoration"></div>
+            <form className="login-form">
+                <div className="login-form__input-group">
+                    <div className="login-form__input-container">
+                        <label className="login-form__label" htmlFor="login-email">Email</label>
+                        <input className="login-form__input" type="email" id="login-email" style={emailError? redBar: blackBar} value={email} onChange={handleChange}></input>
+                        <p className="error-msg" style={emailError? {opacity: "1"}: {opacity: 0}}  >Podany email jest nieprawidłowy!</p>
                     </div>
-                    <div className="loginInputContainer">
-                        <label htmlFor="loginPasswd">Hasło</label>
-                        <input type="password"  id="loginPasswd" style={passwdError? redBar: blackBar} value={passwd} onChange={handleChange}></input>
-                        <p  className="errorMsg" style={passwdError? {opacity: "1"}: {opacity: 0}}  >Podane hasło jest za krótkie!</p>
+                    <div className="login-form__input-container">
+                        <label className="login-form__label" htmlFor="loginPasswd">Hasło</label>
+                        <input className="login-form__input" type="password"  id="login-passwd" style={passwdError? redBar: blackBar} value={passwd} onChange={handleChange}></input>
+                        <p className="error-msg" style={passwdError? {opacity: "1"}: {opacity: 0}}  >Podane hasło jest za krótkie!</p>
                     </div>
                     
                 </div>  
-                <div className="loginButtonGroup">
-                    <Link to ='rejestracja'><button className="signInBtn" type="button">Załóż konto</button></Link>
-                    <button className="logInBtn" type="submit" onClick={handleClick}>Zaloguj się</button>
+                <div className="login-form__button-group">
+                    <Link to ='rejestracja'>
+                        <button className="login-form__button" type="button">Załóż konto</button>
+                    </Link>
+                    <button className="login-form__button login-form__button--log-in" type="submit" onClick={handleClick}>Zaloguj się</button>
                 </div>
 
             </form>
-
+            </div>
         </section>
-
-        </>
+      
+     </div>
+    </>
     )
 
 
 
 }
 
-export {Login}
+export default Login 

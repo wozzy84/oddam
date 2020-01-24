@@ -5,6 +5,7 @@ import {useSelector}from 'react-redux'
 import { HomeContact } from '../HomeContact/HomeContact';
 import { GiveSteps } from '../GiveSteps/GiveSteps';
 import {HomeFooter} from '../HomeFooter/HomeFooter';
+import {withRouter} from 'react-router-dom';
 
 
 
@@ -37,4 +38,4 @@ const Give = () => {
 
 }
 
-export {Give}
+export default withRouter(Give)

@@ -4,7 +4,6 @@ import { useHistory } from "react-router-dom"
 import {auth} from '../../config'
 import { useSelector, useDispatch} from 'react-redux'
 
-
 const HomeLoginNav = () => {
 
     const history = useHistory();
@@ -28,28 +27,26 @@ const HomeLoginNav = () => {
 
     if (logged){
         return (    
-            <nav className="loginNav">
-            <ul className="main-nav__list loginUl_logged">
-                <li className="HiLogged">Cześć {logged}!</li>
-                <li className="oddaj_link"><NavLink to='/oddaj-rzeczy'>Oddaj rzeczy</NavLink></li>
-                <li onClick={handleClick}>Wyloguj</li>
+            <nav className="login-nav">
+            <ul className="login-nav__list">
+                <li className="login-nav__list-element login-nav__list-element--hi-user">Cześć {logged}!</li>
+                <li className="login-nav__list-element"><NavLink className="login-nav__list-link" to='/oddaj-rzeczy'>Oddaj rzeczy</NavLink></li>
+                <li className="login-nav__list-element login-nav__list-element--logout" onClick={handleClick}>Wyloguj</li>
                
             </ul>
         </nav>
         )
     } else {
         return (    
-            <nav className="loginNav">
-            <ul className="navigation loginUl">
-                <li><NavLink to='/logowanie'>Zaloguj</NavLink></li>
-                <li><NavLink to ='rejestracja'>Załóż konto</NavLink></li>
+            <nav className="login-nav">
+            <ul className="login-nav__list">
+                <li className="login-nav__list-element"><NavLink className="login-nav__list-link" to='/logowanie'>Zaloguj</NavLink></li>
+                <li className="login-nav__list-element"><NavLink className="login-nav__list-link" to ='rejestracja'>Załóż konto</NavLink></li>
                
             </ul>
         </nav>
         )
     }
-
 } 
-
 
 export {HomeLoginNav}

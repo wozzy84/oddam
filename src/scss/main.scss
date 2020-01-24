@@ -16,7 +16,6 @@
 @import '../components/register/register.scss';
 @import '../components//LogOut/LogOut.scss';
 @import '../components/HomeLoginNav/HomeLoginNav.scss';
-@import '../components/Header_log_reg/HeaderLogReg.scss';
 @import '../components/Give/Give.scss';
 @import '../components/GiveMainSec/GiveMainSec.scss';
 @import '../components/GiveRibbon/GiveRibbon.scss';
@@ -31,7 +30,10 @@
 body {
     font-family: $font-base;
     color:  #3C3C3C;
+    overflow: overlay;
 }
+
+
 
 .test {
     

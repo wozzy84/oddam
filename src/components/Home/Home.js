@@ -8,14 +8,15 @@ import { HomeHelp } from '../HomeHelp/HomeHelp';
 import { HomeContact } from '../HomeContact/HomeContact';
 import { HomeFooter } from '../HomeFooter/HomeFooter'
 
-const Home = () => {
 
+const Home = ({match}) => {
+ 
   return (
     <div className="home-container">
       <div className="header-main-sec-container">
           <div className="header-main-sec-container__picture"></div>
           <div className="header-main-sec-container__subcontiner">
-              <HomeHeader/>
+              <HomeHeader currentLocation={match.url}/>
               <HomeMainSec/>
           </div>
       </div>
@@ -30,4 +31,4 @@ const Home = () => {
     )
 }
 
-export {Home}
+export default Home

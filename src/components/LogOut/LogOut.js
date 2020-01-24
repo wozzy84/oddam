@@ -15,4 +15,4 @@ const LogOut= () => {
     )
 }
 
-export {LogOut}
+export default LogOut

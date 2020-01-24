@@ -3,6 +3,8 @@ import {NavLink} from 'react-router-dom'
 import { useHistory } from "react-router-dom"
 import {auth} from '../../config'
 import { useSelector, useDispatch} from 'react-redux'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import  { faUserPlus, faSignInAlt, faBoxOpen, faSignOutAlt}  from '@fortawesome/free-solid-svg-icons'
 
 
 const HomeLoginNavMin = () => {
@@ -29,16 +31,50 @@ const HomeLoginNavMin = () => {
     if (logged){
         return (    
                 <>
-                <li className= "main-nav__list-element ">Cześć {logged}!</li>
-                <li className="main-nav__list-element"><NavLink to='/oddaj-rzeczy' className="main-nav__link">Oddaj rzeczy</NavLink></li>
-                <li onClick={handleClick} className="main-nav__list-element">Wyloguj</li>
+                <li className= "main-nav__list-element main-nav__list-element--minified main-nav__list-element--minfied--hi-user"> 
+                Cześć {logged}!
+                </li>
+               
+                <li className="main-nav__list-element main-nav__list-element--minified">
+                    <NavLink to='/oddaj-rzeczy' className="main-nav__link main-nav__link--minfied">  
+                        <span className="main-nav_icon-container">
+                            <FontAwesomeIcon icon={faBoxOpen} className="main-nav__icon"/>
+                        </span>
+                    Oddaj rzeczy
+                    </NavLink>    
+                                           
+                </li>
+                <li onClick={handleClick} className="main-nav__list-element main-nav__list-element--minified main-nav__list-element--minfied--sign-out">
+                    <span className="main-nav_icon-container">
+                        <FontAwesomeIcon icon={faSignOutAlt} className="main-nav__icon"/>
+                    </span>
+                    Wyloguj
+                </li>
+                <span className="main-nav__bar"></span>
+             
                 </>
             )
     } else {
         return (    
             <>
-                <li className="main-nav__list-element" ><NavLink to='/logowanie' className="main-nav__link">Zaloguj</NavLink></li>
-                <li className="main-nav__list-element" ><NavLink to ='rejestracja' className="main-nav__link">Załóż konto</NavLink></li> 
+                <li className="main-nav__list-element main-nav__list-element--minified" >
+                    <NavLink to='/logowanie' className="main-nav__link main-nav__link--minfied">
+                    <span className="main-nav_icon-container">
+                    <FontAwesomeIcon icon={faSignInAlt} className="main-nav__icon"/>
+                    </span>
+                    Zaloguj</NavLink>
+                </li>
+                <li className="main-nav__list-element main-nav__list-element--minified" >
+                    <NavLink to ='rejestracja' className="main-nav__link main-nav__link--minfied">
+                    <span className="main-nav_icon-container">
+                    <FontAwesomeIcon icon={faUserPlus} className="main-nav__icon"/>
+                    </span>
+                     Załóż konto</NavLink>
+                </li>
+                <span className="main-nav__bar"></span> 
+
+              
+                
             </>
         )
     }

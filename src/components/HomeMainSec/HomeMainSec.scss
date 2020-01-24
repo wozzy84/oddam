@@ -7,11 +7,13 @@
 }
 
 .MainSecContainer {
+    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    height: 350px;;  
+    height: 350px;
+    
 
 }
 
@@ -23,14 +25,18 @@
 .buttonsContainer {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
-    button {
+    justify-content: space-between;
 
+
+    
+    button {
+            margin: 20px;
             background: transparent;
             border: none;
-            margin: 20px;
+    
         a {
             display: flex;
+           
             align-items: center;
             justify-content: center;
             height: 120px;
@@ -47,9 +53,11 @@
 }
 
 .callToAction {
-display: flex;
-  text-align: center;
-  font-size: 38px;
-  line-height: 55px;
-  letter-spacing: -0.76px;
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    font-size: 36px;
+    line-height: 55px;
+    letter-spacing: -0.76px;
+
 }

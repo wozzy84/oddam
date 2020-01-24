@@ -3,9 +3,10 @@ import {Link} from 'react-router-dom'
 import {useState, useEffect} from 'react';
 import {auth} from '../../config'
 import { useHistory } from "react-router-dom";
-import { HeaderLogReg} from '../../components/Header_log_reg/HeaderLogReg'
+import {withRouter} from 'react-router-dom';
+import {HomeHeader} from '../../components/HomeHeader/HomeHeader'
 
-const Register = () => {
+const Register = ({match}) => {
     const [emailError, setEmailError] = useState(false);
     const [passwdError, setPasswdError] = useState(false); 
     const redBar = {borderBottom: "1px solid #D8000C"};
@@ -76,7 +77,7 @@ const Register = () => {
 
     return  (
         <>
-        <HeaderLogReg/>
+        <HomeHeader currentLocation={match.url}/>
         <section className="registerSection">
             <h1>Załóż konto</h1>
             <div className="registerDecoration"></div>
@@ -112,4 +113,4 @@ const Register = () => {
     )
 }
 
-export {Register}
+export default withRouter(Register)
