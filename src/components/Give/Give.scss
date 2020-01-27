@@ -7,23 +7,23 @@
 .Give_MainSec_container {
     margin: 0 auto;
     display: flex;
-    width: 100%;
-    height: 853x;
+    height: 956px;
 }
 
 .GiveRightSubContainer {
-    padding-top:37px;
-    width:100%;
+    width:55%;
     padding-right: 142px;
   
     
 }
 
 .GiveMainPic {
-    height: 853px;
-    min-width: 885px;
-    background-image: url('../../assets/images/Form-Hero-Image.jpg');
-    background-size: cover;
-    
-    background-repeat: no-repeat;
+    @media(min-width: 1024px) {
+        height: 963px;
+        width: 45%;
+        background-image: url('../../assets/images/Form-Hero-Image.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
 }

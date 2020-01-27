@@ -1,18 +1,28 @@
 .home-container {
     margin: 0 auto;
     max-width: 1900px;  
+    @media(max-width:1024px) {
+        width: 100vw;
+    }
 }
 
 .header-main-sec-container {
     margin: 0 auto;
     display: flex;
     height: 963px; 
+    width: 100%;
+    
 }
 
 .header-main-sec-container__subcontiner {
    
     padding-right: 142px;
     width: 55%;
+    @media(max-width:1024px) {
+        width: 100%;
+        padding-right: 0px;
+       
+    }
 }
 
 .header-main-sec-container__picture {

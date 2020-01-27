@@ -6,6 +6,7 @@ import { HomeContact } from '../HomeContact/HomeContact';
 import { GiveSteps } from '../GiveSteps/GiveSteps';
 import {HomeFooter} from '../HomeFooter/HomeFooter';
 import {withRouter} from 'react-router-dom';
+import {HomeHeader} from '../HomeHeader/HomeHeader'
 
 
 
@@ -19,7 +20,7 @@ const Give = () => {
                     <div className="Give_MainSec_container">
                         <div className="GiveMainPic"></div>
                         <div className="GiveRightSubContainer">
-                            <GiveHeader/>
+                            <HomeHeader/>
                             <GiveMainSec/>
                         </div>        
                      </div>

@@ -154,6 +154,7 @@ const HomeHeader = (props) => {
              handleCloseMenu()
              }}>
                     <div className="home-header">
+                    <ReactResizeDetector handleWidth handleHeight onResize={onResize} />
                         <div className="hamburger-menu">
                             <span className="hamburger-menu__icon"></span>
                                 <div className="hamburger-menu__hamburger-field" onClick={handleClick} style={activeMenu? {opacity: "0", transition: "opacity 0.3s" }: null}>
