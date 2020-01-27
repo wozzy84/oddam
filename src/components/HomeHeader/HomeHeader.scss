@@ -39,10 +39,11 @@
 
 .hamburger-menu__hamburger-field { 
     display: flex;
+    padding:10px;
     flex-direction: column;
     justify-content: center;
     align-items: flex-end;
-    margin-right: 20px;
+    margin-right: 10px;
     cursor: pointer;
 }
 
@@ -74,7 +75,7 @@
 .main-nav__list {
     @media (max-width: 1024px) {
         position: absolute;
-        width: 300px;
+        width: 270px;
         height: 100vh;
         top: 0px;
         right:-1000px;

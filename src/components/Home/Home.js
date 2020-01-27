@@ -10,8 +10,9 @@ import { HomeFooter } from '../HomeFooter/HomeFooter'
 
 
 const Home = ({match}) => {
- 
+
   return (
+    <>
     <div className="home-container">
       <div className="header-main-sec-container">
           <div className="header-main-sec-container__picture"></div>
@@ -27,7 +28,7 @@ const Home = ({match}) => {
             <HomeContact/> 
             <HomeFooter/>
     </div>
-       
+    </>   
     )
 }
 

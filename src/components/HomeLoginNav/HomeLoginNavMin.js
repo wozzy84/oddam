@@ -1,17 +1,21 @@
 import React from 'react'
+import ReactDOM from "react-dom";
 import {NavLink} from 'react-router-dom'
 import { useHistory } from "react-router-dom"
 import {auth} from '../../config'
 import { useSelector, useDispatch} from 'react-redux'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import  { faUserPlus, faSignInAlt, faBoxOpen, faSignOutAlt}  from '@fortawesome/free-solid-svg-icons'
+import { parseWithOptions } from 'date-fns/fp'
 
 
-const HomeLoginNavMin = () => {
+const HomeLoginNavMin = (props) => {
 
     const history = useHistory();
     const dispatch = useDispatch()
     const logged = useSelector(state => state.loggedUser.email)
+
+ 
 
     const handleClick = () => {
         auth.signOut().then( ()=> {
@@ -26,6 +30,11 @@ const HomeLoginNavMin = () => {
 
         })
         .catch((error)=>console.log(error))
+        handlePass()
+    }
+
+    const handlePass = () => {
+        props.pass()
     }
 
     if (logged){
@@ -35,8 +44,8 @@ const HomeLoginNavMin = () => {
                 Cześć {logged}!
                 </li>
                
-                <li className="main-nav__list-element main-nav__list-element--minified">
-                    <NavLink to='/oddaj-rzeczy' className="main-nav__link main-nav__link--minfied">  
+                <li className="main-nav__list-element main-nav__list-element--minified" onClick={handlePass}>
+                    <NavLink to='/oddaj-rzeczy' className="main-nav__link main-nav__link--minfied" >  
                         <span className="main-nav_icon-container">
                             <FontAwesomeIcon icon={faBoxOpen} className="main-nav__icon"/>
                         </span>
@@ -44,7 +53,7 @@ const HomeLoginNavMin = () => {
                     </NavLink>    
                                            
                 </li>
-                <li onClick={handleClick} className="main-nav__list-element main-nav__list-element--minified main-nav__list-element--minfied--sign-out">
+                <li onClick={handleClick} onChange={handlePass} className="main-nav__list-element main-nav__list-element--minified main-nav__list-element--minfied--sign-out">
                     <span className="main-nav_icon-container">
                         <FontAwesomeIcon icon={faSignOutAlt} className="main-nav__icon"/>
                     </span>
@@ -57,14 +66,14 @@ const HomeLoginNavMin = () => {
     } else {
         return (    
             <>
-                <li className="main-nav__list-element main-nav__list-element--minified" >
+                <li className="main-nav__list-element main-nav__list-element--minified" onClick={handlePass} >
                     <NavLink to='/logowanie' className="main-nav__link main-nav__link--minfied">
                     <span className="main-nav_icon-container">
                     <FontAwesomeIcon icon={faSignInAlt} className="main-nav__icon"/>
                     </span>
                     Zaloguj</NavLink>
                 </li>
-                <li className="main-nav__list-element main-nav__list-element--minified" >
+                <li className="main-nav__list-element main-nav__list-element--minified" onClick={handlePass}>
                     <NavLink to ='rejestracja' className="main-nav__link main-nav__link--minfied">
                     <span className="main-nav_icon-container">
                     <FontAwesomeIcon icon={faUserPlus} className="main-nav__icon"/>

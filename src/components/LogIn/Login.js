@@ -4,7 +4,7 @@ import {useState, useEffect} from 'react';
 import {auth} from '../../config'
 import { useHistory } from "react-router-dom";
 import {HomeHeader} from '../HomeHeader/HomeHeader'
-import {useSelector} from 'react-redux'
+import {useSelector, useDispatch} from 'react-redux'
 
 const Login = ({match}) => {
 
@@ -17,6 +17,7 @@ const Login = ({match}) => {
     const [submitTry, setSubmitTry] = useState(false)
     const sideMenu = useSelector(state=>state.SideMenu)
     const history = useHistory();   
+    const dispatch = useDispatch()
 
 
     const handleChange = (e) => {
