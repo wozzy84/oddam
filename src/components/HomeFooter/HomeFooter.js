@@ -1,6 +1,6 @@
 import React from "react"
- import {SvgFacebook} from '../../assets/Icons/Facebook'
- import {SvgInstagram} from '../../assets/Icons/Instagram'
+ import SvgFacebook from '../../assets/Icons/Facebook'
+ import SvgInstagram from '../../assets/Icons/Instagram'
 
 const HomeFooter = () => {
 

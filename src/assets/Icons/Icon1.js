@@ -24,4 +24,4 @@ const SvgIcon1 = props => (
   </svg>
 );
 
-export {SvgIcon1};
+export default SvgIcon1;

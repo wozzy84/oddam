@@ -26,4 +26,4 @@ const SvgIconArrowDown = props => (
   </svg>
 );
 
-export {SvgIconArrowDown};
+export default SvgIconArrowDown;

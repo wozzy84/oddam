@@ -31,4 +31,4 @@ const SvgInstagram = props => (
   </svg>
 );
 
-export {SvgInstagram} ;
+export default SvgInstagram;

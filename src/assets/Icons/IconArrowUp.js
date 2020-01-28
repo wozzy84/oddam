@@ -30,4 +30,4 @@ const SvgIconArrowUp = props => (
   </svg>
 );
 
-export {SvgIconArrowUp};
+export default SvgIconArrowUp;

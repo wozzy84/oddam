@@ -31,4 +31,4 @@ const SvgFacebook = props => (
   </svg>
 );
 
-export {SvgFacebook};
+export default SvgFacebook;
