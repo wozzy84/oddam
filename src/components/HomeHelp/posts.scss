@@ -1,11 +1,14 @@
-.postsContainer {
+.posts {
     max-width: 1344px;
     margin: 0 auto;
     padding-top: 50px;
-    font-family: $font-base-light
+    font-family: $font-base-light;
+    @media(max-width: 1024px){
+        display: none;
+    }
 }
 
-.postLine {
+.post-line {
     height: 81px;
     margin-top: 17px;
     margin-bottom: 17px;
@@ -14,22 +17,22 @@
     display: flex;
     justify-content: space-between;
 }
-.postLine:last-child {
+.post-line:last-child {
     border-bottom: transparent;
 }
 
-.postTitle {
+.post-line__title {
     
     font-size: 26px;
     line-height: 1.2;
 }
 
-.postBody {
+.post-line__body {
     font-size: 18px;
     line-height: 1.22;
 }
 
-.postTags {
+.post-line__tag {
     font-size: 18px;
 
 }

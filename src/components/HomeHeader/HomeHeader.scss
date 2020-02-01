@@ -72,6 +72,12 @@
     
     } 
 }
+.main-nav__list-element--about {
+    display: inline-block;
+    @media(max-width: 1024px) {
+        display: none
+    }
+}
 
 .main-nav__list {
    
@@ -98,8 +104,6 @@
     @media(max-width: 1350px) {
         font-size: 14px;
         padding: 9px 10px;
-      
-        
     }
  
     @media (min-width: 1024px) {
@@ -125,6 +129,13 @@
             background: linear-gradient(90deg, rgba(255,255,255,1) 60%, rgba(249,201,16,0.6026785714285714) 100%);
         }   
     } 
+}
+
+.main-nav__link--about {
+    display: block;
+    @media(max-width: 1024px) {
+        display: none
+    }
 }
 
 .times-circle {

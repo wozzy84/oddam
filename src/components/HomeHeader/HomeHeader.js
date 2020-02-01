@@ -104,8 +104,8 @@ const HomeHeader = (props) => {
                             >O co chodzi? 
                             </Link>
                         </li>                   
-                        <li className="main-nav__list-element">
-                            <Link className="main-nav__link" onClick={handleCloseMenu}
+                        <li className="main-nav__list-element main-nav__list-element--about">
+                            <Link className="main-nav__link  main-nav__link--about " onClick={handleCloseMenu}
                                 to="about"
                                 spy={true}
                                 smooth={true}

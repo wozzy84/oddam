@@ -1,42 +1,44 @@
-.HomeAbout_sec {
+.home-about {
     display: flex;
+    @media(max-width:1024px) {
+        display:none
+    }
 }
 
-.aboutPicContainer {
+.home-about__picture {
     background-image: url('../../assets/images/People.jpg');
     height: 935px;
     width: 50%
 }
 
-.aboutDescriptContainer {
+.home-about__container {
     width: 50%;
     text-align: center;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-
 }
 
-.aboutDecoration {
+.home-about__decoration {
     @include decoration_mixin;
     margin-top: 15px;
     margin-bottom: 15px;
 }
 
-.aboutTitle {
+.home-about__title {
     font-size: 36px;
     line-height: 1.5;
 }
 
-.aboutDescription {
+.home-about__description {
     font-size: 30px;
     letter-spacing: -0.6px;
     line-height: 1.8;
     max-width: 657px;
 }
 
-.aboutSignature {
+.home-about__signature {
     height: 148px;
     width: 100%;
     margin-top: 20px;

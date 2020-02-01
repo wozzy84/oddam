@@ -40,8 +40,6 @@
     @media(max-width: 1024px) {
         height: auto;
         justify-content: space-around;
-
-  
     }
 }
 
@@ -64,7 +62,6 @@
     }
 }
 
-
 .home-four-steps-icon__icon--min {
     display: none;
     @media(max-width:1024px) {
@@ -74,12 +71,23 @@
 }
 
 .home-four-steps-icon__icon-header{
-    font-size: 18px;
+    font-size: 12px;
     margin-top:10px;
     margin-bottom:10px;
-    @media(max-width:1024px) {
-         font-size:13px
+    
+    @media(min-width: 575px) {
+        width: 150px;
+        font-size: 14px;
+        
     }
+    @media(min-width: 768px) {
+        width: 180px;
+        font-size:16px;
+       
+    }
+    @media(min-width:1024px) {
+        font-size:18px
+   }
 }
 
 .home-four-steps-icon__bar {
@@ -102,7 +110,6 @@
         font-size: 16px;
     }
 }
-
 
 .home-four-steps__button {
     display: none; 
@@ -131,6 +138,12 @@
 
 .home-for-steps-icon__container--icon-4 {
     @media(min-width: 1040px) {
+        padding-top: 20px
+    }
+}
+
+.home-for-steps-icon__container--icon-3 {
+    @media(max-width: 1040px) {
         padding-top: 20px
     }
 }

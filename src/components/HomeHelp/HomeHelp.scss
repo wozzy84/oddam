@@ -1,5 +1,4 @@
-
-.HomeHelpNavCont {
+.home-help__container {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -9,20 +8,24 @@
     padding-top: 60px;
 }
 
-
-.HomeHelpNav {
+.home-help__nav {
     margin-top: 70px;
     margin-bottom:70px;
+    @media(max-width: 1024px){
+        display: none;
+    }
 }
 
-
-.HelpNavList {
+.home-help-list {
     display: flex;
     justify-content: center;
     align-items: center;
+    @media(max-width: 1024px){
+        display: none;
+    }
 }
 
-.HelpNavList li {
+.home-help-list__element {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -32,27 +35,95 @@
     width: 208px;
     height: 79px;
     margin: 0px 10px;
+    cursor: pointer;
     &:hover {
         border: 0.75px solid #3C3C3C;
     }
-
 }
 
-.HomeHelpTitle {
+.home-help__title {
     font-size: 38px;
     line-height: 1.44;
+    @media(max-width: 1024px){
+        font-size:28px;
+        font-family: $font-base-semi;
+    }
 }
 
-.HomeDecoration {
+.home-help__decoration {
     @include decoration_mixin;
     margin-top: 15px;
-
+    @media(max-width: 1024px){
+        display: none;
+    }
 }
 
-.HomeHelpNavDesc {
+.home-help__description {
     max-width: 640px;
     font-size: 22px;
     line-height: 1.4;
     text-align: center;
+    @media(max-width: 1024px){
+        display: none;
+    }
+}
+
+.home-help-min {
+    display: flex;
+    @media(min-width: 1024px) {
+        display: none;
+    }
+}
+
+.home-help-min__field {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 20px;
+
+}
+
+
+.home-help-min__circle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    border: 4px solid $color-blue;
+    color: white;
+    line-height: 1.3;
+    font-family: $font-base-bold;
+    background-color: $color-blue;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    font-size: 10px;
+    @media(min-width: 575px) {
+        width: 150px;
+        height: 150px;
+        font-size: 15px;
+    }
+    @media(min-width: 768px) {
+        width: 200px;
+        height: 200px;
+        font-size:20px
+    }
+}
+
+.home-help-min__description {
+    font-size: 14px;
+    line-height: 1.3;
+    width: 158px;
+    @media(min-width: 575px) {
+        width: 180px;
+        font-size: 18px;
+    }
+    @media(min-width: 768px) {
+        width: 200px;
+        font-size:22px
+    }
 }
 

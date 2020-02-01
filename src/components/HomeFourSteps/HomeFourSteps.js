@@ -35,7 +35,7 @@ const HomeFourSteps = () => {
                     <span className="home-four-steps-icon__bar"></span>
                     <p className="home-four-steps-icon__text" >wkorzystaj z woków na śmieci</p>
                 </div>
-                <div className="home-four-steps-icon__container">
+                <div className="home-four-steps-icon__container home-for-steps-icon__container--icon-3">
                     <SvgIcon3 className="home-four-steps-icon__icon"/>
                     <SvgIcon3Min className="home-four-steps-icon__icon--min"/>
                     <p className="home-four-steps-icon__icon-header">Zdecyduj komu chcesz pomóc</p>

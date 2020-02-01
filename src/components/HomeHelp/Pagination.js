@@ -1,11 +1,9 @@
 import React, { useEffect } from 'react';
-import {useState, setState} from 'react'
+import {useState} from 'react'
  
-
 const Pagination = ( { pageMark, postsPerPage, totalPosts, paginate }) => {
   const pageNumbers = [];
   const [activeLink, setActiveLink] = useState("0");
-  console.log(pageMark)
   const style = {
     border: "0.75px solid #3C3C3C"
  }
@@ -27,9 +25,9 @@ const handleClick =(e) => {
       <ul className='pagination'>
         {pageNumbers.map((number, index) => (
           
-          <li key={number} id={index}  onClick={(e) => paginate(number)} onMouseDown={handleClick}className='page-item'
+          <li key={number} id={index}  onClick={(e) => paginate(number)} onMouseDown={handleClick}className='pagination__item'
           style={activeLink==index? style: null}>
-            <a   className='page-link'>
+            <a className='pagination__link'>
               {number}
             </a>
           </li>
@@ -45,10 +43,8 @@ const handleClick =(e) => {
       
       <ul className='pagination'>
         {pageNumbers.map((number, index) => (
-          
-          <li key={number} id={index} onClick={handleClick}className='page-item'
+          <li key={number} id={index} onClick={handleClick}className='pagination__item'
           style={{display: "hidden"}}>
-        
           </li>
         ))}
       </ul>
