@@ -80,10 +80,11 @@
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    margin: 20px;
-
+    margin: 10px;
+    @media(max-width: 414px) {
+        margin: 7px
+    }
 }
-
 
 .home-help-min__circle {
     display: flex;
@@ -124,6 +125,9 @@
     @media(min-width: 768px) {
         width: 200px;
         font-size:22px
+    }
+    @media(max-width: 414px) {
+        width: 110px
     }
 }
 

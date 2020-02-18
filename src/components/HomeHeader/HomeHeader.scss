@@ -123,10 +123,10 @@
         }
         @media (max-width: 1024px) {
             color: lighten($color-dark-gray, 20%);
-            border-left: 4px solid rgba(250, 207, 3, 1);
+            border-left: 4px solid $color-blue;
             border-right: 0px; 
             background: rgb(255,255,255);
-            background: linear-gradient(90deg, rgba(255,255,255,1) 60%, rgba(249,201,16,0.6026785714285714) 100%);
+            background: linear-gradient(90deg, rgba(255,255,255,1) 60%, rgba(54, 153, 190, 0.603) 100%);
         }   
     } 
 }

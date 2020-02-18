@@ -1,5 +1,8 @@
 import React from "react"
 import {useState, useEffect} from "react"
+import { Link} from 'react-router-dom'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import  {faPhone, faEnvelope}  from '@fortawesome/free-solid-svg-icons'
 
 const HomeContact = ()  => {
 
@@ -25,7 +28,6 @@ const HomeContact = ()  => {
             case "textarea":
             setMessage(e.currentTarget.value)
             return
-        
         }
     }
     const validateEmail = (e) =>{
@@ -35,17 +37,14 @@ const HomeContact = ()  => {
 
     const validateName = (e) => {
       let reg = /^\S+$/g;
-
       return reg.test(e)
     }
     const validateMessage = (e) => {
         if (e.length > 120) {
             return true
         };
-   
         return false
     }
- 
 
     const handleClick = (e) => {
         e.preventDefault();
@@ -60,11 +59,11 @@ const HomeContact = ()  => {
         }
         if(emailValidatiton&&nameValidation&&messageValidaion) {{
             const url = 'https://fer-api.coderslab.pl/v1/portfolio/contact';
-            const data = { name:  name,
+            const data = { 
+                           name: name,
                            email: email,
                            message: message
                          };
-    
             try {
                 const response =  fetch(url, {
                 method: 'POST', 
@@ -78,19 +77,16 @@ const HomeContact = ()  => {
                 console.log( data );
                 setValidated(true)
                 setSubmitTry(false);
-                setEmail("")
-                setName("")
+                setEmail("");
+                setName("");
                 setMessage("");
-            
                 });
             } catch (error) {
                 console.error('Error:', error);
                 }
-            
         }} else {
             setValidated(false)
         }
-
     }
 
     useEffect(()=> {
@@ -102,47 +98,62 @@ const HomeContact = ()  => {
              setNameError(!nameValidation);
              setMessageError(!messageValidaion);
         }
-        
-       
     },[email, name, message])
  
-    
     return (
-           <section className="HomeContactSec" id="Contact">
-        <div className="ContactPic"></div>
-        <div className="ContactTextContainer">
-            <h2 className="contactTitle">Skontaktuj się z nami</h2>
-            <div className="contactDecoration"></div>
-            <p className="successInfo" style={validated? {opacity: "1"}: {opacity: 0}}>Wiadomość została wysłana! <br/>Wkrótce się sontaktujemy.</p>
-            <form className="contactForm">
-                <div className="inputGroup">
-                    <div className="inputSubGroup">
-                        <label>Wpis swoje imię</label>
-                        < input type="text" id="textInput" className="nameInput" value={name} onChange={handleChange} style={nameError? redBar: blackBar} ></input> 
-                        <p className="errorMsg" style={nameError? {opacity: "1"}: {opacity: 0}} >Podane imię jest nieprawidłowe!</p>
-                    </div>
-                    <div className="inputSubGroup">
-                        <label>Wpisz swój email</label>
-                        <input type="email" id="emailInput" value={email} onChange={handleChange} className="emailInput"  style={emailError? redBar: blackBar}></input>
-                        <p className="errorMsg" style={emailError? {opacity: "1"}: {opacity: 0}} >Podany e-mail jest nieprawidłowy!</p>
-                    </div>
+        <section className="home-contact" id="Contact">
                
+        <div className="home-contact__picture"></div>
+        <div className="home-contact__container">
+            <h2 className="home-contact__title">Skontaktuj się z nami</h2>
+            <div className="home-contact__decoration"></div>
+            <p className="home-contact_success" style={validated? {opacity: "1"}: {opacity: 0}}>Wiadomość została wysłana! <br/>Wkrótce się sontaktujemy.</p>
+            <form className="contact-form">
+                <div className="contact-form__input-group">
+                    <div className="contact-form__input-subgroup">
+                        <label className="contact-form__label">Wpisz swoje imię</label>
+                        <input type="text" id="textInput" className="contact-form__input contact-form__input--name" value={name} onChange={handleChange} style={nameError? redBar: blackBar} ></input> 
+                        <p className="contact-form__error" style={nameError? {opacity: "1"}: {opacity: 0}} >Podane imię jest nieprawidłowe!</p>
+                    </div>
+                    <div className="contact-form__input-subgroup">
+                        <label className="contact-form__label">Wpisz swój email</label>
+                        <input type="email" id="emailInput" value={email} onChange={handleChange} className="contact-form__input contact-form__input--email"  style={emailError? redBar: blackBar}></input>
+                        <p className="contact-form__error" style={emailError? {opacity: "1"}: {opacity: 0}} >Podany e-mail jest nieprawidłowy!</p>
+                    </div>
                 </div>
-                <div className="textAreaGroup">
-                    <label className="textAreaLabel"> Wpisz swoją wiadomość</label>
-                    <textarea className="contactTextArea" id="textarea" value={message} onChange={handleChange} style={messageError? redBar: blackBar}></textarea>
-                    <p className="errorMsg" style={messageError? {opacity: "1"}: {opacity: 0}}>Wiadomość musi mieć conajmniej 120 znaków!</p>
-             
+                <div className="contact-form__textarea-group">
+                    <label className="contact-form__label contact-form__label--textarea"> Wpisz swoją wiadomość</label>
+                    <textarea className="contact-form__textarea" id="textarea" value={message} onChange={handleChange} style={messageError? redBar: blackBar}></textarea>
+                    <p className="contact-form__error" style={messageError? {opacity: "1"}: {opacity: 0}}>Wiadomość musi mieć conajmniej 120 znaków!</p>
                 </div>
-                <div className="buttonContainer">
-                <button type="submit" className="contactSubmit" onClick={handleClick}>Wyślij</button>    
+                <div className="contact-form__button-container">
+                    <button type="submit" className="contact-form__submit" onClick={handleClick}>Wyślij</button>    
                 </div>
-                
             </form>
+        </div>
+        <div className="home-contact-min">
+            <h2 className="home-contact-min__title">
+                Chcesz oddać swoje rzeczy lub zorganizować lokalną zbórkę
+            </h2>
+            <button className="home-contact-min__button" type="button">
+                <Link className="home-contact-min__button-link" to='logowanie'>Załóż konto </Link>
+            </button>
+            <footer className="home-contact-min__footer">
+                <span className="home-contact-min__icon"></span>
+                <h3 className="home-contact-min__call-to-action">
+                    Skontaktuj się z nami
+                    <FontAwesomeIcon className="home-contact-min__fontawesome-icon" icon={faPhone}/>
+                    <FontAwesomeIcon className="home-contact-min__fontawesome-icon" icon={faEnvelope} />
+                </h3>
+                <div className="home-contact-min__contact-links">
+                    <p className="home-contact-min__paragraph"><a className="home-contact-min__link" href="#">Regulamin</a></p>
+                    <p className="home-contact-min__paragraph"><a className="home-contact-min__link" href="#">Polityka Prywatności</a></p>
+                    <p className="home-contact-min__paragraph"><a className="home-contact-min__link" href="#">Instrukcja jak spakować rzeczy do ubrania</a></p>  
+                </div>
+            </footer>
         </div>
     </section> 
     )
-
 }
 
 export {HomeContact}

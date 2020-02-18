@@ -9,7 +9,7 @@ import {useState} from "react"
 import { useSelector, useDispatch} from 'react-redux'
 import { disableBodyScroll, clearAllBodyScrollLocks } from 'body-scroll-lock';
 import OutsideClickHandler from 'react-outside-click-handler';
-import { createLogger } from 'redux-logger';
+
 import ReactResizeDetector from 'react-resize-detector';
 
 
@@ -22,8 +22,7 @@ const HomeHeader = (props) => {
     }
     const sideMenu = useSelector(state=>state.SideMenu)
 
-    console.log(sideMenu)
-  
+
 
     const handleClick = () => {
         setActiveMenu(true)
