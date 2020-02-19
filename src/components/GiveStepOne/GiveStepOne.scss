@@ -1,22 +1,28 @@
-.StepOneSec {
+.step-one__section {
     height: 883px;
     background-image: url('../../assets/images/Background-Form.jpg');
     padding-bottom: 50px;
-    padding-top: 50px
+    padding-top: 50px;
+    @media(max-width: 1024px) {
+        background-image: none;
+        height: auto;
+    }
 }
 
-.StepOneForm {
+.step-one__form {
     display: flex;
     flex-direction: column;
     height: 100%;
-    justify-content: space-between;
-    // padding-top: 50px;
-    
+    justify-content: space-between;    
     margin-left: 142px;
+    @media(max-width: 1024px) {
+        margin-left: 0px;
+        padding-left: 15px;
+    }
 }
 
-.radioList {
-    display: flex;
+.step-one__radio-list {
+    display: flex;;
     flex-direction: column;
     text-decoration: none;
     min-width: 575px;
@@ -25,13 +31,19 @@
     font-family: $font-base-light;
     label {
         cursor: pointer;
+        
+    }
+    @media(max-width:1024px) {
+        font-size: 18px;
+        font-weight: bold;
+        min-width: 0px;
+        line-height: 1.2;
     }
 }
 
-.radioElement > label{
+.step-one__radio-list-element > label{
     display: flex;
-    align-items: center;
-    
+    align-items: center;  
 }
 
 
@@ -52,10 +64,14 @@
     border: 1px solid #3C3C3C;
     background: transparent;
     cursor: pointer;
-
-
+    @media (max-width: 1024px) {
+        min-width: 30px;
+        max-width: 30px;
+        height: 30px;
+        margin: 15px;
+      
+    }
 }
-
 
 [type="checkbox"]:checked + label:before {
     content: '';
@@ -69,21 +85,36 @@
     border: 1px solid#3C3C3C;
     background:#FAD648;
     cursor: pointer;
-
+    @media(max-width: 1024px) {
+        background-color: $color-blue;
+        min-width: 30px;
+        max-width: 30px;
+        height: 30px;
+        margin:15px
+    }
 }
 
-.StepOneTitle {
+.step-one__title {
     font-size: 36px;
     font-family: $font-base-semi;
     line-height: 1.25;
+    @media (max-width: 1024px) {
+        font-size: 28px;
+        margin-bottom: 30px
+    }
 }
 
-.StepCounter {
+.step-counter {
     font-size: 24px;
     font-family: $font-base-light;
+    @media(max-width: 1024px) {
+        display: none;
+    }
 }
 
-.fwdButton {
-    @include buttonsFdwRev
+.forward-button {
+    @include buttonsFdwRev;
+    @include buttonsFwdRev-min
+    
 
 }

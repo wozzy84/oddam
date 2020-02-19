@@ -16,10 +16,10 @@ const Give = () => {
     if(logged) {
         return (
             <>
-                <div className="GiveContainer">
-                    <div className="Give_MainSec_container">
-                        <div className="GiveMainPic"></div>
-                        <div className="GiveRightSubContainer">
+                <div className="give__container">
+                    <div className="give__main-sec-container">
+                        <div className="give__main-picture"></div>
+                        <div className="give__right-subcontainer">
                             <HomeHeader/>
                             <GiveMainSec/>
                         </div>        
@@ -28,7 +28,6 @@ const Give = () => {
                     <HomeContact/>
                     <HomeFooter/>
                 </div>
-
             </>
         )   
 

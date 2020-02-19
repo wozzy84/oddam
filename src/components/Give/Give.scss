@@ -1,10 +1,10 @@
-.GiveContainer {
+.give__container {
     margin: 0 auto;
     max-width: 1900px;
     
 }
 
-.Give_MainSec_container {
+.give__main-sec-container {
     margin: 0 auto;
     display: flex;
     height: 956px;
@@ -14,7 +14,7 @@
     }
 }
 
-.GiveRightSubContainer {
+.give__right-subcontainer {
     width:55%;
     padding-right: 142px;
     @media (max-width: 1024px) {
@@ -24,7 +24,7 @@
     }
 }
 
-.GiveMainPic {
+.give__main-picture {
     @media(min-width: 1024px) {
         height: auto;
         width: 45%;

@@ -1,5 +1,7 @@
 import React from 'react'
 import {useSelector} from 'react-redux'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import  {faInfoCircle}  from '@fortawesome/free-solid-svg-icons'
 
 
 const GiveRibbon = () => {
@@ -20,20 +22,18 @@ const GiveRibbon = () => {
                 return ""
         }
    } 
-   
-
-
 
     return (
         <>      
-        <div className="RibbonContainer">
-            <h2 className="RibbonTitle">Ważne!</h2>
-            <p className="RibbonText">{handleRibbon(step)}</p>
-        </div>
-
-
+            <div className="ribbon__container">
+                <FontAwesomeIcon icon={faInfoCircle} className="ribbon__icon"/>
+                <div>
+                    <h2 className="ribbon__title">Ważne!</h2>
+                    <p className="ribbon__text">{handleRibbon(step)}</p>
+                </div>    
+            </div>
         </>
-    )
+    )   
 }
 
 export {GiveRibbon}
