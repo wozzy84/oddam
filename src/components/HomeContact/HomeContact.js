@@ -1,11 +1,13 @@
 import React from "react"
 import {useState, useEffect} from "react"
 import { Link} from 'react-router-dom'
+import {useSelector}from 'react-redux'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import  {faPhone, faEnvelope}  from '@fortawesome/free-solid-svg-icons'
 
 const HomeContact = ()  => {
 
+    const logged = useSelector(state => state.loggedUser.email)
     const [email, setEmail] = useState("");
     const [name, setName] = useState("");
     const [message, setMessage] = useState("")
@@ -132,12 +134,14 @@ const HomeContact = ()  => {
             </form>
         </div>
         <div className="home-contact-min">
+            <div style={logged?{display:"none"}:{display:"block"}}>
             <h2 className="home-contact-min__title">
                 Chcesz oddać swoje rzeczy lub zorganizować lokalną zbórkę
             </h2>
             <button className="home-contact-min__button" type="button">
                 <Link className="home-contact-min__button-link" to='logowanie'>Załóż konto </Link>
             </button>
+            </div>
             <footer className="home-contact-min__footer">
                 <span className="home-contact-min__icon"></span>
                 <h3 className="home-contact-min__call-to-action">
