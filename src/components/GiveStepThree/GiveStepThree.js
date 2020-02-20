@@ -2,8 +2,9 @@ import React from 'react';
 import { useSelector, useDispatch} from 'react-redux'
 import {GiveStepThreeList} from './GiveStepThreeLisit/GiveStepThreList'
 import {useState} from 'react'
-import { taggedTemplateExpression } from '@babel/types';
-
+import ReactResizeDetector from 'react-resize-detector';
+import { set } from 'date-fns';
+import { createPortal } from 'react-dom';
 
 const  GiveStepThree = () => {
     const dispatch = useDispatch()
@@ -13,35 +14,27 @@ const  GiveStepThree = () => {
     const localization = useSelector (state=>state.Localization)
     const [localizationError, setLocalizationError]=useState(false);
     const [recieverError, setRecieverError]=useState(false)
-    
+    const [color, setColor] = useState({backgroundColor:"yellow"})
 
-    const handleClick = (e) => {
-       
+    const handleClick = (e) => {     
         if (reciever.length && localization.Localization!="wybierz") {
-    
-          dispatch({
-           
+            dispatch({
                 type: "CURRENT_STEP",
                 payload  : {
                  currentStep: +step.currentStep + parseInt(e.currentTarget.value)
                 }          
-        })    
-    }
-    if (!reciever.length){
-        setRecieverError(true);
-        
-    } 
-    if(localization.Localization=="wybierz") {
-        setLocalizationError(true)
-   
-    }
+           })    
         }
-        
+        if (!reciever.length){
+            setRecieverError(true);
+        } 
+        if(localization.Localization=="wybierz") {
+            setLocalizationError(true)
+        }
+    }  
 
-    const handleSelect = (e) => {
-        
+    const handleSelect = (e) => {   
         dispatch({
-            
             type:"SELECT_RECIEVER",
             payload: {
                 currentReciever: e.currentTarget.innerText
@@ -51,60 +44,62 @@ const  GiveStepThree = () => {
     }
 
     const handleChange = (e) => {
-      
         dispatch ({
             type: "TYPE_ORGANIZATION",
             organizationName: e.currentTarget.value
-
          })
-
     }
 
     const handlePass = (e) => {
         setLocalizationError(e)
     }
+
+    const onResize = () => {
+        if(window.innerWidth < 1023) {
+           setColor({
+                    backgroundColor:"#3699be", 
+                    color:"white",
+                    borderColor: "transparent"
+            })
+
+        } else {
+            setColor("yellow")
+        }
+    }
  
     return (
         <>
-        <section className="StepThreeSec">
-            <form className="StepThreeForm">
-                <p className="StepCounter">Krok 3/4</p> 
-                <h3 className="StepThreeTitle">Lokalizacja:</h3>
+        <section className="step-three__section">
+        <ReactResizeDetector handleWidth handleHeight onResize={onResize} />
+            <form className="step-three__form">
+                <p className="step-counter">Krok 3/4</p> 
+                <h3 className="step-three__title">Lokalizacja:</h3>
+                <div className="step-three__container">
                 <GiveStepThreeList pass={handlePass}/>
+                  </div>
                 <div>
-                   <h4 className="StepThreeSubTitle"> Komu chcesz  pomóc?</h4>
-                <ul className="ChooseRecieverList">
-                    <li className="ChooseRecieverElement" onClick={handleSelect} style={reciever.includes("dzieciom") ? {backgroundColor:"yellow"}: null}>dzieciom</li>
-                    <li className="ChooseRecieverElement" onClick={handleSelect} style={reciever.includes("samotnym matkom") ? {backgroundColor:"yellow"}: null}>samotnym matkom</li>
-                    <li className="ChooseRecieverElement" onClick={handleSelect} style={reciever.includes("bezdomnym") ? {backgroundColor:"yellow"}: null}>bezdomnym</li>
-                    <li className="ChooseRecieverElement" onClick={handleSelect} style={reciever.includes("niepełnosprawnym") ? {backgroundColor:"yellow"}: null}>niepełnosprawnym</li>
-                    <li className="ChooseRecieverElement" onClick={handleSelect} style={reciever.includes("osobom starszym") ? {backgroundColor:"yellow"}: null}>osobom starszym</li>
-                </ul> 
-                </div>
-                
-                <div>
-                <h4 className="StepThreeSubTitle"> Wpis nazwę konkretnej organizacji (opcjonalnie)</h4>
-                <input type="text"  value={organizationName} className="TextInputStepThree" onChange={handleChange}></input>
-                </div>
-                
+                   <h4 className="step-three__subtitle"> Komu chcesz  pomóc?</h4>
+                    <ul className="choose-reciever__list">
+                        <li className="choose-reciever__list-element" onClick={handleSelect} style={reciever.includes("dzieciom") ? color: null}>dzieciom</li>
+                        <li className="choose-reciever__list-element" onClick={handleSelect} style={reciever.includes("samotnym matkom") ? color: null}>samotnym matkom</li>
+                        <li className="choose-reciever__list-element" onClick={handleSelect} style={reciever.includes("bezdomnym") ? color: null}>bezdomnym</li>
+                        <li className="choose-reciever__list-element" onClick={handleSelect} style={reciever.includes("niepełnosprawnym") ? color: null}>niepełnosprawnym</li>
+                        <li className="choose-reciever__list-element" onClick={handleSelect} style={reciever.includes("osobom starszym") ? color: null}>osobom starszym</li>
+                    </ul> 
+              
+                    <h4 className="step-three__subtitle"> Wpis nazwę konkretnej organizacji (opcjonalnie)</h4>
+                    <input type="text"  value={organizationName} className="step-three__text-input" onChange={handleChange}></input>
+                </div> 
                <div>
-                   
                     {localizationError && <p style={{color:"red", marginBottom: "20px"}}>Wybierz lokalizację</p>}
                     {recieverError && <p style={{color:"red"}}>Wybierz odbiorcę</p>}
                </div>
                <div>
-               <button  className="revButton" type="button" value={-1} onClick={handleClick}>Wstecz</button>
-
-               <button  className="fwdButton" type="button" value={1} onClick={handleClick}>Dalej</button>
-                
+                    <button  className="rev-button" type="button" value={-1} onClick={handleClick}>Wstecz</button>
+                    <button  className="fwd-button" type="button" value={1} onClick={handleClick}>Dalej</button>
                </div>
-              
             </form>
-
         </section>
-
-        
-
         </>
     )
 }

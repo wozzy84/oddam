@@ -9,7 +9,6 @@ const  GiveStepTwo = () => {
     const step = useSelector(state => state.currentStep)
     const bags = useSelector(state => state.bags)
     const [error, setError] = useState(false)
-
     const handleClick = (e) => {
         if(typeof bags.bags === "number") {
             dispatch({           
