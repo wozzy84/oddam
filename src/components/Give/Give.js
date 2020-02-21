@@ -1,6 +1,5 @@
 import React from 'react'
 import {GiveMainSec} from '../GiveMainSec/GiveMainSec'
-import {GiveHeader} from '../GiveHeader/GiveHeader'
 import {useSelector}from 'react-redux'
 import { HomeContact } from '../HomeContact/HomeContact';
 import { GiveSteps } from '../GiveSteps/GiveSteps';

@@ -63,7 +63,7 @@ const  GiveStepThree = () => {
             })
 
         } else {
-            setColor("yellow")
+            setColor({backgroundColor:"yellow"})
         }
     }
  
@@ -81,7 +81,7 @@ const  GiveStepThree = () => {
                    <h4 className="step-three__subtitle"> Komu chcesz  pomóc?</h4>
                     <ul className="choose-reciever__list">
                         <li className="choose-reciever__list-element" onClick={handleSelect} style={reciever.includes("dzieciom") ? color: null}>dzieciom</li>
-                        <li className="choose-reciever__list-element" onClick={handleSelect} style={reciever.includes("samotnym matkom") ? color: null}>samotnym matkom</li>
+                        <li className="choose-reciever__list-element" onClick={handleSelect} style={reciever.includes("samotnym matkom") ? color: null} >samotnym matkom</li>
                         <li className="choose-reciever__list-element" onClick={handleSelect} style={reciever.includes("bezdomnym") ? color: null}>bezdomnym</li>
                         <li className="choose-reciever__list-element" onClick={handleSelect} style={reciever.includes("niepełnosprawnym") ? color: null}>niepełnosprawnym</li>
                         <li className="choose-reciever__list-element" onClick={handleSelect} style={reciever.includes("osobom starszym") ? color: null}>osobom starszym</li>
@@ -94,7 +94,7 @@ const  GiveStepThree = () => {
                     {localizationError && <p style={{color:"red", marginBottom: "20px"}}>Wybierz lokalizację</p>}
                     {recieverError && <p style={{color:"red"}}>Wybierz odbiorcę</p>}
                </div>
-               <div>
+               <div className="step-three__button-container">
                     <button  className="rev-button" type="button" value={-1} onClick={handleClick}>Wstecz</button>
                     <button  className="fwd-button" type="button" value={1} onClick={handleClick}>Dalej</button>
                </div>

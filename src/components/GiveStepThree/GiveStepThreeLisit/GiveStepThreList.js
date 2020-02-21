@@ -10,7 +10,7 @@ const  GiveStepThreeList = (props) => {
     const dispatch = useDispatch()
     const Localization = useSelector(state => state.Localization)
     const [activeList, setActiveList] = useState(null)
-    
+   
     const handleAcive = (e) => {
         setActiveList(true)
     }
@@ -25,6 +25,8 @@ const  GiveStepThreeList = (props) => {
         setActiveList(false)
         props.pass(false)
     }
+
+
 
     return(
         <>        

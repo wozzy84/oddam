@@ -1,4 +1,17 @@
-.StepFourForm {
+.step-four__section {
+    height: 883px;
+    background-image: url('../../assets/images/Background-Form.jpg');
+    padding-bottom: 50px;
+    padding-top: 50px;
+    @media(max-width: 1024px) {
+        height: auto;  
+        background-image: none;
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+}
+
+.step-four__form {
     display: flex;
     flex-direction: column;
     height: 100%;
@@ -20,39 +33,95 @@
         font-size: 24px;
         font-family: $font-base-light;
         padding-left:5px;
+        @media (max-width: 1024px) {
+            min-width: 0px;
+            width: 70%;
+            height: 30px;
+            margin-left: 5px;
+            font-size: 18px;
+            margin-left: 0px;
+            max-width: 300px
+        }
     }
     textarea{
         height: 120px;
         width: 349px;
         resize: none;
+        @media (max-width: 1024px) {
+            min-width:0px;
+            width: 70%;
+            height: 100px; 
+        }
     }
     h4 {
         font-family: $font-base-semi;
         margin-bottom: 20px;
     }
-    
+    @media(max-width: 1024px) {
+        margin-left:0px;
+        padding-left: 10px;
+        font-size: 20px;
+     
+    }
+    label {
+        @media(max-width: 1024px){
+            width: 30%;
+        }
+    }
 }
 
-.StepFourFormColumn {
+.step-four__title {
+    font-size: 36px;
+    font-family: $font-base-semi;
+    line-height: 1.25;
+    @media(max-width: 1024px){
+        font-size:22px;
+        margin-bottom: 20px
+    }
+}
+
+
+.step-four__form-column {
     display: flex;
     flex-direction: column;
     margin: 10px;
     width: 392px; 
+    @media (max-width:1024px) {
+        width: auto;
+    };
 
 }
 
-.StepFourFormWrapper {
+.step-four__form-wrapper {
     display: flex;
     width: 900px;
     justify-content: space-between;
+    @media (max-width: 1024px) {
+        display: block;
+        width: auto;
+    }
 }
 
-.StepFouruInputGroup {
+.step-four__input-group {
     display: flex;
     width: 100%;
     justify-content: space-between;
     align-items: center;
+    @media(max-width: 1024px) {
+        justify-content: flex-start;
+    }
 
+}
+
+.step-four__button-container {
+    @media(max-width: 1024px) {
+        margin-top: 20px;
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        margin-left: -10px
+        
+    }
 }
 
 /* Chrome, Safari, Edge, Opera */
