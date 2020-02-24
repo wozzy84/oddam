@@ -1,11 +1,17 @@
-.StepFiveSec {
+.summary__section {
     height: 883px;
     background-image: url('../../assets/images/Background-Form.jpg');
     padding-bottom: 50px;
-    padding-top: 50px
+    padding-top: 50px;
+    @media(max-width: 1024px) {
+        background-image: none;
+        height: auto;
+        padding-bottom: 20px;
+        padding-top: 20px
+    }
 }
 
-.StepFiveForm {
+.summary__form{
     display: flex;
     flex-direction: column;
     height: 100%;
@@ -18,50 +24,71 @@
     h3 {
         font-family: $font-base-semi;
         margin-bottom: 20px;
-        font-size: 34px
+        font-size: 34px;
+        @media(max-width: 1024px) {
+            font-size: 24px
+        }
     }
     h4 {
         font-family: $font-base-semi;
         margin-bottom: 20px;
-    }   
+    }  
+    @media (max-width: 1024px) {
+        margin-left: 0px;
+        padding-left:  10px;
+        padding-right: 10px;
+        font-size: 18px;
+    }
+
 }
 
-.StepFiveFormColumn {
+.summary__title {
+    font-size: 24px;
+    font-family: $font-base-semi;
+    @media (max-width: 1024px) {
+        font-size: 18px
+    }
+}
+
+
+.summary__column {
     display: flex;
     flex-direction: column;
     margin: 10px;
     width: 392px; 
+    @media (max-width:1024px){
+        width: auto;
+    }
 }
 
-.StepFiveFormWrapper {
+.summary__wrapper {
     display: flex;
     width: 900px;
     justify-content: space-between;
+    @media (max-width:1024px) {
+        display: block;
+        width: auto;
+    }
 }
 
-.StepFiveInputGroup {
+.summary__input-group {
     display: flex;
     width: 100%;
     justify-content: space-between;
     align-items: center;
 }
 
-.SummaryLabel {  
+.summary__label {  
     max-width: 150px;   
     margin-bottom: 25px
 }
 
-.SummaryDescription{
+.summary__description {
     margin-bottom: 25px;
     max-width: 250px;
 }
 
-.SummaryBriefTitle {
-    font-size: 24px;
-    font-family: $font-base-semi;
-}
-
-.ShirtIcon {
+.shirt-icon {
     background-image: url('../../assets/Icons/IconShirt.png');
     min-width: 45px;
     min-height: 45px;
@@ -70,7 +97,7 @@
     margin: 10px;
 }
 
-.CircleIcon {
+.circle-icon {
     background-image: url('../../assets/Icons/IconCircle.png');
     width: 45px;
     height: 45px;
@@ -78,8 +105,23 @@
     background-position: center;
     margin: 10px;
 }
-.SummaryBriefDetails {
+.summary-brief__details {
     display: flex;  
     align-items: center;
     max-width: 1000px
+}
+
+.summary-brief__title {
+    font-family: $font-base-semi;
+    margin-bottom: 10px;
+}
+
+.summary__button-container {
+    @media(max-width: 1024px) {
+        margin-top: 20px;
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        margin-left: -10px
+    }
 }

@@ -1,8 +1,6 @@
 import React from 'react';
-import { useSelector, useDispatch} from 'react-redux'
-import { useForm } from 'react-hook-form'
-
-
+import {useSelector, useDispatch} from 'react-redux'
+import {useForm} from 'react-hook-form'
 
 const  GiveSummary = () => {
     const dispatch = useDispatch()   
@@ -13,10 +11,9 @@ const  GiveSummary = () => {
     const option = useSelector(state => state.selectedOption)
     const recievers = useSelector(state=>state.reciever)
     const data = useSelector(state=>state.data)
-    const { handleSubmit} = useForm()
-
- 
     
+    const {handleSubmit} = useForm()
+
     const onSubmit = () => { 
         dispatch({   
             type: "CURRENT_STEP",
@@ -27,12 +24,11 @@ const  GiveSummary = () => {
     }
 
     const handleClick = (e) => {
-        dispatch({
-           
-                type: "CURRENT_STEP",
-                payload  : {
-                 currentStep: +step.currentStep + parseInt(e.currentTarget.value)
-                }          
+        dispatch({           
+            type: "CURRENT_STEP",
+            payload: {
+                currentStep: +step.currentStep + parseInt(e.currentTarget.value)
+            }          
         })    
     }
     const handleBags = (e) => {
@@ -44,62 +40,59 @@ const  GiveSummary = () => {
             case 4:
             return "worki, "
             case 5:
-            return "worków, "
-            
+            return "worków, " 
         }
     } 
 
     return (
         <>
-        <section className="StepFiveSec">
-            <form className="StepFiveForm" onSubmit={handleSubmit(onSubmit)}>
-                <h3 className="StepFiveTitle">Podsumowanie Twojej darowizny</h3>        
-                <div className="SummaryBriefContainer">
-                    <h5 className="SummaryBriefTitle">Oddajesz:</h5>
-                    <p className="SummaryBriefDetails"><span className="ShirtIcon"></span>{bags} {handleBags(bags)}{option.map(e=> e.optionDescription +', ')} {recievers.map(e=> e+", ")} </p>
-                    <p className="SummaryBriefDetails"><span className="CircleIcon"> </span>dla lokalizacji: {localization}</p>
-                </div>
-                
-               
-                <div className="StepFourFormWrapper">
-                    <div className="StepFiveFormColumn">
+        <section className="summary__section">
+            <form className="summary__form" onSubmit={handleSubmit(onSubmit)}>
+                <h3 className="summary__title">Podsumowanie Twojej darowizny</h3>        
+                <div className="summary-brief__container">
+                    <h5 className="summary-brief__title">Oddajesz:</h5>
+                    <p className="summary-brief__details"><span className="shirt-icon"></span>{bags} {handleBags(bags)}{option.map(e=> e.optionDescription +', ')} {recievers.map(e=> e+", ")} </p>
+                    <p className="summary-brief__details"><span className="circle-icon"> </span>dla lokalizacji: {localization}</p>
+                </div>      
+                <div className="summary__wrapper">
+                    <div className="summary__column">
                         <h4>Adres odbioru:</h4>
-                        <div className="StepFiveInputGroup">
-                            <p className="SummaryLabel">Ulica</p>
-                            <p className="SummaryDescription">{controledForm.street}</p>
+                        <div className="summary__input-group">
+                            <p className="summary__label">Ulica</p>
+                            <p className="summary__description">{controledForm.street}</p>
                         </div>                     
-                        <div className="StepFouruInputGroup">
-                            <p className="SummaryLabel">Miasto</p>
-                            <p className="SummaryDescription">{controledForm.city}</p>  
+                        <div className="summary__input-group">
+                            <p className="summary__label">Miasto</p>
+                            <p className="summary__description">{controledForm.city}</p>  
                         </div>
-                        <div className="StepFouruInputGroup">
-                            <p className="SummaryLabel">Kod pocztowy</p>
-                            <p className="SummaryDescription">{controledForm.zipCode} </p>
+                        <div className="summary__input-group">
+                            <p className="summary__label">Kod pocztowy</p>
+                            <p className="summary__description">{controledForm.zipCode} </p>
                         </div> 
-                        <div className="StepFouruInputGroup">
-                            <p className="SummaryLabel">Numer telefonu  </p>
-                            <p className="SummaryDescription">{controledForm.phone}</p>
+                        <div className="summary__input-group">
+                            <p className="summary__label">Numer telefonu  </p>
+                            <p className="summary__description">{controledForm.phone}</p>
                         </div>
                     </div>
-                    <div className="StepFourFormColumn">
+                    <div className="summary__column">
                         <h4>Termin odbioru:</h4>
-                        <div className="StepFouruInputGroup">
-                            <p className="SummaryLabel">Data</p>
-                            <p className="SummaryDescription">{data.toLocaleDateString()}</p>
+                        <div className="summary__input-group">
+                            <p className="summary__label">Data</p>
+                            <p className="summary__description">{data.toLocaleDateString()}</p>
                         </div>
-                        <div className="StepFouruInputGroup">
-                            <p className="SummaryLabel">Godzina</p>
-                            <p className="SummaryDescription">{controledForm.recieveHour}</p>
+                        <div className="summary__input-group">
+                            <p className="summary__label">Godzina</p>
+                            <p className="summary__description">{controledForm.recieveHour}</p>
                         </div>                       
-                        <div className="StepFouruInputGroup">
-                            <p className="SummaryLabel">Uwagi dla kuriera</p>
-                            <p className="SummaryDescription">{controledForm.remarks}</p>    
+                        <div className="summary__input-group">
+                            <p className="summary__label">Uwagi dla kuriera</p>
+                            <p className="summary__description">{controledForm.remarks}</p>    
                         </div>
                     </div>               
                 </div>    
-                <div>
-                    <button  className="revButton" type="button" value={-1} onClick={handleClick}>Wstecz</button>
-                    <button  className="fwdButton" type="submit" value={0} onClick={handleClick}>Potwierdzam</button> 
+                <div className="summary__button-container">
+                    <button  className="rev-button" type="button" value={-1} onClick={handleClick}>Wstecz</button>
+                    <button  className="fwd-button" type="submit" value={0} onClick={handleClick}>Potwierdzam</button> 
                 </div>
 
             </form>

@@ -6,10 +6,10 @@ const  GiveThankYou = () => {
 
     return (
         <>
-        <section className="ThankYouSec">
-            <div className="ThankYouContainer">
-                <p className="ThankYouPar">Dziękujemy za przesłanie formularza Na maila prześlemy wszelkie informacje o odbiorze.</p>
-                <div className="ThankYoDecoration"></div>
+        <section className="thank-you__section">
+            <div className="thank-you__container">
+                <p className="thank-you__text">Dziękujemy za przesłanie formularza. Na maila prześlemy wszelkie informacje o odbiorze.</p>
+                <div className="thank-you__decoration"></div>
             </div>  
         </section>
         </>
