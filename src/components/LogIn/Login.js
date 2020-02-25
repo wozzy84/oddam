@@ -2,7 +2,7 @@ import React from 'react'
 import {Link} from 'react-router-dom'
 import {useState, useEffect} from 'react';
 import {auth} from '../../config'
-import { useHistory } from "react-router-dom";
+import {useHistory} from "react-router-dom";
 import {HomeHeader} from '../HomeHeader/HomeHeader'
 import {useSelector, useDispatch} from 'react-redux'
 
@@ -15,10 +15,7 @@ const Login = ({match}) => {
     const [email, setEmail] = useState("");
     const [passwd, setPasswd] = useState("");
     const [submitTry, setSubmitTry] = useState(false)
-    const sideMenu = useSelector(state=>state.SideMenu)
     const history = useHistory();   
-    const dispatch = useDispatch()
-
 
     const handleChange = (e) => {
         switch (e.currentTarget.id){
@@ -69,52 +66,46 @@ const Login = ({match}) => {
         if (submitTry==true) {
              setEmailError(!emailValidatiton);
              setPasswdError(!passwdValidaion);
-        }
-        
-       
+        }  
     },[email, passwd ])
 
-
-    return  (
+    return (
     <>
      <div className="login-container">
         <div className="login-header-container">
             <HomeHeader currentLocation={match.url}/>
         </div>    
-     <section className="login-section">
+        <section className="login-section">
             <div className="login-form-container">
-            <h1 className="login-form-container__title">Zaloguj się</h1>
-            <div className="login-form-container__decoration"></div>
-            <form className="login-form ">
-                <div className="login-form__input-group">
-                    <div className="login-form__input-container">
-                        <label className="login-form__label" htmlFor="login-email">Email</label>
-                        <input className="login-form__input" type="email" id="login-email" style={emailError? redBar: blackBar} value={email} onChange={handleChange}></input>
-                        <p className="login-form__error " style={emailError? {opacity: "1"}: {opacity: 0}}  >Podany email jest nieprawidłowy!</p>
-                    </div>
-                    <div className="login-form__input-container">
-                        <label className="login-form__label" htmlFor="loginPasswd">Hasło</label>
-                        <input className="login-form__input" type="password"  id="login-passwd" style={passwdError? redBar: blackBar} value={passwd} onChange={handleChange}></input>
-                        <p className="login-form__error " style={passwdError? {opacity: "1"}: {opacity: 0}}  >Podane hasło jest za krótkie!</p>
-                    </div>       
-                </div>  
-                <div className="login-form__button-group">
+                <h1 className="login-form-container__title">Zaloguj się</h1>
+                <div className="login-form-container__decoration"></div>
+                <form className="login-form ">
+                    <div className="login-form__input-group">
+                        <div className="login-form__input-container">
+                            <label className="login-form__label" htmlFor="login-email">Email</label>
+                            <input className="login-form__input" type="email" id="login-email" style={emailError? redBar: blackBar} value={email} onChange={handleChange}></input>
+                            <p className="login-form__error " style={emailError? {opacity: "1"}: {opacity: 0}}>Podany email jest nieprawidłowy!</p>
+                        </div>
+                        <div className="login-form__input-container">
+                            <label className="login-form__label" htmlFor="loginPasswd">Hasło</label>
+                            <input className="login-form__input" type="password"  id="login-passwd" style={passwdError? redBar: blackBar} value={passwd} onChange={handleChange}></input>
+                            <p className="login-form__error " style={passwdError? {opacity: "1"}: {opacity: 0}}>Podane hasło jest za krótkie!</p>
+                        </div>       
+                    </div>  
+                    <div className="login-form__button-group">
                         <button className="login-form__button" type="button">
                             <Link to ='rejestracja' className="login-form__link">Załóż konto</Link>
                         </button>
                         <button className="login-form__button login-form__button--log-in" type="submit" onClick={handleClick}>
                             Zaloguj się
                         </button>
-                </div>
-            </form>
+                    </div>
+                </form>
             </div>
         </section>
      </div>
     </>
     )
-
-
-
 }
 
 export default Login 

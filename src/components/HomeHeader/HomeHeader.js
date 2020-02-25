@@ -1,15 +1,14 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import {Link} from 'react-scroll'
-import { HashLink as HashLink } from 'react-router-hash-link';
+import {HashLink as HashLink} from 'react-router-hash-link';
 import {HomeLoginNav} from '../HomeLoginNav/HomeLoginNav'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import  {faTimesCircle}  from '@fortawesome/free-solid-svg-icons'
-import { HomeLoginNavMin } from '../HomeLoginNav/HomeLoginNavMin'
+import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
+import {faTimesCircle}  from '@fortawesome/free-solid-svg-icons'
+import {HomeLoginNavMin} from '../HomeLoginNav/HomeLoginNavMin'
 import {useState} from "react"
-import { useSelector, useDispatch} from 'react-redux'
-import { disableBodyScroll, clearAllBodyScrollLocks } from 'body-scroll-lock';
+import {useSelector, useDispatch} from 'react-redux'
+import {disableBodyScroll, clearAllBodyScrollLocks} from 'body-scroll-lock';
 import OutsideClickHandler from 'react-outside-click-handler';
-
 import ReactResizeDetector from 'react-resize-detector';
 
 
@@ -21,8 +20,6 @@ const HomeHeader = (props) => {
         reserveScrollBarGap: true
     }
     const sideMenu = useSelector(state=>state.SideMenu)
-
-
 
     const handleClick = () => {
         setActiveMenu(true)
@@ -81,7 +78,7 @@ const HomeHeader = (props) => {
                         <HomeLoginNavMin pass={handlePass}/>
                         <li className="main-nav__list-element">
                             <Link className="main-nav__link" onClick={handleCloseMenu}
-                               to="target"
+                               to="home"
                                spy={true}
                                smooth={true}
                                hashSpy={true}
@@ -97,7 +94,7 @@ const HomeHeader = (props) => {
                                 spy={true}
                                 smooth={true}
                                 hashSpy={true}
-                                offset={20}
+                                offset={-20}
                                 duration={500}
                                 isDynamic={true}
                             >O co chodzi? 
@@ -143,7 +140,6 @@ const HomeHeader = (props) => {
                 </nav>
             </div>
             </OutsideClickHandler>
-
         )
     } else {
         return (

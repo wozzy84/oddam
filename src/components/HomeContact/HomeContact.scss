@@ -1,5 +1,6 @@
 .home-contact {
     display: flex;
+    padding-top: 20px;
 }
 
 .home-contact__decoration{
@@ -11,9 +12,15 @@
     width: 60%;
     height: 950px;
     background-image: url('../../assets/images/Background-Contact-Form.jpg');
+    background-size: cover;
     opacity: 0.3;
-    @media(max-width: 1024px) {
-        display: none
+   
+    @media(max-width: 1150px) {
+        display: none;
+    } 
+    @media (max-width: 1590px) {
+        background-image: url('../../assets/images/min-Background-Contact-Form.jpg');
+        height: auto;
     }
 }
 
@@ -23,8 +30,12 @@
     justify-content: center;
     align-items: center;
     text-align: center;
+    padding:20px;
     @media(max-width: 1024px) {
         display: none
+    }
+    @media(max-width:1590px) {
+        margin: 0 auto
     }
 }
 
@@ -77,7 +88,6 @@
 
 .contact-form__label--textarea {
     margin-bottom: 20px;
-   
 }
 
 .contact-form__input--name {
@@ -103,7 +113,7 @@
 .contact-form__button-container {
     width: 100%;
     display: flex;
-    justify-content: flex-end;
+    justify-content: flex-end; 
 }
 
 .contact-form__submit {

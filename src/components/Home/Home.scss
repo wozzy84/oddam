@@ -9,19 +9,17 @@
 .header-main-sec-container {
     margin: 0 auto;
     display: flex;
-    width: 100%;
-
-    
+    width: 100%;    
 }
 
 .header-main-sec-container__subcontiner {
-   
+    
     padding-right: 142px;
     width: 55%;
     @media(max-width:1024px) {
         width: 100%;
         padding-right: 0px;
-       
+      
     }
 }
 
@@ -33,7 +31,11 @@
         background-position: cover;
         background-position-x: -473px;  
     }
-  
+    @media(min-width:1590px){
+        background-size: cover;
+        background-position: center;
+        height: auto;
+    } 
 }
 
  
