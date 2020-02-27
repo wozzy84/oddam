@@ -25,7 +25,6 @@ const Give = () => {
                      </div>
                     <GiveSteps/>
                     <HomeContact/>
-                    <HomeFooter/>
                 </div>
             </>
         )   

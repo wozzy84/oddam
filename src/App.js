@@ -7,12 +7,8 @@
     import Give from './components/Give/Give'
     import { useDispatch } from 'react-redux';
     import {auth} from './config'
-    
-    
-
-    const App = (props) => {
-
-        
+   
+    const App = () => {
         const dispatch = useDispatch()
 
         auth.onAuthStateChanged((user) => {
@@ -35,7 +31,6 @@
             }
         }); 
 
-
     return (
         <>
             <HashRouter>
@@ -45,7 +40,6 @@
                 <Route path ='/wylogowano' component= {LogOut}/>
                 <Route path ='/oddaj-rzeczy' component={Give}/>
             </HashRouter>
-
         </>
     )
     }

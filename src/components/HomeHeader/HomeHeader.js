@@ -1,5 +1,4 @@
 import React from 'react'
-import {Link} from 'react-scroll'
 import {HashLink as HashLink} from 'react-router-hash-link';
 import {HomeLoginNav} from '../HomeLoginNav/HomeLoginNav'
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
@@ -10,7 +9,6 @@ import {useSelector, useDispatch} from 'react-redux'
 import {disableBodyScroll, clearAllBodyScrollLocks} from 'body-scroll-lock';
 import OutsideClickHandler from 'react-outside-click-handler';
 import ReactResizeDetector from 'react-resize-detector';
-
 
 const HomeHeader = (props) => {
     const [activeMenu, setActiveMenu] = useState(false)
@@ -23,8 +21,7 @@ const HomeHeader = (props) => {
 
     const handleClick = () => {
         setActiveMenu(true)
-        document.body.style.backgroundColor = "grey";
-        document.body.style.transition = "background-color 1s ";
+
         dispatch({
             type: "SIDE_MENU",
             active: true
@@ -35,7 +32,7 @@ const HomeHeader = (props) => {
 
     const handleCloseMenu = () => {
         setActiveMenu(false)
-        document.body.style.backgroundColor = "transparent"
+
         dispatch({
             type: "SIDE_MENU",
             active: false
@@ -45,22 +42,22 @@ const HomeHeader = (props) => {
     
     const handlePass = () => {
         handleCloseMenu()
-     } 
+    }
+
     const onResize = () => {
         if(sideMenu && window.innerWidth > 1023) {
             document.body.style.transition = "background-color 0s ";
             handleCloseMenu()
         }
     }
-     
     
     if (props.currentLocation==="/"){
-        return (
-            
+        return (  
             <OutsideClickHandler
             onOutsideClick={() => {
                 handleCloseMenu()
              }}>
+          
             <div className="home-header" >
             <ReactResizeDetector handleWidth handleHeight onResize={onResize} />
                 <div className="hamburger-menu" >
@@ -77,8 +74,8 @@ const HomeHeader = (props) => {
                     <FontAwesomeIcon icon={faTimesCircle} className="times-circle" onClick={handleCloseMenu}/>
                         <HomeLoginNavMin pass={handlePass}/>
                         <li className="main-nav__list-element">
-                            <Link className="main-nav__link" onClick={handleCloseMenu}
-                               to="home"
+                            <HashLink className="main-nav__link" onClick={handleCloseMenu}
+                               to="/#home"
                                spy={true}
                                smooth={true}
                                hashSpy={true}
@@ -86,11 +83,11 @@ const HomeHeader = (props) => {
                                duration={500}
                                isDynamic={true}
                             >Start
-                            </Link>
+                            </HashLink>
                          </li>
                         <li className="main-nav__list-element">
-                            <Link className="main-nav__link" onClick={handleCloseMenu}
-                                to="FourSteps"
+                            <HashLink className="main-nav__link" onClick={handleCloseMenu}
+                                to="/#FourSteps"
                                 spy={true}
                                 smooth={true}
                                 hashSpy={true}
@@ -98,11 +95,11 @@ const HomeHeader = (props) => {
                                 duration={500}
                                 isDynamic={true}
                             >O co chodzi? 
-                            </Link>
+                            </HashLink>
                         </li>                   
                         <li className="main-nav__list-element main-nav__list-element--about">
-                            <Link className="main-nav__link  main-nav__link--about " onClick={handleCloseMenu}
-                                to="about"
+                            <HashLink className="main-nav__link  main-nav__link--about " onClick={handleCloseMenu}
+                                to="/#about"
                                 spy={true}
                                 smooth={true}
                                 hashSpy={true}
@@ -110,11 +107,11 @@ const HomeHeader = (props) => {
                                 duration={500}
                                 isDynamic={true}
                             >O nas      
-                            </Link>
+                            </HashLink>
                         </li>
                         <li className="main-nav__list-element">
-                            <Link className="main-nav__link" onClick={handleCloseMenu}
-                                to="Help"
+                            <HashLink className="main-nav__link" onClick={handleCloseMenu}
+                                to="/#Help"
                                 spy={true}
                                 smooth={true}
                                 hashSpy={true}
@@ -122,11 +119,11 @@ const HomeHeader = (props) => {
                                 duration={500}
                                 isDynamic={true}
                             >Fundacja i oraganizacje
-                            </Link>
+                            </HashLink>
                         </li>
                         <li className="main-nav__list-element">
-                            <Link className="main-nav__link" onClick={handleCloseMenu}
-                                to="Contact"
+                            <HashLink className="main-nav__link" onClick={handleCloseMenu}
+                                to="/#Contact"
                                 spy={true}
                                 smooth={true}
                                 hashSpy={true}
@@ -134,7 +131,7 @@ const HomeHeader = (props) => {
                                 duration={500}
                                 isDynamic={true}
                             >Kontakt
-                        </Link>
+                        </HashLink>
                         </li>
                     </ul>
                 </nav>
@@ -145,9 +142,9 @@ const HomeHeader = (props) => {
         return (
                 <>
                     <OutsideClickHandler
-            onOutsideClick={() => {
-             handleCloseMenu()
-             }}>
+                        onOutsideClick={() => {
+                             handleCloseMenu()
+                    }}>
                     <div className="home-header">
                     <ReactResizeDetector handleWidth handleHeight onResize={onResize} />
                         <div className="hamburger-menu">
@@ -170,16 +167,11 @@ const HomeHeader = (props) => {
                                     <li className="main-nav__list-element"><HashLink className="main-nav__link" onClick={handleCloseMenu} to="/#Contact">Kontakt</HashLink></li>
                                 </ul>
                             </nav>
-                    </div> 
+                        </div> 
                     </OutsideClickHandler>
                 </>
             )
-    }
-        
-    onResize = () => {
-        console.log(":P")
-    }
- 
+    } 
     
 }
 

@@ -25,9 +25,6 @@ const HomeLoginNav = (props) => {
         .catch((error)=>console.log(error))
     }
 
-
- 
-
     if (logged){
         return (    
             <nav className="login-nav">

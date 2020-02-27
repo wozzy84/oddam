@@ -1,6 +1,7 @@
 .home-contact {
     display: flex;
     padding-top: 20px;
+    position: relative;
 }
 
 .home-contact__decoration{
@@ -31,6 +32,7 @@
     align-items: center;
     text-align: center;
     padding:20px;
+    padding-bottom: 100px;
     @media(max-width: 1024px) {
         display: none
     }
@@ -141,6 +143,7 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
+  
     @media(min-width: 1024px) {
         display: none;
     }
@@ -163,7 +166,7 @@
 .home-contact-min__footer {
     width: 100%;
     padding-top: 20px;
-    padding-bottom: 20px; 
+    padding-bottom: 60px; 
     background-color: $color-blue;
 }
 

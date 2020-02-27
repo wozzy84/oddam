@@ -4,6 +4,7 @@ import { Link} from 'react-router-dom'
 import {useSelector}from 'react-redux'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import  {faPhone, faEnvelope}  from '@fortawesome/free-solid-svg-icons'
+import {HomeFooter} from '../HomeFooter/HomeFooter'
 
 const HomeContact = ()  => {
 
@@ -156,6 +157,7 @@ const HomeContact = ()  => {
                 </div>
             </footer>
         </div>
+        <HomeFooter/>
     </section> 
     )
 }

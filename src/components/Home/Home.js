@@ -6,13 +6,15 @@ import {HomeFourSteps} from '../HomeFourSteps/HomeFourSteps'
 import {HomeAbout} from '../HomeAbout/HomeAbout';
 import {HomeHelp} from '../HomeHelp/HomeHelp';
 import {HomeContact} from '../HomeContact/HomeContact';
-import {HomeFooter} from '../HomeFooter/HomeFooter'
+import {useSelector} from 'react-redux'
 
 
 const Home = ({match}) => {
+  const sideMenu = useSelector(state=>state.SideMenu)
 
   return (
     <>
+    <div className="shadow-box" style={sideMenu? {position:"fixed", height: "120vh", width:"120vh", backgroundColor: "rgba(0,0,0,0.5)", zIndex:"999"}:null}></div>
     <div className="home-container">
       <div className="header-main-sec-container" id="home">
           <div className="header-main-sec-container__picture"></div>
@@ -26,8 +28,8 @@ const Home = ({match}) => {
             <HomeAbout/>
             <HomeHelp/>
             <HomeContact/> 
-            <HomeFooter/>
     </div>
+    
     </>   
     )
 }
