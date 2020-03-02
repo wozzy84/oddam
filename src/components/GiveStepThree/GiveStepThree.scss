@@ -1,6 +1,10 @@
 .step-three__section {
     height: 883px;
     background-image: url('../../assets/images/Background-Form.jpg');
+    width: 100%;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
     padding-bottom: 50px;
     padding-top: 50px;
     @media(max-width: 1024px) {

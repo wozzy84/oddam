@@ -7,19 +7,23 @@
     margin-bottom:20px;
     padding-top: 70px;
     text-align: center;
-    @media(max-width:1024px) {
+    @media(min-width:1024px) {
         margin: 5px 10px;
-
+        padding-top: 40px;
     }
 }
 
 .home-four-steps__call-to-action {
-    font-size: 38px;
-    margin-top: 15px;
-    margin-bottom: 30px;
-    @media(max-width: 1024px) {
         font-size:28px;
-        font-family: $font-base-semi
+        font-family: $font-base-semi;
+    @media(min-width: 1024px) {
+        font-size: 32px;
+        margin-top: 15px;
+        margin-bottom: 30px;
+        font-family: $font-base;
+    }
+    @media(min-width:1800px) {
+        font-size: 38px
     }
 }
 
@@ -33,14 +37,17 @@
 
 .home-four-steps__icon-group {
     display: flex;
-    height: 325px;
+    height:auto;
     width: 100%;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-around;
     max-width: 1100px; 
-    @media(max-width: 1024px) {
-        height: auto;
-        justify-content: space-around;
+    @media(min-width: 1024px) {
+        height: 325px;
+    }
+    @media (min-width: 1800px) {
+        justify-content: space-between;
+        
     }
 }
 
@@ -58,14 +65,14 @@
 
 .home-four-steps-icon__icon {
     display: none; 
-    @media(min-width: 1024px) {
+    @media(min-width: 1800px) {
         display: block;
     }
 }
 
 .home-four-steps-icon__icon--min {
     display: none;
-    @media(max-width:1024px) {
+    @media(max-width:1800px) {
         display: block
     }
     

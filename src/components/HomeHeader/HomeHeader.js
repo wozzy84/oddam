@@ -74,64 +74,19 @@ const HomeHeader = (props) => {
                     <FontAwesomeIcon icon={faTimesCircle} className="times-circle" onClick={handleCloseMenu}/>
                         <HomeLoginNavMin pass={handlePass}/>
                         <li className="main-nav__list-element">
-                            <HashLink className="main-nav__link" onClick={handleCloseMenu}
-                               to="/#home"
-                               spy={true}
-                               smooth={true}
-                               hashSpy={true}
-                               offset={20}
-                               duration={500}
-                               isDynamic={true}
-                            >Start
-                            </HashLink>
+                            <HashLink className="main-nav__link" onClick={handleCloseMenu} smoth to="/#home">Start</HashLink>
                          </li>
                         <li className="main-nav__list-element">
-                            <HashLink className="main-nav__link" onClick={handleCloseMenu}
-                                to="/#FourSteps"
-                                spy={true}
-                                smooth={true}
-                                hashSpy={true}
-                                offset={-20}
-                                duration={500}
-                                isDynamic={true}
-                            >O co chodzi? 
-                            </HashLink>
+                            <HashLink className="main-nav__link" onClick={handleCloseMenu} smooth to="/#FourSteps" scroll={el => el.scrollIntoView({ behavior: 'smooth', block: "start"})}>O co chodzi?</HashLink>
                         </li>                   
                         <li className="main-nav__list-element main-nav__list-element--about">
-                            <HashLink className="main-nav__link  main-nav__link--about " onClick={handleCloseMenu}
-                                to="/#about"
-                                spy={true}
-                                smooth={true}
-                                hashSpy={true}
-                                offset={20}
-                                duration={500}
-                                isDynamic={true}
-                            >O nas      
-                            </HashLink>
+                            <HashLink className="main-nav__link  main-nav__link--about " onClick={handleCloseMenu} smooth to="/#about" offset={100}>O nas</HashLink>
                         </li>
                         <li className="main-nav__list-element">
-                            <HashLink className="main-nav__link" onClick={handleCloseMenu}
-                                to="/#Help"
-                                spy={true}
-                                smooth={true}
-                                hashSpy={true}
-                                offset={20}
-                                duration={500}
-                                isDynamic={true}
-                            >Fundacja i oraganizacje
-                            </HashLink>
+                            <HashLink className="main-nav__link" onClick={handleCloseMenu} smooth to="/#Help">Fundacja i oraganizacje</HashLink>
                         </li>
                         <li className="main-nav__list-element">
-                            <HashLink className="main-nav__link" onClick={handleCloseMenu}
-                                to="/#Contact"
-                                spy={true}
-                                smooth={true}
-                                hashSpy={true}
-                                offset={50}
-                                duration={500}
-                                isDynamic={true}
-                            >Kontakt
-                        </HashLink>
+                            <HashLink className="main-nav__link" onClick={handleCloseMenu}smooth to="/#Contact">Kontakt</HashLink>
                         </li>
                     </ul>
                 </nav>

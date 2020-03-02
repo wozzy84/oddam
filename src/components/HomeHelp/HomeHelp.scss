@@ -29,24 +29,35 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size:24px;
+    font-size:20px;
     text-align: center;
     border: 0.75px solid transparent; 
-    width: 208px;
-    height: 79px;
+    width: 170px;
+    height: 60px;
     margin: 0px 10px;
     cursor: pointer;
     &:hover {
         border: 0.75px solid #3C3C3C;
     }
+    @media(min-width:1800px){
+        font-size: 24px;
+        width: 208px;
+        height: 79px;
+    }
+
+
 }
 
 .home-help__title {
-    font-size: 38px;
+    font-size:28px;
+    font-family: $font-base-semi;
     line-height: 1.44;
-    @media(max-width: 1024px){
-        font-size:28px;
-        font-family: $font-base-semi;
+    @media(min-width: 1024px){
+        font-family: $font-base;
+        font-size: 34px;
+    }
+    @media(min-width: 1800px){
+        font-size: 38px;    
     }
 }
 
@@ -60,11 +71,14 @@
 
 .home-help__description {
     max-width: 640px;
-    font-size: 22px;
+    font-size: 20px;
     line-height: 1.4;
     text-align: center;
     @media(max-width: 1024px){
         display: none;
+    }
+    @media(min-width: 1800px) {
+        font-size: 22px;
     }
 }
 

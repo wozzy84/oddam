@@ -1,11 +1,16 @@
 .step-one__section {
     height: 883px;
     background-image: url('../../assets/images/Background-Form.jpg');
-    padding-bottom: 50px;
-    padding-top: 50px;
+    width: 100%;
+    background-position: center;
+    background-size: cover;
+    padding-top:50px;
+    padding-bottom:  50px;
+    background-repeat: no-repeat;
     @media(max-width: 1024px) {
         background-image: none;
         height: auto;
+     
     }
 }
 

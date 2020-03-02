@@ -4,7 +4,6 @@
     height: 90%;
     justify-content: space-around;
     align-items: center;
-
 }
 
 .give-main__call-to-action{
@@ -77,9 +76,7 @@
 
 .give-main-min {
     width: 100%;
-    
     margin-top: 150px;
-    
     @media (min-width: 1024px) {
         display: none;
     }
