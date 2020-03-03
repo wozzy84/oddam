@@ -21,18 +21,15 @@ const HomeHeader = (props) => {
 
     const handleClick = () => {
         setActiveMenu(true)
-
         dispatch({
             type: "SIDE_MENU",
             active: true
         })
         disableBodyScroll(targetElement, options)
-        
     }
 
     const handleCloseMenu = () => {
         setActiveMenu(false)
-
         dispatch({
             type: "SIDE_MENU",
             active: false
@@ -50,14 +47,11 @@ const HomeHeader = (props) => {
             handleCloseMenu()
         }
     }
-    
-    if (props.currentLocation==="/"){
         return (  
             <OutsideClickHandler
             onOutsideClick={() => {
                 handleCloseMenu()
              }}>
-          
             <div className="home-header" >
             <ReactResizeDetector handleWidth handleHeight onResize={onResize} />
                 <div className="hamburger-menu" >
@@ -92,42 +86,7 @@ const HomeHeader = (props) => {
                 </nav>
             </div>
             </OutsideClickHandler>
-        )
-    } else {
-        return (
-                <>
-                    <OutsideClickHandler
-                        onOutsideClick={() => {
-                             handleCloseMenu()
-                    }}>
-                    <div className="home-header">
-                    <ReactResizeDetector handleWidth handleHeight onResize={onResize} />
-                        <div className="hamburger-menu">
-                            <span className="hamburger-menu__icon"></span>
-                                <div className="hamburger-menu__hamburger-field" onClick={handleClick} style={activeMenu? {opacity: "0", transition: "opacity 0.3s" }: null}>
-                                    <span className="hamburger-menu__span"></span>
-                                    <span className="hamburger-menu__span"></span>
-                                    <span className="hamburger-menu__span"></span>
-                                </div>
-                        </div>
-                            <HomeLoginNav/>
-                            <nav className="main-nav">
-                                <ul className="main-nav__list" style={activeMenu? {right:'0px'}: null} >
-                                    <FontAwesomeIcon icon={faTimesCircle} className="times-circle" onClick={handleCloseMenu}/>
-                                    <HomeLoginNavMin pass={handlePass}/>
-                                    <li className="main-nav__list-element"><HashLink className="main-nav__link" onClick={handleCloseMenu} to="/">Start</HashLink></li>
-                                    <li className="main-nav__list-element"><HashLink className="main-nav__link" onClick={handleCloseMenu} to="/#FourSteps">O co chodzi?</HashLink></li>
-                                    <li className="main-nav__list-element"><HashLink className="main-nav__link" onClick={handleCloseMenu} to="/#about">O nas</HashLink></li>
-                                    <li className="main-nav__list-element"><HashLink className="main-nav__link" onClick={handleCloseMenu} to="/#Help">Fundacja i oraganizacje</HashLink></li>
-                                    <li className="main-nav__list-element"><HashLink className="main-nav__link" onClick={handleCloseMenu} to="/#Contact">Kontakt</HashLink></li>
-                                </ul>
-                            </nav>
-                        </div> 
-                    </OutsideClickHandler>
-                </>
-            )
-    } 
-    
+        ) 
 }
 
 export {HomeHeader}

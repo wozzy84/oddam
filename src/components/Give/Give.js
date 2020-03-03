@@ -21,7 +21,7 @@ const Give = () => {
     if(logged) {
         return (
             <>
-            <div className="shadow-box" style={sideMenu? style :null}></div>
+                <div className="shadow-box" style={sideMenu? style :null}></div>
                 <div className="give__container">
                     <div className="give__main-sec-container">
                         <div className="give__main-picture"></div>
@@ -29,7 +29,7 @@ const Give = () => {
                             <HomeHeader/>
                             <GiveMainSec/>
                         </div>        
-                     </div>
+                    </div>
                     <GiveSteps/>
                     <HomeContact/>
                 </div>

@@ -88,7 +88,7 @@ const  GiveStepFour = (props) => {
         <section className="step-four__section">
             <form className="step-four__form" onSubmit={handleSubmit(onSubmit)}>
                 <p className="step-counter">Krok 4/4</p> 
-                <h3 className="step-four__title">Podaj adres oraz termin odbioru rzecz przez kuriera</h3>        
+                <h3 className="step-four__title">Podaj adres oraz termin odbioru<br/> rzeczy przez kuriera</h3>        
                 <div className="step-four__form-wrapper">
                     <div className="step-four__form-column">
                         <h4>Adres odbioru:</h4>
@@ -113,7 +113,7 @@ const  GiveStepFour = (props) => {
                         <h4>Termin odbioru:</h4>
                         <div className="step-four__input-group">
                             <label>Data</label>
-                            <DatePicker selected={data} minDate={new Date} locale="pl"dateFormat="dd/MM/yyyy" onChange={handleChangeDate}/>
+                            <DatePicker selected={data} minDate={new Date} locale="pl"dateFormat="dd/MM/yyyy" onChange={handleChangeDate} className="date-picker"/>
                             </div>
                         <div className="step-four__input-group">
                             <label>Godzina</label>
@@ -129,13 +129,6 @@ const  GiveStepFour = (props) => {
                     <button  className="rev-button" type="button" value={-1} onClick={handleClick}>Wstecz</button>
                     <button  className="fwd-button" type="submit" value={0} data-val={1} onClick={handleClick} >Dalej</button>
                 </div>
-                {errors.street && <p style={errorMsg}>Podaj adres odbioru!</p>}
-                {errors.city &&  <p style={errorMsg}>Podaj miasto!</p>}
-                {errors.zipCode && <p style={errorMsg}>Podaj kod pocztowy!</p>}
-                {errors.phone && <p style={errorMsg}>Podaj nr telefonu!</p>}
-                {errors.recieveData && <p style={errorMsg}>Niepoprawna data dostawy!</p>}
-                {errors.recieveHour && <p style ={errorMsg}>Wskaż godzinę dostawy!</p>}             
-                {errors.remarks && <p style ={errorMsg}>Wiadomość może mieć maksymalnie 120 znaków</p>}
             </form>
         </section>
         </>

@@ -50,7 +50,7 @@ const  GiveSummary = () => {
             <form className="summary__form" onSubmit={handleSubmit(onSubmit)}>
                 <h3 className="summary__title">Podsumowanie Twojej darowizny</h3>        
                 <div className="summary-brief__container">
-                    <h5 className="summary-brief__title">Oddajesz:</h5>
+                    <h4 className="summary-brief__title">Oddajesz:</h4>
                     <p className="summary-brief__details"><span className="shirt-icon"></span>{bags} {handleBags(bags)}{option.map(e=> e.optionDescription +', ')} {recievers.map(e=> e+", ")} </p>
                     <p className="summary-brief__details"><span className="circle-icon"> </span>dla lokalizacji: {localization}</p>
                 </div>      

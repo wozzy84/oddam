@@ -1,19 +1,24 @@
 .step-three__section {
-    height: 883px;
-    background-image: url('../../assets/images/Background-Form.jpg');
-    width: 100%;
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    padding-bottom: 50px;
-    padding-top: 50px;
-    @media(max-width: 1024px) {
-        height: auto;  
+    background-image: none;
+    height: auto;
+    padding-top:50px;
+    padding-bottom:  50px;
+    @media(min-width: 1024px) {
+        height: 550px;
+        background-image: url('../../assets/images/Background-Form.jpg');
+        width: 100%;
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+    @media(min-width: 1800px) {
+        height: 800px;
     }
 }
 
 .step-three__form {
     display: flex;
+    position: relative;
     flex-direction: column;
     height: 100%;
     justify-content: space-between;
@@ -24,13 +29,15 @@
     }
 }
 
-
 .step-three__title {
-    font-size: 36px;
+    font-size: 32px;
     font-family: $font-base-semi;
     line-height: 1.25;
     @media(max-width: 1024px){
         font-size:22px;
+    }
+    @media(min-width: 1800px) {
+        font-size: 34px;
     }
 }
 
@@ -40,32 +47,36 @@
 }
 
 .step-three__select {
-    font-size:24px;
-    width: 260px;
-    height: 49px;
     border: 1px solid#3C3C3C;
     display: flex;
-    padding-left:40px;
     justify-content: space-between;
     align-items: center;
+    background-color: white;
     cursor: pointer;
     position: relative;
-    margin-top: -60px;
-    @media(max-width: 1024px) {
-        width: 140px;
-        height: 35px;
-        font-size: 18px;
-        background-color: white;
-        padding: 0px;
-        display: flex;
-        justify-content: center;
-        margin-top: 20px;
-        margin-bottom: 20px;
-    }  
+    width: 140px;
+    height: 35px;
+    padding: 0px;
+    justify-content: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    @media(min-width: 1024px) {
+        background-color: transparent;
+        width: 180px;
+        justify-content: space-between;
+        padding-left: 20px;
+    } 
+    @media(min-width: 1800px) {
+        width: 260px;
+        height: 49px;
+        font-size:24px;
+        padding-left:40px;
+        margin-top: -60px;
+    } 
 }
-
+        
 .step-three__list {
-    width: 290px;
+    width: 180px;
     border: 1px solid #3C3C3C;
     font-family: $font-base-light;
     display: flex;
@@ -73,15 +84,18 @@
     align-items: center;
     padding:5px;
     position: absolute;
-    top:3px;
+    top: 65px;
     background-color:#E8E9E4;
     @media(max-width: 1024px) {
         top: 60px;
         background-color: white;
-        width: 160px;
-    
+    }
+    @media(min-width: 1800px) {
+        top:3px;
+        width: 290px;
     }
 }
+
 .step-three__container {
     position: relative;
 }
@@ -93,21 +107,24 @@
         display: flex;
         justify-content: space-around;
         margin-left: -10px
-        
     }
-
 }
+
 .step-three__list-element {
-    font-size: 24px;
     padding-top: 5px;
     padding-bottom: 5px;
-    width: 260px;
-    text-align: left;
-    padding-left: 10px;
+    text-align: center;;
     cursor: pointer;
+    width: 95%;
     @media (max-width: 1024px) {
         font-size: 18px;
         width: 160px;
+    }
+    @media (min-width: 1800px) {
+        padding-left: 10px;
+        width: 260px;
+        font-size: 24px;
+        text-align: left;
     }
 }
 
@@ -116,17 +133,15 @@
     color:white;
 }
 
-.arrow-icon {
-    height: 26px;
-    width: 57px;
-}
-
 .step-three__subtitle {
     font-family: $font-base-semi;
-    font-size: 24px;
+    font-size: 20px;
     @media(max-width: 1024px) {
         font-size:18px;
         margin-top:10px;
+    }
+    @media(min-width: 1800px) {
+        font-size: 24px;
     }
 }
 
@@ -142,9 +157,9 @@
 .choose-reciever__list-element {
     border:1px solid #3C3C3C;
     font-family: $font-base-light;
-    font-size: 24px;
-    padding:15px;
-    margin: 10px 20px 10px 0px;
+    font-size: 20px;
+    padding:10px;
+    margin: 10px 15px 10px 0px;
     cursor: pointer;
     user-select: none;
     @media (max-width: 1024px) {
@@ -154,18 +169,28 @@
         font-weight: bolder;
         padding: 10px
     }
+    @media(min-width: 1800px) {
+        font-size: 24px;
+        padding:15px;
+        margin: 10px 20px 10px 0px;
+    }
 }
 
 .step-three__text-input {
     margin-top: 20px;
-    height: 40px;
-    width: 570px;
+    height: 36px;
+    width: 500px;
     border:1px solid #3C3C3C;
     background-color: transparent;
-    font-size: 24px;
+    font-size: 18px;
     font-family: $font-base-light;
     padding-left: 10px;
     @media(max-width: 1024px) {
         width: 80%;
+    }
+    @media(min-width: 1800px){
+        height: 40px;
+        width: 570px;
+        font-size: 24px
     }
 }

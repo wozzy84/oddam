@@ -65,8 +65,8 @@ const  GiveStepOne = () => {
                         <label htmlFor="SteoOneRadio5">inne</label>
                     </li>                  
                 </ul>
-                {error && <p style={{color:"red"}}>Wybierz przynajmniej jedną opcję</p>}
                 <button  className="forward-button" type="button" onClick={handleClick}>Dalej</button>
+                {error && <p style={{color:"red", position: "absolute", bottom: "-30px"}}>Wybierz przynajmniej jedną opcję</p>}
             </form>     
         </section>
         </>

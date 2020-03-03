@@ -90,14 +90,15 @@ const  GiveStepThree = () => {
                     <h4 className="step-three__subtitle"> Wpis nazwę konkretnej organizacji (opcjonalnie)</h4>
                     <input type="text"  value={organizationName} className="step-three__text-input" onChange={handleChange}></input>
                 </div> 
-               <div>
-                    {localizationError && <p style={{color:"red", marginBottom: "20px"}}>Wybierz lokalizację</p>}
-                    {recieverError && <p style={{color:"red"}}>Wybierz odbiorcę</p>}
-               </div>
+
+                  
+             
                <div className="step-three__button-container">
                     <button  className="rev-button" type="button" value={-1} onClick={handleClick}>Wstecz</button>
                     <button  className="fwd-button" type="button" value={1} onClick={handleClick}>Dalej</button>
                </div>
+                {localizationError && <p style={{color:"red",  position: "absolute", bottom: "-20px"}}>Wybierz lokalizację</p>}
+                {recieverError && <p style={{color:"red", position: "absolute", bottom: "-40px"}}>Wybierz odbiorcę</p>}
             </form>
         </section>
         </>

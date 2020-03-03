@@ -1,21 +1,24 @@
 .step-one__section {
-    height: 883px;
-    background-image: url('../../assets/images/Background-Form.jpg');
-    width: 100%;
-    background-position: center;
-    background-size: cover;
+    background-image: none;
+    height: auto;
     padding-top:50px;
     padding-bottom:  50px;
-    background-repeat: no-repeat;
-    @media(max-width: 1024px) {
-        background-image: none;
-        height: auto;
-     
+    @media(min-width: 1024px) {
+        height: 550px;
+        background-image: url('../../assets/images/Background-Form.jpg');
+        width: 100%;
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+    @media(min-width: 1800px) {
+        height: 800px;
     }
 }
 
 .step-one__form {
     display: flex;
+    position: relative;
     flex-direction: column;
     height: 100%;
     justify-content: space-between;    
@@ -61,20 +64,19 @@
     content: '';
     display: inline-block;
     margin-right: 30px;
-    margin-top: 20px;
-    margin-bottom:20px;
+    margin-top: 15px;
+    margin-bottom:15px;
     position: relative;
-    width: 40px;
-    height: 40px;
+    min-width: 30px;
+    height: 30px;
     border: 1px solid #3C3C3C;
     background: transparent;
     cursor: pointer;
-    @media (max-width: 1024px) {
-        min-width: 30px;
-        max-width: 30px;
-        height: 30px;
-        margin: 15px;
-      
+    @media(min-width: 1800px) {
+        min-width: 40px;
+        max-width: 40px;
+        height: 40px;
+        margin:20px
     }
 }
 
@@ -82,44 +84,56 @@
     content: '';
     display: inline-block;
     margin-right: 30px;
-    margin-top: 20px;
-    margin-bottom:20px;
+    margin-top: 15px;
+    margin-bottom:15px;
     position: relative;
-    width: 40px;
-    height: 40px;
+    min-width: 30px;
+    height: 30px;
     border: 1px solid#3C3C3C;
-    background:#FAD648;
+    background-color: $color-blue;
     cursor: pointer;
-    @media(max-width: 1024px) {
-        background-color: $color-blue;
-        min-width: 30px;
-        max-width: 30px;
-        height: 30px;
-        margin:15px
+    @media(min-width: 1024px) {
+        background:#FAD648;
+    }
+    @media(min-width: 1800px) {
+        min-width: 40px;
+        max-width: 40px;
+        height: 40px;
+        margin:20px
     }
 }
 
 .step-one__title {
-    font-size: 36px;
+    font-size: 28px;
+    margin-bottom: 20px;
     font-family: $font-base-semi;
     line-height: 1.25;
-    @media (max-width: 1024px) {
-        font-size: 28px;
-        margin-bottom: 30px
+    @media (min-width: 1024px) {
+        font-size: 30px
+    }
+    @media(min-width: 1200px) {
+        font-size: 32px
+    }
+    @media(min-width: 1800px) {
+        font-size: 36px;
     }
 }
 
 .step-counter {
-    font-size: 24px;
-    font-family: $font-base-light;
-    @media(max-width: 1024px) {
-        display: none;
+    display: none;
+    @media(min-width: 1024px) {
+        display: inline;
+        font-size: 20px;
+        font-family: $font-base-light;
+    }
+    @media(min-width: 1200px) {
+        font-size: 24px
+    }
+    @media(min-width: 1800px) {
+        font-size: 26px;
     }
 }
 
 .forward-button {
     @include buttonsFdwRev;
-    @include buttonsFwdRev-min
-    
-
 }

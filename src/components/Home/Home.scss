@@ -1,7 +1,6 @@
 .home-container {
     margin: 0 auto;
     max-width: 1900px;  
-
 }
 
 .header-main-sec-container {
@@ -26,6 +25,7 @@
 
 .header-main-sec-container__picture {
     @media(min-width: 1024px) {
+        height: auto;
         width: 45%;
         background-image: url('../../assets/images/Home-Hero-Image.jpg');
         background-size: cover;
