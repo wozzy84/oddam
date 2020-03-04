@@ -1,157 +1,153 @@
 .home-four-steps {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin-top:20px;
-    margin-bottom:20px;
-    padding-top: 100px;
-    text-align: center;
-    @media(min-width:1024px) {
-        margin: 5px 10px;
-        padding-top: 40px;
-    }
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding-top: 100px;
+  text-align: center;
+  @media (min-width: 1024px) {
+    margin: 5px 10px;
+    padding-top: 40px;
+  }
 }
 
 .home-four-steps__call-to-action {
-        font-size:28px;
-        font-family: $font-base-semi;
-    @media(min-width: 1024px) {
-        font-size: 32px;
-        margin-top: 15px;
-        margin-bottom: 30px;
-        font-family: $font-base;
-    }
-    @media(min-width:1800px) {
-        font-size: 38px
-    }
+  font-size: 28px;
+  font-family: $font-base-semi;
+  @media (min-width: 1024px) {
+    font-size: 32px;
+    margin-top: 15px;
+    margin-bottom: 30px;
+    font-family: $font-base;
+  }
+  @media (min-width: 1800px) {
+    font-size: 38px;
+  }
 }
 
-.home-four-steps__decoration{
-    display:none;
-    @media(min-width: 1024px) {
-        display: block;
-        @include decoration_mixin
-    }
+.home-four-steps__decoration {
+  display: none;
+  @media (min-width: 1024px) {
+    display: block;
+    @include decoration_mixin;
+  }
 }
 
 .home-four-steps__icon-group {
-    display: flex;
-    height:auto;
-    width: 100%;
-    align-items: center;
-    justify-content: space-around;
-    max-width: 1100px; 
-    @media(min-width: 1024px) {
-        height: 325px;
-    }
-    @media (min-width: 1800px) {
-        justify-content: space-between;
-        
-    }
+  display: flex;
+  height: auto;
+  width: 100%;
+  align-items: center;
+  justify-content: space-around;
+  max-width: 1100px;
+  @media (min-width: 1024px) {
+    height: 325px;
+  }
+  @media (min-width: 1800px) {
+    justify-content: space-between;
+  }
 }
 
 .home-four-steps-icon__container {
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    max-width: 132px;
-    @media(max-width: 1024px) {
-        width: 85px;
-    }
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 132px;
+  @media (max-width: 1024px) {
+    width: 85px;
+  }
 }
 
 .home-four-steps-icon__icon {
-    display: none; 
-    @media(min-width: 1800px) {
-        display: block;
-    }
+  display: none;
+  @media (min-width: 1800px) {
+    display: block;
+  }
 }
 
 .home-four-steps-icon__icon--min {
-    display: none;
-    @media(max-width:1800px) {
-        display: block
-    }
-    
+  display: none;
+  @media (max-width: 1800px) {
+    display: block;
+  }
 }
 
-.home-four-steps-icon__icon-header{
-    font-size: 12px;
-    margin-top:10px;
-    margin-bottom:10px;
-    
-    @media(min-width: 575px) {
-        width: 150px;
-        font-size: 14px;
-        
-    }
-    @media(min-width: 768px) {
-        width: 180px;
-        font-size:16px;
-       
-    }
-    @media(min-width:1024px) {
-        font-size:18px
-   }
+.home-four-steps-icon__icon-header {
+  font-size: 12px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+
+  @media (min-width: 575px) {
+    width: 150px;
+    font-size: 14px;
+  }
+  @media (min-width: 768px) {
+    width: 180px;
+    font-size: 16px;
+  }
+  @media (min-width: 1024px) {
+    font-size: 18px;
+  }
 }
 
 .home-four-steps-icon__bar {
-    display: none;
-    @media(min-width: 1024px) {
-        display: block;
-        margin: 10px;
-        display: block;
-        width: 70px;
-        height: 2px;
-        background-color: #707070;
-    }
+  display: none;
+  @media (min-width: 1024px) {
+    display: block;
+    margin: 10px;
+    display: block;
+    width: 70px;
+    height: 2px;
+    background-color: #707070;
+  }
 }
 
-.home-four-steps-icon__text{
-    display: none; 
-    @media(min-width: 1024px) {
-        display: block;
-        margin-top:10px;
-        font-size: 16px;
-    }
+.home-four-steps-icon__text {
+  display: none;
+  @media (min-width: 1024px) {
+    display: block;
+    margin-top: 10px;
+    font-size: 16px;
+  }
 }
 
 .home-four-steps__button {
-    display: none; 
-    @media(min-width: 1024px) {
-        background: transparent;
-        border: none;
-        margin: 20px;
-    }
+  display: none;
+  @media (min-width: 1024px) {
+    background: transparent;
+    border: none;
+    margin: 20px;
+  }
 }
 
-.home-four-steps__link{
-    display: block;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 120px;
-    width: 310px; 
-    text-align: center;
-    font-size: 36px;
-    font-family: $font-base-light;
-    cursor: pointer;
-    color:  #3C3C3C;
-    border: 0.75px solid  #3C3C3C;
-    text-decoration: none;
+.home-four-steps__link {
+  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 120px;
+  width: 310px;
+  text-align: center;
+  font-size: 36px;
+  font-family: $font-base-light;
+  cursor: pointer;
+  color: #3c3c3c;
+  border: 0.75px solid #3c3c3c;
+  text-decoration: none;
 }
 
 .home-for-steps-icon__container--icon-4 {
-    @media(min-width: 1040px) {
-        padding-top: 20px
-    }
+  @media (min-width: 1040px) {
+    padding-top: 20px;
+  }
 }
 
 .home-for-steps-icon__container--icon-3 {
-    @media(max-width: 1040px) {
-        padding-top: 20px
-    }
+  @media (max-width: 1040px) {
+    padding-top: 20px;
+  }
 }

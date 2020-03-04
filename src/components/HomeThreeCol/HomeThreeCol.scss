@@ -1,53 +1,53 @@
 .home-three-col__container {
-    display: none;
-    @media(min-width: 1024px) {
-        margin: 0 auto;
-        max-width: 1900px;
-        background-image: url('../../assets/images/3\ Columns\ Background.png');
-        display: flex;
-        justify-content: space-around; 
-        padding-top: 20px;
-        padding-bottom:20px
-    }
- 
-    @media(min-width: 1800px) {
-        height: 384px;
-        padding-top: 0px;
-        padding-bottom: 0px;
-    }
+  display: none;
+  @media (min-width: 1024px) {
+    margin: 0 auto;
+    max-width: 1900px;
+    background-image: url("../../assets/images/3\ Columns\ Background.png");
+    display: flex;
+    justify-content: space-around;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+
+  @media (min-width: 1800px) {
+    height: 384px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+  }
 }
 
 .home-three-col__column {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    text-align: center;
-    color: #5E5322
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  color: #5e5322;
 }
 
 .home-three-col__text-nr {
-    font-family: $font-base-light;
-    font-size: 45px;
-    @media(min-width: 1800px) {
-        font-size: 90px;
-        line-height: 1.5;
-        padding: 5px;
-    }
+  font-family: $font-base-light;
+  font-size: 45px;
+  @media (min-width: 1800px) {
+    font-size: 90px;
+    line-height: 1.5;
+    padding: 5px;
+  }
 }
 
 .home-three-col_text-head {
-    font-family: $font-base-semi;
-    @media(min-width: 1800px) {
-        font-size: 18px;
-        line-height: 1.66;
-        padding: 15px;
-    }
+  font-family: $font-base-semi;
+  @media (min-width: 1800px) {
+    font-size: 18px;
+    line-height: 1.66;
+    padding: 15px;
+  }
 }
 
 .home-three-col__column {
-    font-size:16px;
-    font-family: $font-base-light;
-    max-width: 334px;
-    line-height: 1.6;
-    letter-spacing: -0.32px;
+  font-size: 16px;
+  font-family: $font-base-light;
+  max-width: 334px;
+  line-height: 1.6;
+  letter-spacing: -0.32px;
 }

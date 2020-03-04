@@ -1,35 +1,32 @@
-.logOutSection  {
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    height: 100vh;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    h1 {
-        font-size: 40px;
-        margin: 20px;
-        line-height: 1.5
-    }
+.logOutSection {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  h1 {
+    font-size: 40px;
+    margin: 20px;
+    line-height: 1.5;
+  }
 }
 
 .logOutDecoration {
-    @include decoration_mixin;
-    margin: 20px;
+  @include decoration_mixin;
+  margin: 20px;
 }
 
 .mainPageBtn {
-            height: 50px;
-            width: 150px;
-            margin-top: 20px;
-            background: transparent;
-            border: none;
-            cursor: pointer;
-            box-shadow: none;
-            font-size: 18px;
-            font-family: $font-base-light;           
-            border: 0.75px solid #3C3C3C;
-        
+  height: 50px;
+  width: 150px;
+  margin-top: 20px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  box-shadow: none;
+  font-size: 18px;
+  font-family: $font-base-light;
+  border: 0.75px solid #3c3c3c;
 }
-
-

@@ -1,95 +1,94 @@
 .login-nav {
-    @media(max-width: 1024px) {
-     display: none;   
-    }
+  @media (max-width: 1024px) {
+    display: none;
+  }
 }
 
 .login-nav__list {
-    display: flex;
-    color: #737373; 
-    border: 0.75px solid transparent;
-    justify-content: center;
-    text-decoration: none;
-    margin-right: 10px
+  display: flex;
+  color: #737373;
+  border: 0.75px solid transparent;
+  justify-content: center;
+  text-decoration: none;
+  margin-right: 10px;
 }
 
 .login-nav__list li:last-child {
-    margin-right: 0px;
+  margin-right: 0px;
 }
 
 .login-nav__list-element {
-    margin: 9px 10px;
-    font-size: 14px;
-    border: 0.75px solid transparent;
-    &:hover {
-        border: 0.75px solid #FAD648;
-    }
+  margin: 9px 10px;
+  font-size: 14px;
+  border: 0.75px solid transparent;
+  &:hover {
+    border: 0.75px solid #fad648;
+  }
 }
 
 .login-nav__list-element--hi-user {
-    padding: 9px 10px;
+  padding: 9px 10px;
 }
 
-.login-nav__list-element--hi-user:hover{
-    border: 0.75px solid transparent;
-    user-select: none;
+.login-nav__list-element--hi-user:hover {
+  border: 0.75px solid transparent;
+  user-select: none;
 }
 
 .login-nav__list-element--logout {
-    color: #737373;
-    border: 0.75px solid transparent;
-    padding: 9px 10px;
-    &:hover {
-        border: 0.75px solid #FAD648;
-       
-    }
+  color: #737373;
+  border: 0.75px solid transparent;
+  padding: 9px 10px;
+  &:hover {
+    border: 0.75px solid #fad648;
+  }
 }
 
 .login-nav__list-link {
-    display: block;
-    width: 100%;
-    height: 100%;
-    font-size: 14px;
-    padding: 9px 10px;
-    color: #737373;
-    text-decoration: none;
+  display: block;
+  width: 100%;
+  height: 100%;
+  font-size: 14px;
+  padding: 9px 10px;
+  color: #737373;
+  text-decoration: none;
 }
-    
+
 .main-nav__list-element--minified {
-    @media(min-width: 1024px) {
-        display: none !important
-    }
+  @media (min-width: 1024px) {
+    display: none !important;
+  }
 }
 
 .main-nav__list-element--minfied--hi-user {
-    margin-top:20px;
-    
-    text-align: center;
-    margin-bottom:20px;
-    user-select: none;
+  margin-top: 20px;
+
+  text-align: center;
+  margin-bottom: 20px;
+  user-select: none;
 }
 
 .main-nav__list-element--minfied--sign-out {
-    @extend .main-nav__link, .main-nav__link--minfied
+  @extend .main-nav__link, .main-nav__link--minfied;
 }
 
 .main-nav__link--minfied {
-    font-size: 15px; 
+  font-size: 15px;
 }
 
 .main-nav__bar {
-    height: 10px;
-    width: 100%;
-    display: block;
-    margin-top: 10px;
-    margin-bottom: 10px
+  height: 10px;
+  width: 100%;
+  display: block;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 .main-nav__icon {
-    margin-right: 15px;
+  margin-right: 15px;
 }
 
 .main-nav_icon-container {
-    width: 15px;
-    margin-right:15px
+  width: 15px;
+  margin-right: 15px;
 }
