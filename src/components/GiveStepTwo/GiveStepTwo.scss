@@ -1,178 +1,178 @@
 .step-two__section {
-    background-image: none;
-    height: auto;
-    padding-top:50px;
-    padding-bottom:  50px;
-    @media(min-width: 1024px) {
-        height: 550px;
-        background-image: url('../../assets/images/Background-Form.jpg');
-        width: 100%;
-        background-position: center;
-        background-size: cover;
-        background-repeat: no-repeat;
-    }
-    @media(min-width: 1800px) {
-        height: 800px;
-    }
+  background-image: none;
+  height: auto;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  @media (min-width: 1024px) {
+    height: 550px;
+    background-image: url("../../assets/images/Background-Form.jpg");
+    width: 100%;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  @media (min-width: 1800px) {
+    height: 800px;
+  }
 }
 
 .step-two__form {
-    display: flex;
-    position: relative;
-    flex-direction: column;
-    height: 100%;
-    justify-content: space-between;
-    margin-left: 142px;
-    @media(max-width: 1024px) {
-        margin-left: 0px;
-        padding-left: 10px ;
-        padding-right: 10px;
-    }
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  height: 100%;
+  justify-content: space-between;
+  margin-left: 142px;
+  @media (max-width: 1024px) {
+    margin-left: 0px;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
 }
 
 .step-two__title {
-    position: relative;
-    font-size: 22px;
-    padding-top: 0px; 
-    @media (min-width: 1024px) {
-        font-size: 30px;
-        font-family: $font-base-semi;
-        line-height: 1.25;
-        position: absolute;
-        padding-top: 90px;
-    }
+  position: relative;
+  font-size: 22px;
+  padding-top: 0px;
+  @media (min-width: 1024px) {
+    font-size: 30px;
+    font-family: $font-base-semi;
+    line-height: 1.25;
+    position: absolute;
+    padding-top: 90px;
+  }
 }
 
 .step-counter {
-    font-size: 24px;
-    font-family: $font-base-light;
+  font-size: 24px;
+  font-family: $font-base-light;
 }
 
 .step-two_button-container {
-    @media (max-width: 1024px) {
-        display: flex;
-        justify-content: space-around; 
-    }
+  @media (max-width: 1024px) {
+    display: flex;
+    justify-content: space-around;
+  }
 }
 
-.fwd-button, .rev-button {
-   @include buttonsFdwRev;
-   
+.fwd-button,
+.rev-button {
+  @include buttonsFdwRev;
 }
 
 .rev-button {
-    margin-right: 50px;
+  margin-right: 50px;
 }
 
-.step-two__select-group{
-    position: absolute;
-    padding-top: 250px;
-    display: flex;
-    width: 800px; 
-    @media(max-width: 1024px) {
-        position: relative;
-        padding-top: 0px;
-        width: 100%;
-    }
-    @media(min-width: 1800px) {
-        padding-top: 300px;
-    }
+.step-two__select-group {
+  position: absolute;
+  padding-top: 250px;
+  display: flex;
+  width: 800px;
+  @media (max-width: 1024px) {
+    position: relative;
+    padding-top: 0px;
+    width: 100%;
+  }
+  @media (min-width: 1800px) {
+    padding-top: 300px;
+  }
 }
 
 .step-two__bag-label {
-    font-size:26px;
-    font-family: $font-base-light;
-    display: flex;
-    align-items: center;
-    position: absolute;
-    @media(max-width: 1024px) {
-        position: relative;
-        font-size: 20px;
-        margin-top: 20px;
-        margin-bottom: 50px    
-    }
-    @media(min-width: 1800px){
-        font-size: 36px;
-    }
+  font-size: 26px;
+  font-family: $font-base-light;
+  display: flex;
+  align-items: center;
+  position: absolute;
+  @media (max-width: 1024px) {
+    position: relative;
+    font-size: 20px;
+    margin-top: 20px;
+    margin-bottom: 50px;
+  }
+  @media (min-width: 1800px) {
+    font-size: 36px;
+  }
 }
 
 .step-two__select-action {
-    font-size:18px;
-    margin-left: 30px;
-    width: 160px;
-    height: 38px;
-    border: 1px solid#3C3C3C;
-    display: flex;
-    padding-left:10px;
-    justify-content: space-between;
-    align-items: center;
-    cursor: pointer;
-    @media(max-width: 1024px) {
-        width: 120px;
-        height: 35px;
-        font-size: 18px;
-        padding-left: 0px;
-        justify-content: center;
-        background-color: white;
-    }
-    @media(min-width: 1800px) {
-        width: 200px;
-        height: 49px;
-        font-size:24px;        
-    }
+  font-size: 18px;
+  margin-left: 30px;
+  width: 160px;
+  height: 38px;
+  border: 1px solid#3C3C3C;
+  display: flex;
+  padding-left: 10px;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  @media (max-width: 1024px) {
+    width: 120px;
+    height: 35px;
+    font-size: 18px;
+    padding-left: 0px;
+    justify-content: center;
+    background-color: white;
+  }
+  @media (min-width: 1800px) {
+    width: 200px;
+    height: 49px;
+    font-size: 24px;
+  }
 }
 
 .step-two__list {
-    width: 30px;
-    border: 1px solid #3C3C3C;
-    font-family: $font-base-light;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding:5px;
-    position: relative;
-    left:378px;
-    top:45px;
-    @media(max-width: 1024px) {
-        position: absolute;
-        left: 278px;
-        top:59px;
-        background-color: white;
-    }
-    @media(min-width: 1800px) {
-        width: 50px;
-        left: 483px;
-        top: 55px;
-    }
+  width: 30px;
+  border: 1px solid #3c3c3c;
+  font-family: $font-base-light;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 5px;
+  position: relative;
+  left: 378px;
+  top: 45px;
+  @media (max-width: 1024px) {
+    position: absolute;
+    left: 278px;
+    top: 59px;
+    background-color: white;
+  }
+  @media (min-width: 1800px) {
+    width: 50px;
+    left: 483px;
+    top: 55px;
+  }
 }
 
 .step-two__list-element {
-    font-size: 20px;
-    padding-top: 5px;
-    padding-bottom: 5px;
-    width: 30px;
-    text-align: center;
-    cursor: pointer; 
-    @media(max-width: 1024px) {
-        font-size:18px;
-    }
-    @media(min-width: 1800px) {
-        font-size: 24px;
-        width:50px
-    }
+  font-size: 20px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  width: 30px;
+  text-align: center;
+  cursor: pointer;
+  @media (max-width: 1024px) {
+    font-size: 18px;
+  }
+  @media (min-width: 1800px) {
+    font-size: 24px;
+    width: 50px;
+  }
 }
 
 .step-two__list-element:hover {
-    background-color:#3C3C3C;;
-    color:white;
-    width: 100%;
-    text-align: center;
+  background-color: #3c3c3c;
+  color: white;
+  width: 100%;
+  text-align: center;
 }
 
 .arrow-icon {
-    height: 26px;
-    width: 57px;
-    @media(max-width: 1024px) {
-        display: none
-    }
+  height: 26px;
+  width: 57px;
+  @media (max-width: 1024px) {
+    display: none;
+  }
 }

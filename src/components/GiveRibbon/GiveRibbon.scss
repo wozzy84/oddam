@@ -1,52 +1,51 @@
 .ribbon__container {
-   height: 200px;
-   background-color: #FAD648;
-   display: flex;
-   align-items: center;
-   justify-content: flex-start;
-   padding: 0 142px;
-   @media(max-width:1024px) {
-       padding: 5px;
-       background-color: $color-blue;
-       color: white;
-   };
-   @media(min-width: 1800px) {
-        height: 250px;
-   }
+  height: 200px;
+  background-color: #fad648;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 0 142px;
+  @media (max-width: 1024px) {
+    padding: 5px;
+    background-color: $color-blue;
+    color: white;
+  }
+  @media (min-width: 1800px) {
+    height: 250px;
+  }
 }
 
 .ribbon__title {
-    font-family: $font-base-semi;
-    font-size: 32px;
-    line-height: 1.22;
-    margin-bottom: 5px;
-    @media(min-width:1024px) {
-        font-size: 34px
-    }
-    @media(min-width:1800px) {
-        font-size: 36px;
-    }
+  font-family: $font-base-semi;
+  font-size: 32px;
+  line-height: 1.22;
+  margin-bottom: 5px;
+  @media (min-width: 1024px) {
+    font-size: 34px;
+  }
+  @media (min-width: 1800px) {
+    font-size: 36px;
+  }
 }
 
 .ribbon__text {
-    font-size:18px;
-    line-height: 1.22;
-    margin-bottom: 10px;
-    margin-top:20px;
-    width: 100%;
-    @media(min-width: 1024px) {
-        font-size: 20px;
-        }
-    @media(min-width:1800px) {
-        font-size:22px
-    }
+  font-size: 18px;
+  line-height: 1.22;
+  margin-bottom: 10px;
+  margin-top: 20px;
+  width: 100%;
+  @media (min-width: 1024px) {
+    font-size: 20px;
+  }
+  @media (min-width: 1800px) {
+    font-size: 22px;
+  }
 }
 
 .ribbon__icon {
-    font-size: 80px;
-    margin:15px;
-    @media(min-width: 1024px) {
-        display: none;
-    }
+  font-size: 80px;
+  margin: 15px;
+  @media (min-width: 1024px) {
+    display: none;
+  }
 }
-
