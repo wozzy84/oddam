@@ -27,6 +27,8 @@ const Login = ({match}) => {
         transition: "1s"
       }
 
+    const [loginError, setLoginError] = useState(false)
+
     const handleChange = (e) => {
         switch (e.currentTarget.id){
             case "login-email":
@@ -63,9 +65,11 @@ const Login = ({match}) => {
             .then(cred=> {
                 console.log(cred.user.email)
                 history.push('/')
+                setLoginError(false)
             })
             .catch(function(error) {
                 console.error(error.code, error.message);
+                setLoginError(true)
               });
         }  
     }
@@ -101,7 +105,8 @@ const Login = ({match}) => {
                                     <label className="login-form__label" htmlFor="loginPasswd">Hasło</label>
                                     <input className="login-form__input" type="password"  id="login-passwd" style={passwdError? redBar: blackBar} value={passwd} onChange={handleChange}></input>
                                     <p className="login-form__error " style={passwdError? {opacity: "1"}: {opacity: 0}}>Podane hasło jest za krótkie!</p>
-                                </div>       
+                                </div>    
+                                <p className="login-form__error " style={loginError? {opacity: "1"}: {opacity: 0}}>Błąd logowania. Podany e-mail lub hasło są nieprawidłowe</p>   
                             </div>  
                             <div className="login-form__button-group">
                                 <button className="login-form__button" type="button">

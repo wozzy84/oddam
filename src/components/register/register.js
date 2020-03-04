@@ -97,7 +97,7 @@ const Register = ({match}) => {
                             <div className="register-form__input-container">
                                 <label className="register-form__label" htmlFor="registerEmail">Email</label>
                                 <input className="register-form__input" type="email" id="registerEmail" style={emailError? redBar: blackBar} value={email} onChange={handleChange}></input>
-                                <p className="errorMsg" style={emailError? {opacity: "1"}: {opacity: 0}}>Niepoprawny email!</p>
+                                <p className="register-form__error" style={emailError? {opacity: "1"}: {opacity: 0}}>Niepoprawny email!</p>
                             </div>
                             <div className="register-form__input-group">
                                 <div className="register-form__input-container">

@@ -68,7 +68,7 @@ const HomeHeader = (props) => {
                     <FontAwesomeIcon icon={faTimesCircle} className="times-circle" onClick={handleCloseMenu}/>
                         <HomeLoginNavMin pass={handlePass}/>
                         <li className="main-nav__list-element">
-                            <HashLink className="main-nav__link" onClick={handleCloseMenu} smoth to="/#home">Start</HashLink>
+                            <HashLink className="main-nav__link" onClick={handleCloseMenu} smooth to="/#home">Start</HashLink>
                          </li>
                         <li className="main-nav__list-element">
                             <HashLink className="main-nav__link" onClick={handleCloseMenu} smooth to="/#FourSteps" scroll={el => el.scrollIntoView({ behavior: 'smooth', block: "start"})}>O co chodzi?</HashLink>

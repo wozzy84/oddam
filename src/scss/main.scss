@@ -1,43 +1,41 @@
-@import ' ../../../../node_modules/reset-css/sass/reset';
-@import 'settings/colors';
-@import 'settings/fonts';
-@import 'settings/mixins';
-@import '../components/Home/Home.scss';
-@import '../components/HomeMainSec/HomeMainSec.scss';
-@import '../components/HomeHeader/HomeHeader.scss';
-@import '../components/HomeThreeCol/HomeThreeCol.scss';
-@import '../components/HomeFourSteps/HomeFourSteps.scss';
-@import '../components/HomeAbout/HomeAbout.scss';
-@import '../components/HomeHelp/HomeHelp.scss';
-@import '../components/HomeHelp/posts.scss';
-@import '../components//HomeHelp/pagination.scss';
-@import '../components/HomeContact/HomeContact.scss';
-@import '../components/LogIn/Login.scss';
-@import '../components/register/register.scss';
-@import '../components//LogOut/LogOut.scss';
-@import '../components/HomeLoginNav/HomeLoginNav.scss';
-@import '../components/Give/Give.scss';
-@import '../components/GiveMainSec/GiveMainSec.scss';
-@import '../components/GiveRibbon/GiveRibbon.scss';
-@import '../components/GiveStepOne/GiveStepOne.scss';
-@import '../components/GiveStepTwo/GiveStepTwo.scss';
-@import '../components/GiveStepThree/GiveStepThree.scss';
-@import '../components/GiveStepFour/GiveStepFour.scss';
-@import '../components/GiveSummary/GiveSummary.scss';   
-@import '../components/GiveThankYou/GiveThankYou.scss';
-@import '../components/HomeFooter/HomeFooter.scss';
+@import "../../node_modules/reset-css/sass/reset";
+@import "settings/colors";
+@import "settings/fonts";
+@import "settings/mixins";
+@import "../components/Home/Home.scss";
+@import "../components/HomeMainSec/HomeMainSec.scss";
+@import "../components/HomeHeader/HomeHeader.scss";
+@import "../components/HomeThreeCol/HomeThreeCol.scss";
+@import "../components/HomeFourSteps/HomeFourSteps.scss";
+@import "../components/HomeAbout/HomeAbout.scss";
+@import "../components/HomeHelp/HomeHelp.scss";
+@import "../components/HomeHelp/posts.scss";
+@import "../components//HomeHelp/pagination.scss";
+@import "../components/HomeContact/HomeContact.scss";
+@import "../components/LogIn/Login.scss";
+@import "../components/register/register.scss";
+@import "../components//LogOut/LogOut.scss";
+@import "../components/HomeLoginNav/HomeLoginNav.scss";
+@import "../components/Give/Give.scss";
+@import "../components/GiveMainSec/GiveMainSec.scss";
+@import "../components/GiveRibbon/GiveRibbon.scss";
+@import "../components/GiveStepOne/GiveStepOne.scss";
+@import "../components/GiveStepTwo/GiveStepTwo.scss";
+@import "../components/GiveStepThree/GiveStepThree.scss";
+@import "../components/GiveStepFour/GiveStepFour.scss";
+@import "../components/GiveSummary/GiveSummary.scss";
+@import "../components/GiveThankYou/GiveThankYou.scss";
+@import "../components/HomeFooter/HomeFooter.scss";
 
 body {
-    font-family: $font-base;
-    color:  #3C3C3C;
-    overflow: overlay;
+  font-family: $font-base;
+  color: #3c3c3c;
+  overflow: overlay;
 }
 
 input {
-    background-color: transparent;
+  background-color: transparent;
 }
 textarea {
-    background-color: transparent;
+  background-color: transparent;
 }
-
-

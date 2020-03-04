@@ -20,8 +20,7 @@ const HomeHelp = () => {
     } 
 
     useEffect(() => {
-        const result = postData.filter(e => e.pageMarkName == activeButton)
-        console.log(result)
+        const result = postData.filter(e => e.pageMarkName === activeButton)
           setPosts(result);    
       }, [activeButton]);
 

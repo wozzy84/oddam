@@ -21,7 +21,7 @@ const HomeMainSec = () => {
                    <Link className="home-main-sec__link" to={logged?'oddaj-rzeczy':'logowanie'}>ODDAJ<br/>RZECZY</Link> 
                 </button>
                <button className="home-main-sec__button" id="org">
-                    <Link className="home-main-sec__link" to='logowanie'>ZORGANIZUJ ZBIÓRKĘ </Link>
+                    <Link className="home-main-sec__link" to={logged?'oddaj-rzeczy':'logowanie'}>ZORGANIZUJ ZBIÓRKĘ </Link>
                </button> 
             </div>
         </div>    

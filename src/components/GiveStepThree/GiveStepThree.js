@@ -17,7 +17,7 @@ const  GiveStepThree = () => {
     const [color, setColor] = useState({backgroundColor:"yellow"})
 
     const handleClick = (e) => {     
-        if (reciever.length && localization.Localization!="wybierz") {
+        if (reciever.length && localization.Localization!="wybierz" ||e.currentTarget.value=="-1") {
             dispatch({
                 type: "CURRENT_STEP",
                 payload  : {
