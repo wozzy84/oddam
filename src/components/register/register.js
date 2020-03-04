@@ -72,7 +72,7 @@ const Register = ({ match }) => {
     if (validateEmail(email) && validatePasswd) {
       auth
         .createUserWithEmailAndPassword(email, passwd)
-        .catch(setAuthError(true));
+        .catch(() => setAuthError(true));
     }
   };
 
@@ -185,7 +185,7 @@ const Register = ({ match }) => {
               </button>
               <button
                 className="register-form__button register-form__button--sign-in"
-                type="button"
+                type="submit"
                 onClick={handleClick}
               >
                 Załóż konto
